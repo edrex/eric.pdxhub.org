@@ -1,6 +1,7 @@
 ---
 layout: default
 icon: glass
+description: a tenacious unwanted comma 
 ---
 
 This is the story of how I finally hit a <a href="#" rel="tooltip" title="Liquid is the template language used to generate output files on Jekyll sites.">Liquid</a> limitation that I couldn't work around with a series of ugly hacks.
