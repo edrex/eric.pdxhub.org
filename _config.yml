@@ -12,7 +12,7 @@ taginfo:
     icon: "gift"
     url: "/things"
 pygments: true
-permalink: "pretty"
+permalink: ":year/:month/:day/:title/"
 markdown: "redcarpet"
 relative_permalinks: false
 github:

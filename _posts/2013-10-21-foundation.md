@@ -3,8 +3,7 @@ title: Zurb Foundation
 published: true
 icon: building
 tags:
-- things
-- github
+- style
 status: idea
 description: Switching over to Zurb Foundation via Grunt.js
 layout: default
