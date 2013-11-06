@@ -40,7 +40,18 @@ boxes:
  - capable
  - compassionate
 
-I maintain [PDXHub's services](http://wiki.pdxhub.org/ops) in support of other local organizers, and am a founding member of [Activate](http://activatehub.org/). I'm also active in many open source software, civic, and bicycling communities.
+## Subsections
+
+ * Classes
+ * Lab
+
+I have done exploratory work on neighborhood server appliances including real world prototypes deployed in several CoOp houses.
+
+Wishlist: Timeline graphic
+
+community support apps at [PDXHub](http://pdxhub.org/). Get in touch if you are interested in
+
+ services](http://wiki.pdxhub.org/ops) in support of other local organizers, and am a founding member of [Activate](http://activatehub.org/). I'm also active in many open source software, civic, and bicycling communities.
 
 I hold a BS in [Mathematics](http://math.pdx.edu/) and [Physics](http://physics.pdx.edu/) minor from [Portland State University](http://pdx.edu/). In my free time I am continuing my studies in physics, data sciences, and natural history.
 

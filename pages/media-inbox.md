@@ -33,3 +33,8 @@ icon: book
  - https://hasgeek.tv
  - https://hasgeek.tv/metarefresh/2013/493-why-the-next-big-thing-sucks
  - http://www.webstock.org.nz/
+
+## Music
+
+Andrew Bird Fake Palindromes
+Moby
