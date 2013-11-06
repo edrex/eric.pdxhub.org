@@ -46,7 +46,7 @@
           </p>
           <h1 class="title">
             {% include post_icon.html post=page %} {{ page.title }}
-            <small>{{ page.description }}</small> 
+            <small>{% if page.description %}{{ page.description | markdownify }}{% endif %}</small> 
           </h1>
         </div>
 
