@@ -1,0 +1,25 @@
+nav.navbar.navbar-default(role='navigation')
+    // Brand and toggle get grouped for better mobile display 
+    .navbar-header
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-main-collapse')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='/', title='{{ site.description }}')
+        mixin icon("coffee")  #{ name }
+    // Collect the nav links, forms, and other content for toggling 
+    .collapse.navbar-collapse.navbar-main-collapse
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(href='/latest/')
+            mixin icon("clock-o")  latest
+        li
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown')
+            mixin icon("th-large")  sections
+          ul.dropdown-menu
+            | {% for post in site.pages %}{% if post.tags contains "main" and post.url != page.url and post.title != null %}
+            li
+              a(href='{{post.url}}') {% include post_icon.html post=post fixed=true %} {{post.title}}
+            | {% endif %}{% endfor %}

@@ -1,0 +1,43 @@
+!!! 5
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(http-equiv='CACHE-CONTROL', content='NO-CACHE')
+    title
+    meta(name='viewport', content='width=device-width')
+    //
+       syntax highlighting CSS 
+    link(rel='stylesheet', href='/assets/css/syntax.css')
+    link(rel='shortcut icon', href='/assets/favicon.ico')
+    //
+       Custom CSS 
+    link(rel='stylesheet', href='/assets/css/application.min.css')
+    link(href='//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css', rel='stylesheet')
+    script(src='/assets/js/jquery.min.js')
+    script(src='/assets/js/bootstrap.min.js')
+    script.
+      $(function () {
+      $("[rel='tooltip']").tooltip();
+      });
+    != header
+
+    include _shared/analytics
+body
+  include _shared/mixins
+  if navbar
+    include _shared/navbar
+  .container.site
+    .page-header
+      p.page-info.pull-right
+        if date
+          span.label.label-info.date #{date}
+        each tag in tags
+          mixin tag(tag)
+        a.label.label-warning(href='http://prose.io/#{ github.repo }/edit/#{ github.branch }/{{ page.path }}')
+          mixin icon("code")  edit
+      h1.title
+          mixin icon(icon)  #{ title }
+        small #{ description }
+    .page-body
+      != yield

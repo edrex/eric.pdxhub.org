@@ -1,1 +1,0 @@
-{% capture icon %}{% if include.post.icon %}{{ include.post.icon }}{% else %}{{ site.defaults.icon }}{% endif %}{% endcapture %}{% capture classes %}page-icon {{ include.classes }}{% endcapture %}{% include icon.html icon=icon classes=classes fixed=include.fixed scale=include.scale %}

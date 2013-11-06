@@ -1,0 +1,5 @@
+mixin icon(icon, classes)
+  i(class="fa fa-#{ icon } #{ classes }")
+mixin tag(tag)
+  a(class="tag label label-default", href="{% if site.taginfo[include.tag].url == nil %}/tags/#tag-{{ include.tag }}{% else %}{{ site.taginfo[include.tag].url }}{% endif %}")
+  mixin icon("#{public.tags.data[tag].icon || edit}") #{tag}

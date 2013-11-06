@@ -1,0 +1,30 @@
+{
+  "globals": {
+    "name": "French Press",
+    "description": "diary of a common cafe nerd",
+    "signature": "Eric Drechsel, Investigative Nerd",
+    "siteurl": "http://eric.pdxhub.org",
+    "github": {
+      "repo": "edrex/edrex.github.io",
+      "branch": "master"
+    },
+    "prose": {
+      "siteurl": "http://eric.pdxhub.org",
+      "relativeLinks": "http://eric.pdxhub.org/links.json",
+      "media": "media"
+    },
+    "navbar": true,
+    "icon": "circle",
+    "tags": []
+  },
+  "tags": {
+    "main": {
+      "icon": "home",
+      "url": "/"
+    },
+    "things": {
+      "icon": "gift",
+      "url": "/things"
+    }
+  }
+}
