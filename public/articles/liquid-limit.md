@@ -1,9 +1,3 @@
----
-layout: default
-icon: glass
-description: a tenacious unwanted comma 
----
-
 This is the story of how I finally hit a <a href="#" rel="tooltip" title="Liquid is the template language used to generate output files on Jekyll sites.">Liquid</a> limitation that I couldn't work around with a series of ugly hacks.
 
 Last night at [MaptimePDX](https://twitter.com/MaptimePDX) I decided to add a [Leaflet](http://leafletjs.com/) map to my blog, just for fun. It would show markers for all posts with a location field. An example post:

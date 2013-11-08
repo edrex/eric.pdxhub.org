@@ -1,11 +1,3 @@
----
-published: true
-title: "Image URLs for Picasaweb, Google+, and Drive Uploads"
-layout: post
-icon: picture
-description: Mapping a maze of ornately inlaid brick walls
----
-
 Picasaweb / Plus Instant Upload images are stored seperately from Drive. This is unfortunate because it means you can't use Drive APIs and tools with synced images. In particular, Drive [exposes public files via well known URLs](http://googlesystem.blogspot.com/2013/02/permalinks-for-google-drive-images.html) while the situation with Picasaweb is much less rosy. 
 
  * [Google product forum complainies](http://productforums.google.com/forum/#!topic/google-plus-discuss/EmzZ1foTYuk).

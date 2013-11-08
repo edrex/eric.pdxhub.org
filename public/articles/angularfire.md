@@ -1,21 +1,3 @@
----
-title: Firebase + Angular Dive
-published: true
-permalink: things/angularfire
-tags:
-- things
-status: done
-description: |
-  Using <a href="http://angularfire.com/">Angularfire</a>
-icon: hdd
-layout: default
-header: |
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.js'></script>
-  <script src='https://cdn.firebase.com/v0/firebase.js'></script>
-  <script src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>
-  <script src='https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.js'></script>
-  <script src='/assets/js/angfire-thing.js'></script>
----
 <div ng-app="myapp">
 {% raw %}
   <div ng-controller="MyController">

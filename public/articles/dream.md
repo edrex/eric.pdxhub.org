@@ -1,9 +1,3 @@
----
-published: true
-layout: post
-description: beautiful and terrifying
----
-
 I had a beautiful and terrifying dream this morning. 
 
 At the beginning, I was hiding in some rubble in an urban area

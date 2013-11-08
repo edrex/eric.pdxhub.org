@@ -1,10 +1,3 @@
----
-published: true
-title: "Prose, Jekyll Starter Repo"
-layout: post
-description: notes for spinning off a new open source project
----
-
 This post comprises my working notes for extracting a reusable Github Pages starter site from the repo for this blog. The template site is [here](https://github.com/edrex/reusable-jekyll-site).
 
 ## Goal

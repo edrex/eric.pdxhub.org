@@ -1,14 +1,3 @@
----
-title: Emoji on Webpages
-published: true
-tags: 
-  - things
-status: done
-description: "<span class='emoji'>🌊 🌟 🍉 🍻 🐌 🐗 👾 🐛 🐧</span>"
-icon: smile-o
-layout: default
----
-
 Emoji are pictograph characters with <a href="http://www.iemoji.com/browse/emoji/category">well-defined conventional meanings</a> used for messaging especially in Asia. They are also part of the <a href="http://en.wikipedia.org/wiki/Emoji#In_the_Unicode_standard">Unicode standard</a>, opening the possibility of using them all over the Internet, an incredibly exciting prospect for a visual thinker like myself. 
 
 A few emoji-supporting fonts are available, such as those included with messaging applications from Apple, Microsoft, and Google. For the web, [Emoji Symbols](http://emojisymbols.com/) from Japanese font designer [blockworks](http://blockworks.jp/) is a free option. The font is woff format ([supported](http://caniuse.com/#feat=woff) by nearly all browsers) and weighs in around 280k compressed. 

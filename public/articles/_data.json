@@ -1,0 +1,159 @@
+{
+  "dedrudge-your-web-editing-with-instant": {
+    "title": "Dedrudge Web Editing with Live Reload",
+    "tags": [
+      "tech-tip",
+      "workflow"
+    ],
+    "date": "2013-11-01"
+  },
+  "math-and-physics-blog": {
+    "tags": [
+      "math",
+      "sites"
+    ],
+    "date": "2013-10-31"
+  },
+  "harpjs": {
+    "tags": [
+      "thing",
+      "static"
+    ],
+    "description": "It's for sites!",
+    "date": "2013-10-26"
+  },
+  "liquid-limit": {
+    "icon": "glass",
+    "description": "a tenacious unwanted comma",
+    "date": "2013-10-24"
+  },
+  "photo-syncing-with-btsync-for-mobile": {
+    "tags": [
+      "privacy",
+      "sync"
+    ],
+    "icon": "camera-retro",
+    "category": "how",
+    "tweet": "syncing full res camera photos with ease and privacy using @BitTorrent Sync for mobile. Goodbye Google Photos et al!",
+    "date": "2013-10-22"
+  },
+  "foundation": {
+    "title": "Zurb Foundation",
+    "icon": "building",
+    "tags": [
+      "style"
+    ],
+    "status": "idea",
+    "description": "Switching over to Zurb Foundation via Grunt.js",
+    "date": "2013-10-21"
+  },
+  "watch-youtube-in-a-tiny-floating-vlc-window": {
+    "title": "Youtube in a Floating Window",
+    "tags": [
+      "how"
+    ],
+    "description": "with VLC",
+    "icon": "laptop",
+    "date": "2013-10-16"
+  },
+  "workflow-stuff": {
+    "icon": "check-square-o",
+    "tags": [
+      "journal"
+    ],
+    "description": "Journaling to capture and develop article ideas/research",
+    "date": "2013-10-14"
+  },
+  "docpad-on-ghpages-travis": {
+    "title": "Automatic Site Rebuilds with Travis CI",
+    "tags": [
+      "things",
+      "github",
+      "docpad",
+      "travis"
+    ],
+    "description": "Continuous integration for artifact generation",
+    "status": "next",
+    "icon": "cogs",
+    "date": "2013-10-08"
+  },
+  "in-page_editor": {
+    "title": "In-page source editor",
+    "tags": [
+      "things",
+      "github"
+    ],
+    "status": "idea",
+    "description": "Github APIfu",
+    "icon": "code",
+    "date": "2013-10-07"
+  },
+  "emoji-web-font": {
+    "title": "Emoji on Webpages",
+    "tags": [
+      "things"
+    ],
+    "status": "done",
+    "description": "<span class='emoji'>🌊 🌟 🍉 🍻 🐌 🐗 👾 🐛 🐧</span>",
+    "date": "2013-09-29"
+  },
+  "liquid-limitations": {
+    "title": "What you can't do in Liquid templates",
+    "description": "A signpost for future would-be explorers",
+    "icon": "thumbs-o-down",
+    "date": "2013-09-15"
+  },
+  "angularfire": {
+    "title": "Firebase + Angular Dive",
+    "tags": [
+      "things"
+    ],
+    "status": "done",
+    "description": "Using <a href=\"http://angularfire.com/\">Angularfire</a>",
+    "icon": "hdd",
+    "header": "<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.js'></script>\n<script src='https://cdn.firebase.com/v0/firebase.js'></script>\n<script src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>\n<script src='https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.js'></script>\n<script src='/assets/js/angfire-thing.js'></script>",
+    "date": "2013-09-14"
+  },
+  "picasaweb-drive-plus-image-urls": {
+    "title": "Image URLs for Picasaweb, Google+, and Drive Uploads",
+    "icon": "picture",
+    "description": "Mapping a maze of ornately inlaid brick walls",
+    "date": "2013-09-12"
+  },
+  "prose-starter-rebase": {
+    "title": "Prose, Jekyll Starter Repo",
+    "description": "notes for spinning off a new open source project",
+    "date": "2013-08-04"
+  },
+  "jekyll-pages-prose": {
+    "title": "Jekyll, Pages, and Prose.io",
+    "description": "a minimalist stack for publishing online",
+    "date": "2013-07-16"
+  },
+  "dream": {
+    "description": "beautiful and terrifying",
+    "date": "2013-07-16"
+  },
+  "washougal-picnic": {
+    "description": "river frolick invitation",
+    "date": "2013-07-15"
+  },
+  "static-site-gen-research-and-experiments": {
+    "description": "research notes",
+    "date": "2013-07-11"
+  },
+  "annotate-slid-es-decks-with-svg": {
+    "title": "Annotating slid.es decks with SVG",
+    "tags": [
+      "things"
+    ],
+    "status": "done",
+    "icon": "suitcase",
+    "description": "an experiment with reveal.io",
+    "date": "2013-07-09"
+  },
+  "first-actual-post": {
+    "description": "baby sheep!!",
+    "date": "2013-07-03"
+  }
+}

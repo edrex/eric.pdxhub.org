@@ -1,12 +1,3 @@
----
-published: true
-tags:
-- thing
-- static
-layout: default
-description: It's for sites!
----
-
 [Start a blog with Harp](http://kennethormandy.com/journal/start-a-blog-with-harp)
 
 ## What's HarpJS?

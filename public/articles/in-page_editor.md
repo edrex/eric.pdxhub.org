@@ -1,16 +1,3 @@
----
-title: In-page source editor
-published: true
-tags:
-- things
-- github
-status: idea
-description: Github APIfu
-icon: code
-layout: default
-permalink: things/in-page-editor
----
-
 ## Idea
 
 In-page content editor using github to store changes

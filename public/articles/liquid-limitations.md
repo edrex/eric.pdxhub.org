@@ -1,11 +1,3 @@
----
-title: What you can't do in Liquid templates
-published: true
-layout: post
-description: A signpost for future would-be explorers
-icon: thumbs-o-down
----
-
 Liquid is the template system used by Jekyll. It is designed to provide basic output control for customers who are building their own sites/emails/what-have-you but hosting in your system, while preventing them from doing things which might adversely affect system security or performance.
 
 . Even in a secure sandbox, a bit of Ruby code could easily consume lots of system resources.

@@ -1,14 +1,3 @@
----
-title: Dedrudge Web Editing with Live Reload
-published: true
-tags:
-- tech-tip
-- workflow
-layout: default
-icon: 
-description: 
----
-
 #### What a drag!
 
 <figure>

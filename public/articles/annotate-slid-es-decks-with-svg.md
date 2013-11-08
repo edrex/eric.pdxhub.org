@@ -1,13 +1,3 @@
----
-published: true
-title: Annotating slid.es decks with SVG
-tags:
-  - things
-status: done
-layout: post
-description: an experiment with reveal.io
----
-
 Today I experimented with annotating [slid.es](http://slid.es) presentations with SVG. It's *almost* there. Following is a rough guide, for the adventurous, along with issues I found along the way.
 
 **Objective:** call out features of my slides using custom floating graphics. 

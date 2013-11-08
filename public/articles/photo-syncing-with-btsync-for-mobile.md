@@ -1,17 +1,3 @@
----
-tags: 
-  - "how"
-layout: default
-icon: camera-retro
-description: 
-tags:
- - privacy
- - sync
-category: how
-tweet: syncing full res camera photos with ease and privacy using @BitTorrent Sync for mobile. Goodbye Google Photos et al!
-published: true
----
-
 Today I decided to setup BitTorrent Sync on my Android phone to sync my camera photos. I'm so happy I did!
 
 BTSync is software based on the BitTorrent protocol which keeps folders syncronized between multiple devices. It supports iOS/Android as well as PC/Mac/Linux, and works well with large files such as full-resolution images and videos.

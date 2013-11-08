@@ -1,12 +1,3 @@
----
-published: true
-icon: check-square-o
-tags:
-- journal
-layout: default
-description: Journaling to capture and develop article ideas/research
----
-
 This is my first journal post. In previous iterations of my primary writing platform (my [wiki](http://wiki.pdxhub.org/)) my daily (sometimes weekly) journal has served as the first stop in my workflow for developing new ideas, and I'm hoping to apply the same process as a workflow component for blogging. I outline how it works below.
 
 

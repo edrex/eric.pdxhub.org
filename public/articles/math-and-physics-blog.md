@@ -1,13 +1,3 @@
----
-
-published: true
-tags:
-- math
-- sites
-layout: default
-description: 
----
-
 This should be a page (like [Things](/things/))
 Post ideas
 

@@ -1,18 +1,3 @@
----
-title: Automatic Site Rebuilds with Travis CI
-published: true
-tags:
-- things
-- github
-- docpad
-- travis
-description: Continuous integration for artifact generation
-status: next
-icon: cogs
-layout: default
-permalink: docpad-ghpages-travis-ci/
----
-
 ## Background
 
 #### Conclusions after creating a few sites with Github Pages' stock Jekyll compiler <a href="#" rel="tooltip" data-placement="bottom" class="fa fa-asterisk" title="As distinct from Jekyll itself, which can be extended by plugins."></a>

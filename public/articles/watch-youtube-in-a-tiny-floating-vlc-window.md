@@ -1,13 +1,3 @@
----
-title: Youtube in a Floating Window
-tags: 
-  - "how"
-layout: default
-description: with VLC
-published: true
-icon: laptop
----
-
 <div class="row">
 <p class="col-xs-6">I like to watch conference talks and engineering lectures while I'm working, in a small unobtrusive window. This is great on a retina display. Here's how.</p>
 <p class="col-xs-6"><img alt="Floating Youtube video in VLC" src="/media/floating_vlc.png" class="img-responsive pull-right img-thumbnail"></p>

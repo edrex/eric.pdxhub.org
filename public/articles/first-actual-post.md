@@ -1,9 +1,3 @@
----
-published: true
-layout: post
-description: baby sheep!!
----
-
 # This. Is. a Static Blog.
 
 I made it using the basic Jekyll support in Github pages.
