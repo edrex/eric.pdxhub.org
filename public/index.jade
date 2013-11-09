@@ -1,17 +1,29 @@
+include _shared/mixins
 .row
-  .col-sm-6.post-list
+  .col-sm-4
+    h2 
+      mixin icon("th-large")
+      | sections
+    ul.nav.nav-pills.nav-stacked
+      each post, slug in public.data
+        if post.main
+          li
+            mixin pretty_link(post, slug)
+  .col-sm-4
     h2
-      {% include _shared/icon.html icon="clock-o" %} latest
-      small
+      mixin icon("page") articles
+      small 
         a(href='/latest/') more
     ul.nav.nav-pills.nav-stacked
-      {% for post in site.posts limit:5 %}
-      li {% include post_link.html post=post %}
-      {% endfor %}
-  .col-sm-6
-    h2 {% include icon.html icon="th-large" %} sections
+      each post, slug in public.articles.data
+        li 
+          mixin pretty_link(post, slug, '/articles')
+  .col-sm-4
+    h2
+      mixin icon("clock-o") journal
+      small 
+        a(href='/latest/') more
     ul.nav.nav-pills.nav-stacked
-      {% for post in site.pages %}{% if post.tags contains "main" and post.url != page.url and post.title != null %}
-      li
-        %a{href: ""} {% include post_icon.html post=post fixed=true %} 
-      {% endif %}{% endfor %}
+      each post, slug in public.journal.data
+        li 
+          mixin pretty_link(post, slug, '/journal')

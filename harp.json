@@ -13,18 +13,10 @@
       "relativeLinks": "http://eric.pdxhub.org/links.json",
       "media": "media"
     },
-    "navbar": true,
-    "icon": "circle",
-    "tags": []
-  },
-  "tags": {
-    "main": {
-      "icon": "home",
-      "url": "/"
-    },
-    "things": {
-      "icon": "gift",
-      "url": "/things"
+    "defaults": {
+      "navbar": true,
+      "icon": "circle",
+      "tags": []
     }
   }
 }

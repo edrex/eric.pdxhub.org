@@ -1,4 +1,5 @@
 !!! 5
+include _shared/mixins
 html(lang='en')
   head
     meta(charset='utf-8')
@@ -24,20 +25,21 @@ html(lang='en')
 
     include _shared/analytics
 body
-  include _shared/mixins
-  if navbar
+  if field(locals, 'navbar')
     include _shared/navbar
   .container.site
     .page-header
       p.page-info.pull-right
         if date
-          span.label.label-info.date #{date}
-        each tag in tags
+          mixin date_label(date)
+        each tag in field(locals, "tags")
           mixin tag(tag)
         a.label.label-warning(href='http://prose.io/#{ github.repo }/edit/#{ github.branch }/{{ page.path }}')
           mixin icon("code")  edit
       h1.title
-          mixin icon(icon)  #{ title }
-        small #{ description }
+        mixin icon(field(locals,'icon')) 
+        = title
+        | 
+        small!= description
     .page-body
       != yield

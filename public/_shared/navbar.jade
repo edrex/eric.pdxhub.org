@@ -19,7 +19,7 @@ nav.navbar.navbar-default(role='navigation')
           a.dropdown-toggle(href='#', data-toggle='dropdown')
             mixin icon("th-large")  sections
           ul.dropdown-menu
-            | {% for post in site.pages %}{% if post.tags contains "main" and post.url != page.url and post.title != null %}
-            li
-              a(href='{{post.url}}') {% include post_icon.html post=post fixed=true %} {{post.title}}
-            | {% endif %}{% endfor %}
+            each post, slug in public.data
+              if post.main
+                li
+                  mixin pretty_link(post, slug)

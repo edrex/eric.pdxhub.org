@@ -1,0 +1,41 @@
+include _shared/mixins
+.row
+  .col-sm-7
+    each post, slug in public.articles.data
+      if field(post,"tags").indexOf("things") > -1
+        mixin post_summary(post, slug, "/articles")
+  .col-sm-5
+
+    h4 Reminders
+
+    :markdown
+      - Avoid a backlog of unstarted things. Instead try to keep each thing fresh and explore it right away.
+      - Keep it simple, avoiding process overhead and complexity. Get to the thing as directly as possible.
+      - Try two or three things at once, for example a hosted database, a data binding framework, and an idea for a cat pictures service. This is to help avoid blank page syndrome and make demos that have some substance.
+
+    h4 Hosting Options
+
+    :markdown
+      - **Inline:** This is appropriate for quick experiments which don't require any external tooling
+      - **Plunkr:** [[1](http://plnkr.co/)] An alternative to inline posts, which can be embedded (when to use?)
+      - **Seperate repo:** if the experiment needs extra tooling (different build tool, etc) or if it seems independently useful.
+
+    h4 Circle of things
+
+    :markdown
+      To focus my work and ensure that I balance skill development, I will identify critical learning areas and rotate between them.
+
+       - Design (color, making a site via comp)
+       - Tooling (Grunt, DocPad)
+       - Interactive (Facets, Viz)
+       - Writing
+       - Multimedia (video, photo, audio)
+
+    h4 Possible future topics
+
+    :markdown
+      - microformats [1](http://microformats.org/wiki/semantic-xhtml) [2](http://microformats.org/wiki/microformats2)
+      - [devsofa](http://indiestatik.com/2013/09/29/devsofa/)
+      - [browserify](http://browserify.org/) [1](https://npmjs.org/package/grunt-browserify) [2](http://dontkry.com/posts/code/angular-browserify-grunt.html)
+      - [Zurb Foundation](http://foundation.zurb.com/)
+

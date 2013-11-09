@@ -1,5 +1,53 @@
+- function field(post, field){ return post.hasOwnProperty(field)? post[field] : defaults[field] }
 mixin icon(icon, classes)
   i(class="fa fa-#{ icon } #{ classes }")
+  | 
+
 mixin tag(tag)
-  a(class="tag label label-default", href="{% if site.taginfo[include.tag].url == nil %}/tags/#tag-{{ include.tag }}{% else %}{{ site.taginfo[include.tag].url }}{% endif %}")
-  mixin icon("#{public.tags.data[tag].icon || edit}") #{tag}
+  - var post = public.tags.data[tag] || {'url':'/tags/#tag-'+ tag, 'icon': 'tag'}
+  a(class="tag label label-default", href=post.url)
+    mixin icon(post.icon)  #{tag}
+  | 
+
+mixin post_title(post, slug)
+  if post.title
+    = post.title
+  else
+    = slug.replace(/-/g,' ').replace(/([^\W_]+[^\s-]*) */g,function(w){return w.charAt(0).toUpperCase() + w.substr(1);})
+
+mixin link(post, slug, path, icon)
+  a(href="#{path || ''}/#{ slug }" class="post-link")
+    if icon
+      mixin icon(field(post,'icon'), "fa-fw")
+    mixin post_title(post, slug)
+
+mixin pretty_link(post, slug, path)
+  mixin link(post, slug, path, true)
+
+mixin date(d)
+  - months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  - D = new Date(d)
+  span.date(data-raw=D) #{D.getDate()} #{months[D.getMonth()]} #{D.getFullYear()}
+
+mixin date_label(d)
+  span.label.label-info(data-raw=d) 
+    mixin icon("calendar")
+    mixin date(d)
+  | 
+
+mixin post_summary(post, slug, path, hide_tags)
+  .post-summary.media
+      .pull-left(href='#')
+          .media-object
+            mixin icon(field(post,'icon'), "fa-2x fa-fw page-icon")
+      .media-body
+        h4.media-heading
+          mixin link(post, slug, path)
+        p.description!= post.description
+        .labels
+          if post && post.date
+            mixin date_label(post.date)
+          unless hide_tags
+            each tag in post.tags
+              mixin tag(tag)
+

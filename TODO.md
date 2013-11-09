@@ -6,7 +6,19 @@ layout: default
 permalink: TODO/
 ---
 
-Update to v4 of font-awesome
+Done
+title mixin
+Default icon
+sections menu
+
+!HarpConversion
+tags page
+Search/replace {%%} and {{}} tags in posts
+Pages in root dir
+Sitemap.xml - can build recursively?
+Publish
+Drafts
+
 (A) Brainstorm some top level categories !Organize
 (B) Per-category pages !Organize
 
