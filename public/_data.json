@@ -5,6 +5,38 @@
     "description": "Diary of a common cafe nerd",
     "navbar": false
   },
+  "bio": {
+    "title": "Bio",
+    "description": "Eric's Vital Statistics",
+    "icon": "user",
+    "main": true
+  },
+  "things": {
+    "title": "Thing a Day",
+    "description": "My effort to do something creative every day",
+    "main": true,
+    "icon": "gift"
+  },
+  "media-inbox": {
+    "title": "Media Inbox",
+    "main": true,
+    "description": "Work I want to check out, often recommended in conversation.",
+    "icon": "headphones"
+  },
+  "tags": {
+    "title": "Tags",
+    "icon": "tags",
+    "main": true
+  },
+  "year": {
+    "title": "Year",
+    "date": "2013-07-11",
+    "description": "A sketch of my plans for the coming year (rolling)"
+  },
+  "studies": {
+    "title": "Studies",
+    "date": "2013-07-11"
+  },
   "sitemap": {
     "layout": false
   }
