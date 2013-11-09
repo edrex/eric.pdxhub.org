@@ -1,0 +1,4 @@
+- function merge(a,b,pre){for (var f in b) { a[f] = b[f]}; return a}
+- function prefix(a,pre){var r={}; for (var f in a) { r[pre+f] = a[f]}; return r}
+- function subdirs(b){var r={}; for (var i in b) {if (i !== 'data' && i !== 'contents') r[i]=b[i]}; return r;}
+- function all_posts(b,pre){var r=prefix(b.data,pre); for(var s in subdirs(b)){merge(r, all_posts(b[s],pre+s+'/'))}; return r}

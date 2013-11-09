@@ -1,0 +1,18 @@
+include _shared/deep
+include _shared/mixins
+//- - function tagsInA
+- function fieldGetter(f){return function(p){return p.hasOwnProperty(f) ? p[f] : []}}
+- function wrappedFieldGetter(f){return function(p){return [keysInField(p[f])]}}
+//- crit should take a post and return an array of index keys
+- function indexPostsBy(P, crit){var R={}; for(var p in P){crit(P[p]).forEach(function(t){if (!R.hasOwnProperty(t)){R[t]=[]};R[t].push(p)})}; return R}
+- var posts = all_posts(public, '/')
+- var tags = indexPostsBy(posts, fieldGetter('tags'))
+- console.log(tags)
+each paths, tag in tags
+  h2= tag
+    small= paths.length
+  ul
+    each path in paths
+      li
+        mixin link(posts[path],path)
+

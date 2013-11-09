@@ -4,5 +4,8 @@
     "icon": "coffee",
     "description": "Diary of a common cafe nerd",
     "navbar": false
+  },
+  "sitemap": {
+    "layout": false
   }
 }

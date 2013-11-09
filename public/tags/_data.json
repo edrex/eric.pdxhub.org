@@ -1,0 +1,10 @@
+{
+  "main": {
+    "icon": "home",
+    "url": "/"
+  },
+  "things": {
+    "icon": "gift",
+    "url": "/things"
+  }
+}
