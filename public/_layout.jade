@@ -1,5 +1,5 @@
 !!! 5
-include _shared/mixins
+include _shared/posts
 html(lang='en')
   head
     meta(charset='utf-8')
@@ -37,7 +37,7 @@ body
         a.label.label-warning(href='http://prose.io/#{ github.repo }/edit/#{ github.branch }/{{ page.path }}')
           mixin icon("code")  edit
       h1.title
-        mixin icon(field(locals,'icon')) 
+        mixin icon(field(locals,'icon'))
         = title
         | 
         small!= description

@@ -1,4 +1,6 @@
 _site
+out
+.idea
 *.sw?
 *.un~
 .DS_Store

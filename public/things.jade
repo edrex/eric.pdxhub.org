@@ -1,9 +1,8 @@
-include _shared/mixins
+include _shared/posts
 .row
   .col-sm-7
-    each post, slug in public.articles.data
-      if field(post,"tags").indexOf("things") > -1
-        mixin post_summary(post, slug, "/articles")
+    each p in arrayify(public.articles.data).filter(has_tag("things"))
+      mixin post_summary(p, p.slug, "/articles")
   .col-sm-5
 
     h4 Reminders

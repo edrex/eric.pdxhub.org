@@ -19,7 +19,4 @@ nav.navbar.navbar-default(role='navigation')
           a.dropdown-toggle(href='#', data-toggle='dropdown')
             mixin icon("th-large")  sections
           ul.dropdown-menu
-            each post, slug in public.data
-              if post.main
-                li
-                  mixin pretty_link(post, slug)
+            include sections

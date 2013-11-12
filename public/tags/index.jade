@@ -1,0 +1,12 @@
+include ../_shared/index_posts
+include ../_shared/posts
+- var posts = all_posts(public, '/')
+- var tags = indexPostsBy(posts, fieldGetter('tags'))
+each paths, tag in tags
+  h2= tag
+    small= paths.length
+  ul
+    each path in paths
+      li
+        mixin link(posts[path],path)
+

@@ -1,29 +1,29 @@
-include _shared/mixins
+include _shared/posts
+
 .row
   .col-sm-4
     h2 
       mixin icon("th-large")
       | sections
     ul.nav.nav-pills.nav-stacked
-      each post, slug in public.data
-        if post.main
-          li
-            mixin pretty_link(post, slug)
+      include _shared/sections
   .col-sm-4
     h2
-      mixin icon("page") articles
+      mixin icon("bookmark") articles
       small 
-        a(href='/latest/') more
+        a(href='/articles/') more
     ul.nav.nav-pills.nav-stacked
-      each post, slug in public.articles.data
+      each post in limit(public.articles.data, 5)
         li 
-          mixin pretty_link(post, slug, '/articles')
+          mixin pretty_link(post, post.slug, '/articles')
   .col-sm-4
     h2
-      mixin icon("clock-o") journal
+      mixin icon("pencil") journal
       small 
-        a(href='/latest/') more
+        a(href='/journal/') more
     ul.nav.nav-pills.nav-stacked
-      each post, slug in public.journal.data
+      each post in limit(public.journal.data, 5)
         li 
-          mixin pretty_link(post, slug, '/journal')
+          - post.title = post.title || format_date(post.date)
+          - post.icon = post.icon || "pencil"
+          mixin pretty_link(post, post.slug, '/journal')

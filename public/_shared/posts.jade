@@ -1,4 +1,11 @@
 - function field(post, field){ return post.hasOwnProperty(field)? post[field] : defaults[field] }
+- function arrayify(posts){ var A = []; for (s in posts){ posts[s].slug=s; A.push(posts[s])}; return A}
+- function limit(posts, n){ return arrayify(posts).slice(0, n) }
+
+// FILTERS
+- function no_index(p){ return p.slug !== "index" }
+- function has_tag(tag){ return function(p){return field(p,"tags").indexOf(tag) > -1} }
+
 mixin icon(icon, classes)
   i(class="fa fa-#{ icon } #{ classes }")
   | 
@@ -24,15 +31,13 @@ mixin link(post, slug, path, icon)
 mixin pretty_link(post, slug, path)
   mixin link(post, slug, path, true)
 
-mixin date(d)
-  - months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-  - D = new Date(d)
-  span.date(data-raw=D) #{D.getDate()} #{months[D.getMonth()]} #{D.getFullYear()}
+- var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+- function format_date(d){var D = new Date(d); return D.getDate()+' '+months[D.getMonth()]+' '+D.getFullYear()}
 
 mixin date_label(d)
   span.label.label-info(data-raw=d) 
     mixin icon("calendar")
-    mixin date(d)
+    span.date(data-raw=(new Date(d)))= format_date(d)
   | 
 
 mixin post_summary(post, slug, path, hide_tags)
@@ -48,6 +53,9 @@ mixin post_summary(post, slug, path, hide_tags)
           if post && post.date
             mixin date_label(post.date)
           unless hide_tags
-            each tag in post.tags
+            each tag in field(post,'tags')
               mixin tag(tag)
 
+mixin post_index(section)
+  each p in arrayify(public[section].data).filter(no_index)
+    mixin post_summary(p, p.slug, "/"+section)
