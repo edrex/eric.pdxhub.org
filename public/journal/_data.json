@@ -1,6 +1,7 @@
 {
   "index": {
-    "title": "Journal"
+    "title": "Journal",
+    "icon": "pencil"
   },
   "2013-10-18": {
     "date": "2013-10-18"

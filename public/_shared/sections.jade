@@ -2,3 +2,5 @@ each post, slug in public.data
   if post.main
     li
       mixin pretty_link(post, slug)
+li
+  mixin pretty_link(public.journal.data.index, 'journal/')

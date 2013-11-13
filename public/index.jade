@@ -1,29 +1,18 @@
 include _shared/posts
 
 .row
-  .col-sm-4
+  .col-sm-6
     h2 
       mixin icon("th-large")
       | sections
     ul.nav.nav-pills.nav-stacked
       include _shared/sections
-  .col-sm-4
+  .col-sm-6
     h2
       mixin icon("bookmark") articles
       small 
         a(href='/articles/') more
     ul.nav.nav-pills.nav-stacked
-      each post in limit(public.articles.data, 5)
+      each post in posts_array(public.articles.data).slice(0,5)
         li 
           mixin pretty_link(post, post.slug, '/articles')
-  .col-sm-4
-    h2
-      mixin icon("pencil") journal
-      small 
-        a(href='/journal/') more
-    ul.nav.nav-pills.nav-stacked
-      each post in limit(public.journal.data, 5)
-        li 
-          - post.title = post.title || format_date(post.date)
-          - post.icon = post.icon || "pencil"
-          mixin pretty_link(post, post.slug, '/journal')
