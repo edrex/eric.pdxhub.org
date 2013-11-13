@@ -11,6 +11,13 @@
     "icon": "user",
     "main": true
   },
+  "TODO": {
+    "published": true,
+    "title": "TODO",
+    "description": "Website roadmap and brainstorming",
+    "layout": "default",
+    "permalink": "TODO/"
+  },
   "things": {
     "title": "Thing a Day",
     "description": "My effort to do something creative every day",

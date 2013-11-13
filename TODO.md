@@ -1,18 +1,7 @@
----
-published: true
-title: TODO
-description: Website roadmap and brainstorming
-layout: default
-permalink: TODO/
----
-
-Limit posts in listings !HarpConversion
- - to_array mixin
-"more" link
-Ditto journal
-Clean up journal !Content
+Move journal to section
 Search/replace {%%} and {{}} Pages in root dir
 Push !HarpConversion
+Clean up journal !Content
 
 Drafts
 
@@ -38,4 +27,7 @@ sections menu
 tags page
 tags in posts
 Recursive Sitemap.xml
-
+Limit posts in listings !HarpConversion
+ - to_array mixin
+"more" link
+Ditto journal
