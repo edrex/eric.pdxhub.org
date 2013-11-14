@@ -1,6 +1,7 @@
 {
   "index": {
-    "title": "All Articles"
+    "title": "Articles",
+    "icon": "bookmark-o"
   },
   "dedrudge-your-web-editing-with-instant": {
     "title": "Dedrudge Web Editing with Live Reload",

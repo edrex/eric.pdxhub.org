@@ -4,14 +4,14 @@ include _shared/posts
   .col-sm-6
     h2 
       mixin icon("th-large")
-      | sections
+      | Sections
     ul.nav.nav-pills.nav-stacked
       include _shared/sections
   .col-sm-6
     h2
-      mixin icon("bookmark") articles
+      mixin icon("bookmark") Articles
       small 
-        a(href='/articles/') more
+        a(href='/articles/') ...
     ul.nav.nav-pills.nav-stacked
       each post in posts_array(public.articles.data).slice(0,5)
         li 

@@ -49,5 +49,10 @@
   },
   "articles": {
     "title": "Articles"
+  },
+  "404": {
+    "title": "404",
+    "description": "Nothing to see here",
+    "icon": "warning"
   }
 }

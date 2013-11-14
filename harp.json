@@ -1,5 +1,9 @@
 {
   "globals": {
+    "site": {
+      "name": "French Press",
+      "description": "diary of a common cafe nerd"
+    },
     "name": "French Press",
     "description": "diary of a common cafe nerd",
     "signature": "Eric Drechsel, Investigative Nerd",
