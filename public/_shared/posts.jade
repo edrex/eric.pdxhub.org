@@ -8,8 +8,18 @@
 - function posts_array(posts){ return arrayify(posts).filter(no_index) }
 
 mixin icon(icon, classes)
-  i(class="fa fa-#{ icon } #{ classes }")
+  span(class="fa fa-#{ icon } #{ classes }")
   | 
+
+mixin emoji(text, classes)
+  span(class="fa-fw emoji #{ classes }")= text
+  | 
+
+mixin post_icon(post, classes)
+  if post.emoji
+    mixin emoji(post.emoji, classes)
+  else
+    mixin icon(field(post,'icon'), classes)
 
 mixin tag(tag)
   - var post = public.tags.data[tag] || {'url':'/tags/#tag-'+ tag, 'icon': 'tag'}
@@ -45,7 +55,7 @@ mixin post_summary(post, slug, path, hide_tags)
   .post-summary.media
       .pull-left(href='#')
           .media-object
-            mixin icon(field(post,'icon'), "fa-2x fa-fw page-icon")
+            mixin post_icon(post, "fa-2x fa-fw page-icon")
       .media-body
         h4.media-heading
           mixin link(post, slug, path)

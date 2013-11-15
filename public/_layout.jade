@@ -34,7 +34,7 @@ html(lang='en')
           //- a.label.label-warning(href='http://prose.io/#{ github.repo }/edit/#{ github.branch }/{{ page.path }}')
           //-   mixin icon("code")  edit
         h1.title
-          mixin icon(field(locals,'icon'))
+          mixin post_icon(locals)
           = title
           | 
           small!= description

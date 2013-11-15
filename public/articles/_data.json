@@ -97,6 +97,7 @@
     "tags": [
       "things"
     ],
+    "emoji": "💩",
     "status": "done",
     "description": "<span class='emoji'>🌊 🌟 🍉 🍻 🐌 🐗 👾 🐛 🐧</span>",
     "date": "2013-09-29"
@@ -120,7 +121,7 @@
   },
   "picasaweb-drive-plus-image-urls": {
     "title": "Image URLs for Picasaweb, Google+, and Drive Uploads",
-    "icon": "picture",
+    "icon": "picture-o",
     "description": "Mapping a maze of ornately inlaid brick walls",
     "date": "2013-09-12"
   },
