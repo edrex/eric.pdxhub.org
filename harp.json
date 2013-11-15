@@ -19,7 +19,7 @@
     },
     "defaults": {
       "navbar": true,
-      "icon": "circle",
+      "icon": "coffee",
       "tags": []
     }
   }
