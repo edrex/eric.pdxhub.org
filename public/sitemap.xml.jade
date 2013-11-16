@@ -1,7 +1,7 @@
-include _shared/deep
 doctype xml
+include _shared/deep
 urlset(xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
-  - delete public.drafts
   each val, key in all_posts(public, '/')
-    url
-      loc #{key}
+    unless /^\/drafts\//.test(key)
+      url
+        loc #{key}
