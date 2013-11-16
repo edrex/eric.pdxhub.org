@@ -76,8 +76,8 @@ div(ng-app='myapp')
               div(ng-show='user')
                 input.form-control(type='text', ng-model='text', ng-keydown='addMessage($event)', placeholder='Message...')
               span(ng-hide='user')
-                | Sign in with
-                a(ng-click='login(\'twitter\')') Twitter
-                | or
-                a(ng-click='login(\'github\')') Github
+                | Sign in with 
+                a(ng-click='login(\'twitter\')') Twitter 
+                | or 
+                a(ng-click='login(\'github\')') Github 
                 | to post messages.
