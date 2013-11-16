@@ -1,13 +1,3 @@
----
-title: Semantic Markup with Bootstrap's LESS Mixins
-tags:
-- things
-status: next
-description: |
-  On the path to semantic bliss
-layout: default
----
-
 ## Summary
 
 Move this site from the markup-based Bootstrap API to the LESS API. 

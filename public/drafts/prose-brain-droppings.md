@@ -1,7 +1,3 @@
----
-layout: default
----
-
 These are the things that have been running through my head in the last 24 hours:
 
 Prose with non-github API, specifically Gitlab?

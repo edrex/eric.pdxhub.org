@@ -1,12 +1,3 @@
----
-title: Urban Edibles Revival
-tags:
-- things
-description: Github Project Comparator
-layout: default
-permalink: urbanedibles/
----
-
 ## Who
 
 - Rafa

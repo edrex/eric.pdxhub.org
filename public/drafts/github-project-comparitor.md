@@ -1,25 +1,3 @@
----
-title: Github Project Comparator
-tags:
-- things
-- github
-description: aka "Dis or Dat"
-layout: default
-permalink: dis-or-dat/
-header: |
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-  <script type="text/javascript" src="/assets/javascript/octokit.js"></script>
-  <script type="text/javascript">
-  var projects = [
-    {"user": "ajaxorg", "project": "node-github"},
-    {"user": "pksunkara", "project": "octonode"},
-    {"user": "k33g", "project": "gh3"},
-    {"user": "michael", "project": "github"},
-    {"user": "philschatz", "project": "github-client"}
-  ]
-  </script>
----
-
 ## Background
 
 This gist was helpful 2 years ago when I first found it, but now it is out of date and as such is doing a disservice to people freshly ask the question

@@ -1,0 +1,69 @@
+{
+  "deploy": {
+    "title": "Deployment",
+    "description": "A sketch of my plans for the coming year (rolling)"
+  },
+  "computer hygiene": {
+    "title": "Computer Hygene"
+  },
+  "parse": {
+    "title": "First Experience with Parse",
+    "tags": [
+      "things"
+    ],
+    "status": "done",
+    "description": "\nDive into <a href=\"http://parse.com/\">Parse</a>!\n",
+    "header": "\n<script src=\"http://www.parsecdn.com/js/parse-1.2.12.min.js\"></script>\n<script>\n  Parse.initialize(\"pXMqe2sx7JYW7uIn9fyQNfDa1YnKXPMwqiE3brSC\", \"PfpyTSA5d43v6NV3TvATdZsYkN26DgIDRK8v8JfS\");\n\n  // A complex subclass of Parse.Object\n  var Monster = Parse.Object.extend(\"Monster\", {\n    // Instance methods\n    hasSuperHumanStrength: function() {\n      return this.get(\"strength\") > 18;\n    }\n  }, {\n    // Class methods\n    spawn: function(strength) {\n      var monster = new Monster();\n      monster.set(\"strength\", strength);\n      return monster;\n    }\n  });\n   \n  var monster = Monster.spawn(200);\n  alert(monster.strength());  // Displays 200.\n\n</script>\n",
+    "date": "2013-10-04"
+  },
+  "github-project-comparitor": {
+    "title": "Github Project Comparator",
+    "tags": [
+      "things",
+      "github"
+    ],
+    "description": "aka \"Dis or Dat\"",
+    "header": "\n<script type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js\"></script>\n<script type=\"text/javascript\" src=\"/assets/javascript/octokit.js\"></script>\n<script type=\"text/javascript\">\nvar projects = [\n  {\"user\": \"ajaxorg\", \"project\": \"node-github\"},\n  {\"user\": \"pksunkara\", \"project\": \"octonode\"},\n  {\"user\": \"k33g\", \"project\": \"gh3\"},\n  {\"user\": \"michael\", \"project\": \"github\"},\n  {\"user\": \"philschatz\", \"project\": \"github-client\"}\n]\n</script>\n",
+    "date": "2013-10-02"
+  },
+  "urban_edibles_revival": {
+    "title": "Urban Edibles Revival",
+    "tags": [
+      "things"
+    ],
+    "description": "Github Project Comparator",
+    "date": "2013-10-01"
+  },
+  "mushrooms": {
+    "title": "Mushroom stuff",
+    "tags": [
+      "things"
+    ],
+    "description": "\nMyco research resources\n",
+    "date": "2013-09-31"
+  },
+  "loan-tiddlyweb-sharing-model-to-firebase": {
+    "title": "FireSpaces",
+    "tags": [
+      "things"
+    ],
+    "status": "next",
+    "description": "\nMash up \"space/bag\" concept from TiddlyWeb with Github group model, using Firebase, to support private and collaborative content spaces\n",
+    "date": "2013-09-30"
+  },
+  "less": {
+    "title": "Semantic Markup with Bootstrap's LESS Mixins",
+    "tags": [
+      "things"
+    ],
+    "status": "next",
+    "description": "\nOn the path to semantic bliss\n",
+    "date": "2013-09-25"
+  },
+  "quick-nav-user-story": {
+    "date": "2013-08-09"
+  },
+  "prose-brain-droppings": {
+    "date": "2013-07-14"
+  }
+}

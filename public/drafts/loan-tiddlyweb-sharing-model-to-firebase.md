@@ -1,13 +1,3 @@
----
-title: FireSpaces
-tags:
-- things
-status: next
-description: |
-  Mash up "space/bag" concept from TiddlyWeb with Github group model, using Firebase, to support private and collaborative content spaces
-layout: default
----
-
 This is actually the "bag" concept from TiddlyWeb, but "space" sounds better.
 
 /user/space
