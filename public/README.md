@@ -1,13 +1,3 @@
----
-published: true
-title: README
-tags: main
-description: about this site
-icon: file-text
-layout: default
-permalink: README/
----
-
 The current version this site (my homepage) is based on [reusable Jekyll template](https://github.com/edrex/reusable-jekyll-site), a quick-start skeleton for Github Pages with Bootstrap 3 and some [Prose](http://prose.io/) integrations. 
 
 **However:** I  am experimenting with swapping out parts of this stack

@@ -1,9 +1,10 @@
-Move journal to section
-Search/replace {%%} and {{}} Pages in root dir
-Push !HarpConversion
-Clean up journal !Content
+Review and prioritize Drafts
+ - port _drafts dir
+ - make a report on the index page with a table
+Triage journal review !Content
 
-Drafts
+
+When 
 
 !Styling
 Consistent styling for post and other links (underline on hover, no background change)
@@ -20,7 +21,12 @@ Spec: make tag pages richer
  - make tags search for a page to link to, starting in the current directory and going up
  
 
-Done
+## Done
+
+Move journal to section
+Search/replace {%%} and {{}} Pages in root dir
+Push !HarpConversion
+
 title mixin
 Default icon
 sections menu
