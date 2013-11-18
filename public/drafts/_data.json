@@ -1,20 +1,6 @@
 {
-  "deploy": {
-    "title": "Deployment",
-    "description": "A sketch of my plans for the coming year (rolling)"
-  },
   "computer hygiene": {
-    "title": "Computer Hygene"
-  },
-  "parse": {
-    "title": "First Experience with Parse",
-    "tags": [
-      "things"
-    ],
-    "status": "done",
-    "description": "\nDive into <a href=\"http://parse.com/\">Parse</a>!\n",
-    "header": "\n<script src=\"http://www.parsecdn.com/js/parse-1.2.12.min.js\"></script>\n<script>\n  Parse.initialize(\"pXMqe2sx7JYW7uIn9fyQNfDa1YnKXPMwqiE3brSC\", \"PfpyTSA5d43v6NV3TvATdZsYkN26DgIDRK8v8JfS\");\n\n  // A complex subclass of Parse.Object\n  var Monster = Parse.Object.extend(\"Monster\", {\n    // Instance methods\n    hasSuperHumanStrength: function() {\n      return this.get(\"strength\") > 18;\n    }\n  }, {\n    // Class methods\n    spawn: function(strength) {\n      var monster = new Monster();\n      monster.set(\"strength\", strength);\n      return monster;\n    }\n  });\n   \n  var monster = Monster.spawn(200);\n  alert(monster.strength());  // Displays 200.\n\n</script>\n",
-    "date": "2013-10-04"
+    "title": "Computer Hygiene"
   },
   "github-project-comparitor": {
     "title": "Github Project Comparator",
