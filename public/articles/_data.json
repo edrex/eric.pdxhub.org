@@ -116,7 +116,13 @@
     "status": "done",
     "description": "Using <a href=\"http://angularfire.com/\">Angularfire</a>",
     "icon": "hdd",
-    "header": "<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.js'></script>\n<script src='https://cdn.firebase.com/v0/firebase.js'></script>\n<script src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>\n<script src='https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.js'></script>\n<script src='/assets/scripts/angfire-thing.js'></script>",
+    "scripts": [
+      "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.js",
+      "https://cdn.firebase.com/v0/firebase.js",
+      "https://cdn.firebase.com/v0/firebase-simple-login.js",
+      "https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.js",
+      "/assets/scripts/angfire-thing.js"
+    ],
     "date": "2013-09-14"
   },
   "picasaweb-drive-plus-image-urls": {

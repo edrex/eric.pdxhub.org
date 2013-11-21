@@ -9,7 +9,10 @@
       "github"
     ],
     "description": "aka \"Dis or Dat\"",
-    "header": "\n<script type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js\"></script>\n<script type=\"text/javascript\" src=\"/assets/javascript/octokit.js\"></script>\n<script type=\"text/javascript\">\nvar projects = [\n  {\"user\": \"ajaxorg\", \"project\": \"node-github\"},\n  {\"user\": \"pksunkara\", \"project\": \"octonode\"},\n  {\"user\": \"k33g\", \"project\": \"gh3\"},\n  {\"user\": \"michael\", \"project\": \"github\"},\n  {\"user\": \"philschatz\", \"project\": \"github-client\"}\n]\n</script>\n",
+    "scripts": [
+      "//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js",
+      "/assets/scripts/octokit.js"
+    ],
     "date": "2013-10-02"
   },
   "urban_edibles_revival": {

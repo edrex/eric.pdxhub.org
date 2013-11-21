@@ -18,6 +18,8 @@ html(lang='en')
       $("[rel='tooltip']").tooltip();
       });
     != header
+    each u in (scripts || [])
+      script(src=u)
     include _shared/analytics
   body
     if field(locals, 'navbar')
