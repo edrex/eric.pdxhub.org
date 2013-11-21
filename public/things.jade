@@ -1,7 +1,7 @@
 include _shared/posts
 .row
   .col-sm-7
-    each p in arrayify(public.articles.data).filter(has_tag("things"))
+    each p in arrayify(public.articles._data).filter(has_tag("things"))
       mixin post_summary(p, p.slug, "/articles")
   .col-sm-5
 

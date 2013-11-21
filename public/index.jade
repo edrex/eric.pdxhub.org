@@ -13,6 +13,6 @@ include _shared/posts
       small 
         a(href='/articles/') ...
     ul.nav.nav-pills.nav-stacked
-      each post in posts_array(public.articles.data).slice(0,5)
+      each post in posts_array(public.articles._data).slice(0,5)
         li 
           mixin pretty_link(post, post.slug, '/articles')

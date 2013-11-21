@@ -1,6 +1,6 @@
-each post, slug in public.data
+each post, slug in public._data
   if post.main
     li
       mixin pretty_link(post, slug)
 li
-  mixin pretty_link(public.journal.data.index, 'journal/')
+  mixin pretty_link(public.journal._data.index, 'journal/')

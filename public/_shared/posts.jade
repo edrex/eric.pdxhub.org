@@ -22,7 +22,7 @@ mixin post_icon(post, classes)
     mixin icon(field(post,'icon'), classes)
 
 mixin tag(tag)
-  - var post = public.tags.data[tag] || {'url':'/tags/#tag-'+ tag, 'icon': 'tag'}
+  - var post = public.tags._data[tag] || {'url':'/tags/#tag-'+ tag, 'icon': 'tag'}
   a(class="tag label label-default", href=post.url)
     mixin icon(post.icon)  #{tag}
   | 
@@ -68,11 +68,11 @@ mixin post_summary(post, slug, path, hide_tags)
               mixin tag(tag)
 
 mixin post_index(section)
-  each p in posts_array(public[section].data)
+  each p in posts_array(public[section]._data)
     mixin post_summary(p, p.slug, "/"+section)
 
 mixin post_list(section)
   - var limit = 5
-  each p in posts_array(public[section].data)
+  each p in posts_array(public[section]._data)
     li
       mixin pretty_link(p, p.slug, '/'+section)
