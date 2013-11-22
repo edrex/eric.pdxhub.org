@@ -1,10 +1,8 @@
-Review and prioritize Drafts
- - port _drafts dir
- - make a report on the index page with a table
+mixins for front page grid
+solarized!
 Triage journal review !Content
+Review and prioritize Drafts
 
-
-When 
 
 !Styling
 Consistent styling for post and other links (underline on hover, no background change)
@@ -22,6 +20,10 @@ Spec: make tag pages richer
  
 
 ## Done
+
+Nov 21
+
+ - port _drafts dir
 
 Move journal to section
 Search/replace {%%} and {{}} Pages in root dir
