@@ -1,7 +1,5 @@
 .intro 
   :markdown
-    .
-
     Last Friday [Don Park](http://donpark.org/) pointed me at the project, which started as a Google 20% project and has since been open sourced (when?).
 
     There's a lot to like about Camli for content producers concerned that about the erosion of control over their digital legacy due to "leaking" of their various creative works into content stores controlled by third social providers, ad networks, and spying agencies. Social network TOS typically grant the network provider with various rights over your content, while ad networks and spying agencies never asked your permission in the first place.
@@ -57,6 +55,28 @@
     ## Mentions 
 
     @bretolius @nbdijulio
+
+    ## Photo journaling with camli notes
+
+    I'm considering using camli for an application, and am trying to understand how permanodes and indexing interplay with the schema. As a kind of user story, I'm going to lay out how I plan to represent my application data in camli, and would appreciate if you would pick it apart.
+
+    The application is a graphical journaling workflow. It looks like this:
+    From a cafe, the user lays out a page on pen and paper.
+    With Android phone, user photographs the page, which is added to store.
+    The user decides to publish permanode is created for publication.
+    Either immediately or some time after, annotate regions of the image as links. The annotations would look like:
+    region:
+    type: boundingBox
+    data: [[left, top], [right, bottom]]
+    reference: anotherPermanode (which I think would be created with a name at annotation time, and could be linked to an image file later)
+
+    ## SPAs interacting with the store
+
+    What glue would be needed to let a SPA interact with Camli?
+
+    Does Camli have sessions?
+    HTTP Semantics?
+    Token-based authorization?
 
 
 

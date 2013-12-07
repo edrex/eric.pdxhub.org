@@ -2,7 +2,10 @@
 
  - http://www.jedmcgowan.com/ voyager, bristlecone pine
  - http://www.letswatchstartrek.com/
-
+ - http://studygroupcomics.com/main/gray-city-part-1-by-ryan-dirks/ (Alicia's friend)
+ - http://www.asofterworld.com/
+ - http://www.buttercupfestival.com/2-5.htm
+ 
 ## Math and science
 
  - http://www.dcc.ufmg.br/miningalgorithms/files/pdf/dmafca.pdf
@@ -29,3 +32,13 @@
 
 Andrew Bird Fake Palindromes
 Moby
+
+## Anime
+
+Jacob:
+
+ - attack on titan
+ - deathnote
+ - blue gender
+ - arjuna
+ - flcl
