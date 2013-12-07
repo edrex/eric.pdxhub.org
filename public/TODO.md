@@ -1,3 +1,22 @@
+Todo:
+
+ - front page
+ - back button
+
+ - Labels
+ - Grid for header icon
+
+
+Blog stuff
+  - Get blog out of port limbo (finish+push foundation version)
+  - Write about unhosted, philosophy?
+  - Write about Github etiquite
+
+
+Style Guide
+  - Manual vs Automatic indexing and curation
+
+
 mixins for front page grid
 solarized!
 Triage journal review !Content

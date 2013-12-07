@@ -1,0 +1,70 @@
+body {
+  color: #002b36;
+  background: #fdf6e3;
+  margin-bottom: 1em; }
+
+h1, h2, h3, h4, h5 {
+  color: #073642; }
+
+.subheading {
+  color: #657b83; }
+
+a, a:visited {
+  color: #dc322f;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+.label, .label:visited, .date {
+  padding-right: .2em;
+  white-space: nowrap; }
+
+.date {
+  color: #586e75; }
+
+/*
+EmojiSymbols Font (c)blockworks - Kenichi Kaneko
+http://emojisymbols.com/
+*/
+@font-face {
+  font-family: "EmojiSymbols";
+  src: url("/assets/font/EmojiSymbols-Regular.woff") format("woff");
+  text-decoration: none;
+  font-style: normal; }
+
+.emoji {
+  font-family: "EmojiSymbols"; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto; }
+
+.header, .main, .footer {
+  margin: 0 1.3em; }
+
+.subheading {
+  margin-top: -1em; }
+
+.footer {
+  font-size: .1em;
+  text-align: right; }
+
+.post-summary {
+  margin-bottom: 1em; }
+  .post-summary .post-link {
+    font-size: 1.61803em; }
+  .post-summary .description {
+    color: #002b36; }
+
+ul.inline {
+  text-align: center;
+  list-style-type: none; }
+  ul.inline li {
+    margin-right: 1em;
+    display: inline; }

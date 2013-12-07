@@ -1,21 +1,15 @@
-nav.navbar.navbar-default(role='navigation')
-    //- Brand and toggle get grouped for better mobile display 
-    .navbar-header
-      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-main-collapse')
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a.navbar-brand(href='/', title=site.description)
-        mixin icon("coffee")= name
-    //- Collect the nav links, forms, and other content for toggling 
-    .collapse.navbar-collapse.navbar-main-collapse
-      ul.nav.navbar-nav.navbar-right
-        li
-          mixin pretty_link(public.articles._data.index, "articles/")
-        li
-        li.dropdown
-          a.dropdown-toggle(href='#', data-toggle='dropdown')
-            mixin icon("th-large")  Sections
-          ul.dropdown-menu
-            include sections
+nav.top-bar(data-topbar)
+  ul.title-area
+    li.name
+      h1
+        a(href='/', title=site.description)
+          mixin icon("coffee")= name
+  section.top-bar-section
+    ul.right
+      li
+        mixin pretty_link(public.articles._data.index, "articles/")
+      li.has-dropdown
+        a(href='#')
+          mixin icon("th-large")  Sections
+        ul.dropdown
+          include sections

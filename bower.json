@@ -1,18 +1,5 @@
 {
-  "name": "mysite",
-  "version": "0.0.0",
-  "authors": [
-    "Eric Drechsel <eric@pdxhub.org>"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "name": "i-am-not-a-component",
   "dependencies": {
-    "bootstrap": "~3.0.0"
   }
 }

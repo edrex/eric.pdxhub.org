@@ -8,11 +8,11 @@
 - function posts_array(posts){ return arrayify(posts).filter(no_index) }
 
 mixin icon(icon, classes)
-  span(class="fa fa-#{ icon } #{ classes }")
+  span(class="fa fa-#{ icon } #{ classes || '' }")
   | 
 
 mixin emoji(text, classes)
-  span(class="fa-fw emoji #{ classes }")= text
+  span(class="fa-fw emoji #{ classes || '' }")= text
   | 
 
 mixin post_icon(post, classes)
@@ -36,36 +36,27 @@ mixin post_title(post, slug)
 mixin link(post, slug, path, icon)
   a(href="#{path || ''}/#{ slug }" class="post-link")
     if icon
-      mixin icon(field(post,'icon'), "fa-fw")
+      mixin icon(field(post,'icon'))
     mixin post_title(post, slug)
 
 mixin pretty_link(post, slug, path)
   mixin link(post, slug, path, true)
 
 - var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-- function format_date(d){var D = new Date(d); return D.getDate()+' '+months[D.getMonth()]+' '+D.getFullYear()}
+- function format_date(d){var D = new Date(d); return months[D.getMonth()]+' '+D.getDate()+', '+D.getFullYear()}
 
 mixin date_label(d)
-  span.label.label-info(data-raw=d) 
-    mixin icon("calendar")
+  span.date(data-raw=d) 
+    //- mixin icon("calendar")
     span.date(data-raw=(new Date(d)))= format_date(d)
   | 
 
-mixin post_summary(post, slug, path, hide_tags)
-  .post-summary.media
-      .pull-left(href='#')
-          .media-object
-            mixin post_icon(post, "fa-2x fa-fw page-icon")
-      .media-body
-        h4.media-heading
-          mixin link(post, slug, path)
-        p.description!= post.description
-        .labels
-          if post && post.date
-            mixin date_label(post.date)
-          unless hide_tags
-            each tag in field(post,'tags')
-              mixin tag(tag)
+mixin post_summary(post, slug, path)
+  .post-summary
+    mixin link(post, slug, path)
+    if post && post.date
+      mixin date_label(post.date)
+    div.description!= post.description
 
 mixin post_index(section)
   each p in posts_array(public[section]._data)

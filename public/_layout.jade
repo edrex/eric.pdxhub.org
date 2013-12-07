@@ -9,33 +9,30 @@ html(lang='en')
     meta(name='viewport', content='width=device-width')
     link(rel='shortcut icon', href='/assets/favicon.ico')
     link(href='//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css', rel='stylesheet')
+    link(rel='stylesheet', href='/assets/styles/normalize.css')
+    link(rel='stylesheet', href='/assets/styles/style.css')
     link(rel='stylesheet', href='/assets/styles/syntax.css')
-    link(rel='stylesheet', href='/assets/styles/application.css')
-    script(src='/assets/scripts/jquery.min.js')
-    script(src='/assets/scripts/bootstrap.min.js')
-    script.
-      $(function () {
-      $("[rel='tooltip']").tooltip();
-      });
     != header
     each u in (scripts || [])
       script(src=u)
     include _shared/analytics
   body
-    if field(locals, 'navbar')
-      include _shared/navbar
-    .container.site
-      .page-header
-        p.page-info.pull-right
-          if date
-            mixin date_label(date)
-          each tag in field(locals, "tags")
-            mixin tag(tag)
-          //- a.label.label-warning(href='http://prose.io/#{ github.repo }/edit/#{ github.branch }/{{ page.path }}')
-          //-   mixin icon("code")  edit
+    //- if field(locals, 'navbar')
+    //-   include _shared/navbar
+    .container
+      .header
+        unless (current.path.length == 1 && current.path[0]=='index')
+          a(class='nav-link' href='/') ◀
         h1.title
-          mixin post_icon(locals)
-          = title
-        h1.subtitle: small!= description
-      .page-body
+          span.brand
+            mixin post_icon(locals)
+            = title
+            | 
+        h3.subheading!= description
+      .main
+        div.page-info
+          include _shared/post_tags
+
         != yield
+      .footer
+    //- script(src='/assets/scripts/jquery.js')

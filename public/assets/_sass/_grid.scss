@@ -1,0 +1,18 @@
+$grids: 10;
+$gutters: .5;
+$include-clearfix: true;
+
+body {
+}
+
+// .container {
+//   width: 960px;
+// }
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.header, .main, .footer  {
+  // @include background-grid;
+  margin: 0 1.3em;
+}

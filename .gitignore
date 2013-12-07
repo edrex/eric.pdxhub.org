@@ -4,5 +4,6 @@ out
 *.sw?
 *.un~
 .DS_Store
-components
+public/assets/_components
 node_modules
+.sass-cache

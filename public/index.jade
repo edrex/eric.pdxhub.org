@@ -1,18 +1,8 @@
 include _shared/posts
 
 .home
+  ul.sections.inline
+    include _shared/sections
   .articles
-    h2
-      mixin icon("bookmark") Articles
-      small 
-        a(href='/articles/') ...
-    ul.nav.nav-pills.nav-stacked
-      each post in posts_array(public.articles._data).slice(0,5)
-        li 
-          mixin pretty_link(post, post.slug, '/articles')
-  .sections
-    h2 
-      mixin icon("th-large")
-      | Sections
-    ul.nav.nav-pills.nav-stacked
-      include _shared/sections
+    each post in posts_array(public.articles._data)
+      mixin post_summary(post, post.slug, '/articles')

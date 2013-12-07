@@ -1,0 +1,58 @@
+//////////////////////////////
+// Set legacy support
+//
+// If you need support for IE6 or IE7, you should install the Box Sizing polyfill.
+// In your project's folder from the command line, type the following:
+// compass install singularitygs/box-sizing
+//////////////////////////////
+$legacy-support-for-ie6:     false;
+$legacy-support-for-ie7:     false;
+$legacy-support-for-mozilla: false;
+
+//////////////////////////////
+// Imports
+//////////////////////////////
+@import "breakpoint";
+@import "singularitygs";
+@import "colors";
+@import "emoji";
+@import "modular-scale";
+
+
+*, *:before, *:after{
+  @include box-sizing('border-box');
+}
+
+@import "grid";
+
+.subheading {
+  margin-top: -1em;
+}
+
+.footer {
+  font-size: .1em;
+  text-align: right;
+}
+
+.post-summary {
+  .post-link {
+    font-size: ms(1, 1em);
+  }
+  .description {
+    color: $base03;
+  }
+  margin-bottom: 1em;
+}
+
+.sections {
+  // font-size: ms(1, 1em);
+
+}
+ul.inline {
+  text-align: center;
+  list-style-type: none;
+  li {
+    margin-right: 1em;
+    display: inline;
+  }
+}
