@@ -25,6 +25,12 @@ $legacy-support-for-mozilla: false;
 
 @import "grid";
 
+.nav-link {
+  margin-left: -2em;
+  margin-top: 1em;
+  float: left;
+}
+
 .subheading {
   margin-top: -1em;
 }
