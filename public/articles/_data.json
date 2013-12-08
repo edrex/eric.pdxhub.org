@@ -5,7 +5,7 @@
   },
   "camlistore": {
     "title": "Camlistore",
-    "description": "A content addressable storage system for your stuff",
+    "description": "A content-addressable storage system for your stuff",
     "tags": [
       "privacy",
       "storage"

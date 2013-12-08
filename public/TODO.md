@@ -1,5 +1,5 @@
 Todo:
-
+ - current font icons are kind of shit. icomoon + local styles
  - front page
  - back button
 
