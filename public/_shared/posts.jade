@@ -40,9 +40,7 @@ mixin pretty_link(post, slug, path)
 - function format_date(d){var D = new Date(d); return months[D.getMonth()]+' '+D.getDate()+', '+D.getFullYear()}
 
 mixin date_label(d)
-  span.date(data-raw=d) 
-    //- mixin icon("calendar")
-    span.date(data-raw=(new Date(d)))= format_date(d)
+  span.date(data-raw=d)= format_date(d)
   | 
 
 mixin post_summary(post, slug, path)
