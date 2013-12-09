@@ -49,11 +49,6 @@
     "main": true,
     "icon": "file-text"
   },
-  "TODO": {
-    "title": "TODO",
-    "description": "Website roadmap and brainstorming",
-    "icon": "check-square-o"
-  },
   "404": {
     "title": "404",
     "description": "Nothing to see here",
