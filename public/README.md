@@ -3,12 +3,12 @@
 The current version of [edrex](/bio)'s homepage was created using these fine tools:
 
   * [Markdown](http://daringfireball.net/projects/markdown/)
-  * Jade
-  * Harp
-  * Sass
-  * Singularity Grid
+  * [Jade](http://jade-lang.com/)
+  * [Harp](http://harpjs.com/community)
+  * [Sass](http://sass-lang.com/guide)
+  * [Singularity Grid](https://github.com/Team-Sass/Singularity/wiki)
   * [Emoji Symbols](http://emojisymbols.com/)
-  * Font Awesome icons
+  * [Font Awesome](fontawesome.io)
   * [Git](http://git-scm.com/)
 
 ## Next
