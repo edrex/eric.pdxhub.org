@@ -1,8 +1,11 @@
+extends _jlayout
 include _shared/posts
 
-.home
-  ul.sections.inline
-    include _shared/sections
-  .articles
-    each post in posts_array(public.articles._data)
-      mixin post_summary(post, post.slug, '/articles')
+block page-info
+  include _shared/sections
+
+block main
+  .home
+    .articles
+      each post in posts_array(public.articles._data)
+        mixin post_summary(post, post.slug, '/articles')

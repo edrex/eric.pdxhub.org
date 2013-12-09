@@ -3,7 +3,8 @@
     "title": "French Press",
     "icon": "coffee",
     "description": "Diary of a common cafe nerd",
-    "navbar": false
+    "navbar": false,
+    "layout": false
   },
   "bio": {
     "title": "Bio",

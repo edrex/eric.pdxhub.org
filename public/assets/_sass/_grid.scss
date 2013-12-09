@@ -1,18 +1,42 @@
-$grids: 10;
-$gutters: .5;
+$med: 500px;
+$lg: 800px;
+
+$grids: 2 3 3;
+// $grids: add-grid(6 at $med);
+$gutters: .2;
+// $gutters: add-gutter(.25 at $med);
 $include-clearfix: true;
 
+@include grid-toggle;
+
 body {
+  margin: 0 auto;
+  max-width: 960px;
+}
+.container {
+  margin: 0 gutter-span();
+  @include breakpoint($med) {
+    margin: 0 gutter-span();
+  }
+  @include clearfix;
 }
 
-// .container {
-//   width: 960px;
-// }
-.container {
-  max-width: 960px;
-  margin: 0 auto;
+.header > *, .main > *, .footer > * {
+  @include grid-span(2, 2);
+  clear: right;
 }
-.header, .main, .footer  {
-  // @include background-grid;
-  margin: 0 1.3em;
+
+.header > * {
+  margin-top: .25em 0;
+}
+
+.gutter {
+  @include grid-span(1, 1);
+  clear: both;
+  text-align: center;
+}
+
+
+.articles .post-summary {
+  // @include clearfix;
 }
