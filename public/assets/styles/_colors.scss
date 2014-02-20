@@ -17,13 +17,14 @@ $green:     #859900;
 
 body {
   color: $base02;
+  background: $base3;
+  margin-bottom: 1em;
 }
 
 .container {
   border-left: 5px solid $base2;
   border-right: 5px solid $base2;
-  background: $base3;
-  margin-bottom: 1em;
+  // background: $base3;
 }
 
 h1, h2, h3, h4, h5 {
