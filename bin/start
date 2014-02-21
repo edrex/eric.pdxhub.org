@@ -1,0 +1,7 @@
+#!/bin/sh
+
+trap 'kill $(jobs -p)' EXIT
+pushd public/assets/_sass/
+  bundle exec sass --watch style.scss:../styles/style.css --compass --sourcemap&
+popd
+harp server

@@ -1,0 +1,16 @@
+{
+  "name": "frenchpress",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/edrex/edrex.github.io.git"
+  },
+  "scripts": {
+    "postinstall": "cd public/assets/_sass; bundle",
+    "start": "bin/start",
+    "deploy": "bin/deploy"
+  },
+  "devDependencies": {
+    "bower": "~1.2.6"
+  }
+}
