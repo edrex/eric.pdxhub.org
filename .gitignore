@@ -7,3 +7,4 @@ out
 public/assets/_components
 node_modules
 .sass-cache
+npm-debug.log
