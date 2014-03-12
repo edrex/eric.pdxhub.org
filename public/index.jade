@@ -6,6 +6,31 @@ block page-info
 
 block main
   .home
+    h2 Activity Stream
+    ul.activities
+    h2 Featured Articles
     .articles
       each post in posts_array(public.articles._data)
         mixin post_summary(post, post.slug, '/articles')
+
+block scripts
+  script(type='text/javascript').
+    $.get("https://zapier.com/engine/rss/196193/activity/", function (data) {
+      var items = $(data).find("item").map(function () { 
+        var el = $(this);
+        // TODO: 
+        // - use post URL regex to set source
+        // 
+        return {
+          title: el.find("title").text(),
+          link: el.find("link").text(),
+          description: el.find("description").text(),
+          author: el.find("creator").text(),
+          date: el.find("pubDate").text(),
+          source: el.find('link').text().replace(/^https?:\/\/([a-z.]+\.)?([a-z]+)\.[a-z]+\/.*/,"$2")
+        }
+      }).get();
+      var tpl = '<% _.forEach(items, function(i) { %><li><i class="fa fa-<%- i.source %>"></i> <a href="<%- i.link %>"><%- i.description %></a></li><% }); %>';
+      
+      $('.activities').html(_.template(tpl, { items: items }))
+    });

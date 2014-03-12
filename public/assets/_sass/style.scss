@@ -49,6 +49,11 @@ $legacy-support-for-mozilla: false;
   // font-size: ms(1, 1em);
 
 }
+
+ul.activities {
+  list-style-type: none;
+}
+
 ul.inline {
   text-align: center;
   list-style-type: none;
