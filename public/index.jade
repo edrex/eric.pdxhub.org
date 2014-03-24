@@ -4,8 +4,8 @@ include _shared/posts
 block main
   .home
     .activityStream
-      h2 Latest activity
-      ul
+      h2 My stream
+      ul.fa-ul
       a.more(href) Load more..
     h2 Featured Articles
     .articles
@@ -34,7 +34,7 @@ block scripts
             source: el.find('link').text().replace(/^https?:\/\/([a-z.]+\.)?([a-z]+)\.[a-z]+\/.*/,"$2")
           }
         }).get();
-        var tpl = '<% _.forEach(items, function(i) { %><li><i class="fa fa-<%- i.source %>"></i> <a href="<%- i.link %>"><%- i.title %></a></li><% }); %>';
+        var tpl = '<% _.forEach(items, function(i) { %><li><a href="<%- i.link %>" title="<%- i.source %> - <%- new Date(i.date).toDateString() %>"><i class="fa fa-li fa-<%- i.source %>"></i><%- i.title %></a></li><% }); %>';
         
         roots.html(_.template(tpl, { items: items }))
       });
