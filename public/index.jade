@@ -6,8 +6,10 @@ block page-info
 
 block main
   .home
-    h2 Activity Stream
-    ul.activities
+    .activityStream
+      h2 Latest activity
+      ul
+      a.more(href) Load more..
     h2 Featured Articles
     .articles
       each post in posts_array(public.articles._data)
@@ -15,22 +17,33 @@ block main
 
 block scripts
   script(type='text/javascript').
-    $.get("https://zapier.com/engine/rss/196193/activity/", function (data) {
-      var items = $(data).find("item").map(function () { 
-        var el = $(this);
-        // TODO: 
-        // - use post URL regex to set source
-        // 
-        return {
-          title: el.find("title").text(),
-          link: el.find("link").text(),
-          description: el.find("description").text(),
-          author: el.find("creator").text(),
-          date: el.find("pubDate").text(),
-          source: el.find('link').text().replace(/^https?:\/\/([a-z.]+\.)?([a-z]+)\.[a-z]+\/.*/,"$2")
-        }
-      }).get();
-      var tpl = '<% _.forEach(items, function(i) { %><li><i class="fa fa-<%- i.source %>"></i> <a href="<%- i.link %>"><%- i.description %></a></li><% }); %>';
-      
-      $('.activities').html(_.template(tpl, { items: items }))
-    });
+    function renderActivityStream(roots, limit) {
+      $.get("https://zapier.com/engine/rss/196193/activity/", function (data) {
+        var items = $(data).find("item").slice(0,limit).map(function () { 
+          var el = $(this);
+          // TODO: 
+          // - use post URL regex to set source
+          // 
+          return {
+            title: el.find("title").text(),
+            link: el.find("link").text(),
+            description: el.find("description").text(),
+            author: el.find("creator").text(),
+            date: el.find("pubDate").text(),
+            source: el.find('link').text().replace(/^https?:\/\/([a-z.]+\.)?([a-z]+)\.[a-z]+\/.*/,"$2")
+          }
+        }).get();
+        var tpl = '<% _.forEach(items, function(i) { %><li><i class="fa fa-<%- i.source %>"></i> <a href="<%- i.link %>"><%- i.title %></a></li><% }); %>';
+        
+        roots.html(_.template(tpl, { items: items }))
+      });
+    }
+    (function() {
+      var roots = $('.activityStream')
+      renderActivityStream(roots.children('ul'), 3)
+      roots.children('.more').click(function(event){
+        event.preventDefault();
+        renderActivityStream($( this ).siblings('ul'));
+        $(this).hide()
+      });
+    }())
