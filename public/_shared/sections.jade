@@ -1,4 +1,5 @@
 each post, slug in public._data
   if post.main
     li
-      mixin pretty_link(post, slug)
+      a(href=slug, title=post.title)
+        mixin post_icon(post)
