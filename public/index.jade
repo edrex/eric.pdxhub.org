@@ -11,9 +11,13 @@ block main
         a focus on user experience, education in math modeling and statistical methods,
         and an immense curiousity and propensity for diving in with new and challenging topics. 
     .activityStream
-      h2 My stream
+      h2
+        a.source(href="https://zapier.com/engine/rss/196193/activity/")
+          mixin icon("rss", nil, true)
+        |  Aggregated activity
       ul.fa-ul
-      a.more(href) Load more..
+      a.more(href)
+        i.fa.fa-ellipsis-h
     h2 Featured Articles
     .articles
       each post in posts_array(public.articles._data)
