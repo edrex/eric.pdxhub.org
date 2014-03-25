@@ -23,8 +23,7 @@ html(lang='en')
           unless (current.path.length == 1 && current.path[0]=='index')
             li 
               a.gutter(href='/' title='home')
-                mixin icon('home')
-                |  Home
+                mixin icon('home') Home
           include _shared/sections
           li#searchBox
             form(action='http://google.com/cse')

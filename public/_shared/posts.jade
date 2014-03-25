@@ -19,7 +19,6 @@ mixin tag(tag)
   - var post = public.tags._data[tag] || {'url':'/tags/#tag-'+ tag, 'icon': 'tag'}
   a(class="tag label label-default", href=post.url)
     mixin icon(post.icon) #{tag}
-  | 
 
 mixin post_title(post, slug)
   if post.title
@@ -30,7 +29,7 @@ mixin post_title(post, slug)
 mixin link(post, slug, path, icon)
   a(href="#{path || ''}/#{ slug }" class="post-link")
     if icon
-      mixin icon(field(post,'icon'))  
+      mixin icon(field(post,'icon'))
     mixin post_title(post, slug)
 
 mixin pretty_link(post, slug, path)
