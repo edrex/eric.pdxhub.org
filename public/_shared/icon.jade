@@ -1,6 +1,6 @@
 mixin icon(icon, classes)
-  span(class="fa fa-#{ icon } #{ classes || '' }")
+  i(class="fa fa-#{ icon } #{ classes || '' }")
 
 mixin emoji(text, classes)
-  span(class="fa-fw emoji #{ classes || '' }")= text
+  i(class="fa-fw emoji #{ classes || '' }")= text
 

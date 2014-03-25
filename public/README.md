@@ -1,6 +1,10 @@
+## Source
+
+Source code is available on Github at [edrex/edrex.github.io](https://github.com/edrex/edrex.github.io). Pull requests welcome :)
+
 ## Credits
 
-The current version of [edrex](/bio)'s homepage was created using these fine tools:
+The current version of my homepage was created using these fine tools:
 
   * [Markdown](http://daringfireball.net/projects/markdown/)
   * [Jade](http://jade-lang.com/)

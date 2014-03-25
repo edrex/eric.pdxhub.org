@@ -30,7 +30,7 @@ mixin post_title(post, slug)
 mixin link(post, slug, path, icon)
   a(href="#{path || ''}/#{ slug }" class="post-link")
     if icon
-      mixin icon(field(post,'icon'))
+      mixin icon(field(post,'icon'))  
     mixin post_title(post, slug)
 
 mixin pretty_link(post, slug, path)

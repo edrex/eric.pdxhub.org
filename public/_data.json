@@ -10,7 +10,7 @@
     "title": "Bio",
     "description": "Eric's Vital Statistics",
     "icon": "user",
-    "main": true
+    "main": false
   },
   "things": {
     "title": "Thing a Day",
@@ -27,7 +27,7 @@
   "tags": {
     "title": "Tags",
     "icon": "tags",
-    "main": true
+    "main": false
   },
   "year": {
     "title": "Year",
@@ -43,6 +43,11 @@
   },
   "articles": {
     "title": "Articles"
+  },
+  "journal/": {
+    "title": "Journal",
+    "main": true,
+    "icon": "pencil"
   },
   "README": {
     "title": "README",

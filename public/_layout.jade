@@ -19,18 +19,25 @@ html(lang='en')
   body
     .container
       .header
+        ul.site-nav
+          unless (current.path.length == 1 && current.path[0]=='index')
+            li 
+              a.gutter(href='/' title='home')
+                mixin icon('home')
+                |  Home
+          include _shared/sections
+          li#searchBox
+            form(action='http://google.com/cse')
+              input(type='hidden', name='cx', value='012963123305395825585:pm5e7m4z5ey')
+              input(type='hidden', name='ie', value='UTF-8')
+              input(type='text', name='q', size='20')
         h1.title
           span.brand
             mixin post_icon(locals)
             mixin post_title(locals, current.path[current.path.length-1])
             | 
-        unless (current.path.length == 1 && current.path[0]=='index')
-          a.gutter(href='/' title='home')
-            //- mixin icon('home')
-            | ◀ Home
-            //- ▲
         h3.subheading!= description
-        ul.inline.links
+        ul.page-info
           block page-info
             include _shared/post_tags
       .main

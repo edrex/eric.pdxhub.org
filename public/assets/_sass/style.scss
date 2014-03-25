@@ -54,12 +54,26 @@ ul.activities {
   list-style-type: none;
 }
 
-ul.inline {
-  text-align: center;
+ul.site-nav, ul.page-info {
+  text-align: right;
   list-style-type: none;
   padding-left: 0;
   li {
     margin-right: 1em;
-    display: inline;
+    display: inline-block;
   }
+  clear: both;
 }
+
+ul.page-info {
+  text-align: center;
+}
+
+#searchBox * {
+  display: inline;
+}
+
+// fix underline for icons in links
+// i {
+//   text-decoration: inherit
+// }
