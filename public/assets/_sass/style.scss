@@ -38,6 +38,11 @@ ul.activities {
   list-style-type: none;
 }
 
+// weirdness with float avatar on front page
+.fa-li {
+  position: static;
+}
+
 ul.site-nav, ul.page-info {
   text-align: right;
   list-style-type: none;
