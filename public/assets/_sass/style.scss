@@ -1,11 +1,12 @@
 // @import "breakpoint";
-@import "singularitygs";
+// @import "singularitygs";
 @import "colors";
 @import "emoji";
 // @import "layout";
+@import "bourbon";
 
 *, *:before, *:after{
-  @include box-sizing('border-box');
+  @include box-sizing(border-box);
 }
 
 @import "grid";

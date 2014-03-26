@@ -15,9 +15,6 @@ body {
 }
 .container {
   padding: 1px 2*$gutters;
-  @include breakpoint($med) {
-    margin: 0 gutter-span();
-  }
   @include clearfix;
 }
 
