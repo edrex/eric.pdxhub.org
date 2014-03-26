@@ -1,5 +1,5 @@
 each post, slug in public._data
   if post.main
     li
-      a(href=slug, title=post.title)
+      a(href='/'+slug, title=post.title)
         mixin post_icon(post)
