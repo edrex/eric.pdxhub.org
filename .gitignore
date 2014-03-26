@@ -8,3 +8,5 @@ public/assets/_components
 node_modules
 .sass-cache
 npm-debug.log
+public/assets/styles/style.css
+public/assets/styles/style.css.map
