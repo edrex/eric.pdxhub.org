@@ -20,7 +20,16 @@ body {
 
 .header > *, .main > *, .footer > * {
   // @include grid-span(2, 2);
-  clear: right;
+  // clear: right;
+}
+
+.header > h1 {
+  display: inline-block;
+}
+
+ul.site-nav {
+  float: right;
+  margin-bottom: 0;
 }
 
 .header > * {
