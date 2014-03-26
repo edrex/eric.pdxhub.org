@@ -1,2 +1,13 @@
 include ../_shared/posts
+include ../_shared/index_posts
+
+h2 Drafts
+
 mixin post_index('drafts')
+
+h2 Tags
+ul
+  each paths, tag in indexPostsBy(all_posts(public, ''), fieldGetter('tags'))
+    li
+      a(href="/tags#" + tag)= tag
+      small= paths.length
