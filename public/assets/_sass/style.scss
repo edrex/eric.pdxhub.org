@@ -28,10 +28,6 @@
 
 }
 
-ul.activities {
-  list-style-type: none;
-}
-
 ul.site-nav, ul.page-info {
   text-align: right;
   list-style-type: none;
@@ -47,13 +43,6 @@ ul.page-info {
   text-align: center;
 }
 
-
-.aside {
-  margin-right: 1em;
-  margin-bottom: 1em;
-  float: left;
-}
-
 #searchBox * {
   display: inline;
 }
@@ -62,14 +51,21 @@ ul.page-info {
   display: flex;
   align-items: flex-start;
   .figure {
+    align-self: center;
+    text-align: center;
     margin-right: 1em;
+    flex: 0 0 33.3333%;
   }
   .body {
-    flex: 1;
+    flex: 0 0 66.6666%;
+    .toolbar {
+      text-align: center;
+    }
   }
+  margin-bottom: 2em;
 }
 
-// fix underline for icons in links
-// i {
-//   text-decoration: inherit
-// }
+.avatar {
+  width: 100%;
+  max-width: 192px;
+}

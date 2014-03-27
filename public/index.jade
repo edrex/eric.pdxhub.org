@@ -4,7 +4,8 @@ include _shared/posts
 block main
   .home
     .bio.media
-      img.figure(src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=192")
+      .figure
+        img.avatar(src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=192")
       .body
         :markdown
           I'm **Eric Drechsel** &mdash;
@@ -13,20 +14,19 @@ block main
           and an immense curiousity and propensity for diving in with new and challenging topics. 
 
           In my free time I ride my bike, eat things I find outdoors, take online courses, and experiment with distributed information systems.
-        .activityStream.media
-
-          .body
-            ul.fa-ul
-          .figure
-            a.source(title="RSS Feed" href="https://zapier.com/engine/rss/196193/activity/")
-              mixin icon("rss", ["fa-4x"], true)
-            br
-            a.more(href title="Load more activities")
-              mixin icon("ellipsis-h", ["fa-4x"], true)
-        .articles
-          h2 Featured Articles
-          each post in posts_array(public.articles._data)
-            mixin post_summary(post, post.slug, '/articles')
+    .activityStream.media
+      .figure
+        a.source(title="RSS Feed" href="https://zapier.com/engine/rss/196193/activity/")
+          mixin icon("rss", ["fa-4x"], true)
+      .body
+        ul.fa-ul
+        .toolbar
+          a.more(href title="Load more activities")
+            mixin icon("ellipsis-h", ["fa-2x"], true)
+    .articles
+      h2 Featured Articles
+      each post in posts_array(public.articles._data)
+        mixin post_summary(post, post.slug, '/articles')
 
 block footer
 
