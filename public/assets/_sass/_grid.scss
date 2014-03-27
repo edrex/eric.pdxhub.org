@@ -1,13 +1,7 @@
 $med: 500px;
 $lg: 800px;
 
-$grids: 2 3 3;
-// $grids: add-grid(6 at $med);
 $gutters: .6em;
-// $gutters: add-gutter(.25 at $med);
-$include-clearfix: true;
-
-// @include grid-toggle;
 
 body {
   margin: 0 auto;
@@ -16,11 +10,6 @@ body {
 .container {
   padding: 1px 2*$gutters;
   @include clearfix;
-}
-
-.header > *, .main > *, .footer > * {
-  // @include grid-span(2, 2);
-  // clear: right;
 }
 
 .header > h1 {
@@ -32,17 +21,7 @@ ul.site-nav {
   margin-bottom: 0;
 }
 
-.header > * {
-  margin-top: .25em 0;
-}
-
 .gutter {
-  // @include grid-span(1, 1);
   clear: both;
   text-align: center;
-}
-
-
-.articles .post-summary {
-  // @include clearfix;
 }
