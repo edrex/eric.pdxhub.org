@@ -34,11 +34,6 @@ ul.activities {
   list-style-type: none;
 }
 
-// weirdness with float avatar on front page
-.fa-li {
-  position: static;
-}
-
 ul.site-nav, ul.page-info {
   text-align: right;
   list-style-type: none;
@@ -57,11 +52,23 @@ ul.page-info {
 
 .aside {
   margin-right: 1em;
+  margin-bottom: 1em;
   float: left;
 }
 
 #searchBox * {
   display: inline;
+}
+
+.media {
+  display: flex;
+  align-items: flex-start;
+  .figure {
+    margin-right: 1em;
+  }
+  .body {
+    flex: 1;
+  }
 }
 
 // fix underline for icons in links

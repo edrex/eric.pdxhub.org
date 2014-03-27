@@ -3,25 +3,30 @@ include _shared/posts
 
 block main
   .home
-    img.avatar.aside(src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=256")
-    .bio
-      :markdown
-        I'm **Eric Drechsel** &mdash;
-        a multiclass creative professional with deep roots in the web and open source, 
-        a focus on user experience, education in math modeling and statistical methods,
-        and an immense curiousity and propensity for diving in with new and challenging topics. 
-    .activityStream
-      h2
-        a.source(href="https://zapier.com/engine/rss/196193/activity/")
-          mixin icon("rss", nil, true)
-        |  Aggregated activity
-      ul.fa-ul
-      a.more(href)
-        i.fa.fa-ellipsis-h
-    h2 Featured Articles
-    .articles
-      each post in posts_array(public.articles._data)
-        mixin post_summary(post, post.slug, '/articles')
+    .bio.media
+      img.figure(src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=192")
+      .body
+        :markdown
+          I'm **Eric Drechsel** &mdash;
+          a multiclass creative professional with deep roots in the web and open source, 
+          a focus on user experience, education in math modeling and statistical methods,
+          and an immense curiousity and propensity for diving in with new and challenging topics. 
+
+          In my free time I ride my bike, eat things I find outdoors, take online courses, and experiment with distributed information systems.
+        .activityStream.media
+
+          .body
+            ul.fa-ul
+          .figure
+            a.source(title="RSS Feed" href="https://zapier.com/engine/rss/196193/activity/")
+              mixin icon("rss", ["fa-4x"], true)
+            br
+            a.more(href title="Load more activities")
+              mixin icon("ellipsis-h", ["fa-4x"], true)
+        .articles
+          h2 Featured Articles
+          each post in posts_array(public.articles._data)
+            mixin post_summary(post, post.slug, '/articles')
 
 block footer
 
@@ -50,10 +55,10 @@ block scripts
     }
     (function() {
       var roots = $('.activityStream')
-      renderActivityStream(roots.children('ul'), 3)
-      roots.children('.more').click(function(event){
+      renderActivityStream(roots.find('ul'), 5)
+      roots.find('.more').click(function(event){
         event.preventDefault();
-        renderActivityStream($( this ).siblings('ul'));
+        renderActivityStream(roots.find('ul'));
         $(this).hide()
       });
     }())
