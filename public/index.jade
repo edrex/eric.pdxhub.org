@@ -19,6 +19,7 @@ block main
         a.source(title="RSS Feed" href="https://zapier.com/engine/rss/196193/activity/")
           mixin icon("rss", ["fa-4x"], true)
       .body
+        h2 My Stream
         ul.fa-ul
         .toolbar
           a.more(href title="Load more activities")
@@ -32,14 +33,21 @@ block footer
 
 block scripts
   script(type='text/javascript').
-    function renderActivityStream(roots, limit) {
+    function renderActivityStream(root, extender, limit) {
       var ignore = [
         /^edrex pushed to master at edrex\/edrex.github.io/,
         /^RT @/
       ]
+      var tpl = '<% _.forEach(items, function(i) { %><li><a href="<%- i.link %>" title="<%- i.source %> - <%- new Date(i.date).toDateString() %>"><i class="fa fa-li fa-<%- i.source %>"></i><%- i.title %></a></li><% }); %>';
+      var n = 0;
+      var items = [];
 
+      function extend(){
+        n = n + limit;
+        root.html(_.template(tpl, { items: items.slice(0,n) }))
+      }
       $.get("https://zapier.com/engine/rss/196193/activity/", function (data) {
-        var items = $(data).find("item").map(function () { 
+        items = $(data).find("item").map(function () { 
           var el = $(this);
           return {
             title: el.find("title").text(),
@@ -51,18 +59,18 @@ block scripts
           }
         }).get().filter(function(elt){
           return !(ignore.some(function(p){return p.test(elt.title)}));
-        }).slice(0,limit);
-        var tpl = '<% _.forEach(items, function(i) { %><li><a href="<%- i.link %>" title="<%- i.source %> - <%- new Date(i.date).toDateString() %>"><i class="fa fa-li fa-<%- i.source %>"></i><%- i.title %></a></li><% }); %>';
-        
-        roots.html(_.template(tpl, { items: items }))
+        });
+        extend();
+        extender.click(function(event){
+          event.preventDefault();
+          extend();
+          if (n >= items.length) {
+            $(this).hide();
+          }
+        });
       });
     }
     (function() {
-      var roots = $('.activityStream')
-      renderActivityStream(roots.find('ul'), 5)
-      roots.find('.more').click(function(event){
-        event.preventDefault();
-        renderActivityStream(roots.find('ul'));
-        $(this).hide()
-      });
+      var root = $('.activityStream')
+      renderActivityStream(root.find('ul'), root.find('.more'), 5)
     }())
