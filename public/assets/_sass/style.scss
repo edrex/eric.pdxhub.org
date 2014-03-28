@@ -55,6 +55,7 @@ ul.page-info {
     text-align: center;
     margin-right: 1em;
     flex: 0 0 33.3333%;
+    max-width: 192px;
   }
   .body {
     flex: 0 0 66.6666%;
@@ -67,5 +68,4 @@ ul.page-info {
 
 .avatar {
   width: 100%;
-  max-width: 192px;
 }
