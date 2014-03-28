@@ -38,7 +38,7 @@ block scripts
         /^edrex pushed to master at edrex\/edrex.github.io/,
         /^RT @/
       ]
-      var tpl = '<% _.forEach(items, function(i) { %><li><a href="<%- i.link %>" title="<%- i.source %> - <%- new Date(i.date).toDateString() %>"><i class="fa fa-li fa-<%- i.source %>"></i><%- i.title %></a></li><% }); %>';
+      var tpl = '<% _.forEach(items, function(i) { %><li><a href="<%- i.link %>" title="<%- i.source %> - <%- new Date(i.date).toDateString() %>"><i class="fa fa-li fa-<%- i.source %>"></i><%= i.title %></a></li><% }); %>';
       var n = 0;
       var items = [];
 
