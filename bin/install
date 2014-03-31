@@ -1,0 +1,5 @@
+bower install
+rm -rf public/talks/reveal
+cp -R public/assets/_components/reveal.js public/talks/reveal
+cd public/assets/_sass
+bundle

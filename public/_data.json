@@ -18,6 +18,12 @@
     "main": true,
     "icon": "gift"
   },
+  "talks/": {
+    "title": "Talks",
+    "description": "Slides of my most recent talks",
+    "main": true,
+    "icon": "comment"
+  },
   "media-inbox": {
     "title": "Media Inbox",
     "main": true,

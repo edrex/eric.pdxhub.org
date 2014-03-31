@@ -6,7 +6,7 @@
     "url": "http://github.com/edrex/edrex.github.io.git"
   },
   "scripts": {
-    "postinstall": "cd public/assets/_sass; bundle",
+    "postinstall": "bin/install",
     "start": "bin/start",
     "deploy": "bin/deploy"
   },

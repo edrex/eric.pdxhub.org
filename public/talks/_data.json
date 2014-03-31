@@ -1,5 +1,17 @@
 {
+  "index": {
+    "layout": "../_layout"
+  },
   "workflow": {
-    "title": "Workflow Talk"
+    "title": "Workflow Talk",
+    "theme": "solarized"
+  },
+  "camlistore": {
+    "title": "Publishing sites out of Camlistore",
+    "theme": "sky"
+  },
+  "camlistore-your-handwritten-notes": {
+    "title": "Camlistore your handwritten notes",
+    "theme": "simple"
   }
 }

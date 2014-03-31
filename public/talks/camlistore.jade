@@ -1,0 +1,50 @@
+section
+  h1 Publishing websites out of Camlistore
+  p
+    small
+      | Speaker:
+      a(href='http://eric.pdxhub.org') Eric Drechsel
+      |  /
+      a(href='http://twitter.com/edrex') @edrex
+  aside.notes
+    | Point-in-time snapshot of my learning process. Questions/comments anytime.
+section
+  h2 Outline
+  :markdown
+    - oh hi
+    - Once you've put all your information in one basket, you might want to publish a website out of it.
+    - Options:
+      - Go templates
+        - Have to rebuild the binary each time. That's no fun!
+        - Also violates encapsulation like whoa. I want my store to be a black box with a consistent API.
+        - Go templates seem great for teaching the server custom output formats (FOOSON?)
+      - External build process
+        - BYO tools/environment
+      - Need to get at store data somehow
+    - My site build: <draw a picture>
+      - Posts (Markdown and Jade) + templates (Jade) in Git
+      - Metadata in `_data.json`
+      - Harp feeds metadata to Jade templates
+    - Want
+      - Posts are Camli objects (Permanodes)
+      - Metadata via Camli claims
+      - Templates in Git
+    - Questions
+      - How to update
+
+    - The vision
+      1 Capture
+        - One interpolated stream for all activity
+          - Location history
+          - Smartphone photos
+          - Social network activity (twitter/fb/g+ etc)
+          - Open browser tabs
+          - Wireless network connections
+      2 Annotate to add structure
+        - Tags
+        - "Folder" structures
+        - Arbitrary fields
+      3 Query
+      - ^ this is what's great about one basket
+section
+  img(src='/media/1.jpg')
