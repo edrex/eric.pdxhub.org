@@ -1,0 +1,112 @@
+section
+  h1 Webpack
+  aside.notes 
+    :markdown
+      - oh hi
+      - Webpack
+      - Takes stuff and makes browser bundles out of it.
+      - Yes it has feature x.
+        - All competency, no hype (in contrast to most of the serverside JS ecosystem)
+      - Module loaders:
+        - CommonJs (including NPM)
+        - AMD
+        - Shims for various ways broken modules
+      - More loaders
+        - HTML templates (Jade, etc)
+        - Images
+        - CSS
+      - It will fit into your workflow, because is supports everything.
+      - Efficient
+        - each input file is hashed allowing the output bundle to be efficiently rebuilt
+        - by including the hash in the filename, you can ensure clients efficiently cache
+        - split your JS into multiple bundles, with dependencies
+      - Getting started
+        - Dev server
+section
+  h2 Takes stuff* and makes browser bundles out of it
+  aside.notes *Mainly JS modules, but there are loaders for many kinds of static assets
+section 
+  h2 My experience
+  aside.notes 
+    :markdown
+      - docs online
+      - browserify
+      - wanted to split deps bundle from app
+      - learned about webpack from React team
+section
+  h2 Yes it has feature x
+  ul
+    li(class="fragment") Module loaders <b class="fragment">CommonJS (including NPM)</b>, <b class="fragment">AMD</b>, <b class="fragment">Shims for broken modules</b>
+    li(class="fragment") Loads HTML templates (Jade etc)
+    li(class="fragment") Can also bundle CSS
+  aside.notes 
+    :markdown
+      - CSS: image inlining, support for all preprocessors
+section
+  h2 All competency, no hype
+  aside.notes 
+    :markdown
+section
+  :markdown
+    ## Using it
+
+    - in npm
+    - `webpack generate`
+    - but really it's all about..
+
+section
+  :markdown
+    `webpack.config.JS`
+
+    ```javascript
+    var path = require("path");
+
+    module.exports = {
+        entry: {
+          app: "./src/app.js",
+        },
+        output: {
+            path: path.join(__dirname, "app"),
+            filename: "[name].bundle.js",
+            chunkFilename: "[id].bundle.js"
+        },
+        module: {
+            loaders: [
+                { test: /\.json$/, loader: "json" }
+            ]
+        },
+        resolve: {
+            alias: { stream: "stream-browserify" }
+        }
+    }
+    ```
+section
+  :markdown
+    `app.js`:
+
+    ```javascript
+    require('./graph.js');
+
+    require.ensure([], function(require) {
+      // Require external dependencies here
+      require('./lib/angular/angular.js');
+      require('./lib/angular-route/angular-route.js');
+
+      // Main app code here
+      console.log("I can haz app")
+
+    }, 'libs');
+    ```
+
+  section
+  h2 Read The Docs
+  p 
+    a(href="http://webpack.github.io/docs/") http://webpack.github.io/docs/
+section
+  p I'm
+  img.avatar(src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=192")  
+  h2 Eric Drechsel
+  p Slides at 
+    a(href='//eric.pdxhub.org') &#47;&#47;eric.pdxhub.org/talks
+  p
+    a(href='http://twitter.com/edrex') @edrex

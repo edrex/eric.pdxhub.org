@@ -13,5 +13,12 @@
   "camlistore-your-handwritten-notes": {
     "title": "Camlistore your handwritten notes",
     "theme": "simple"
+  },
+  "webpack": {
+    "title": "Webpack Lightening Talk"
+  },
+  "ipython-notebook-for-math-educators": {
+    "title": "iPython Notebook for Math Educators",
+    "layout": false
   }
 }
