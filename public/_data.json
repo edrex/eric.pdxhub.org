@@ -61,6 +61,9 @@
     "main": true,
     "icon": "file-text"
   },
+  "dev": {
+    "layout": false
+  },
   "404": {
     "title": "404",
     "description": "Nothing to see here",
