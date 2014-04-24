@@ -11,5 +11,5 @@ npm-debug.log
 public/assets/styles/style.css
 public/assets/styles/style.css.map
 .sass-cache
-public/talks/reveal
+public/talks/reveal.js
 
