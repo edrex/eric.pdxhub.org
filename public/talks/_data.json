@@ -1,5 +1,7 @@
 {
   "index": {
+    "title": "Talks",
+    "description": "Slides of my most recent talks",
     "layout": "../_layout"
   },
   "workflow": {

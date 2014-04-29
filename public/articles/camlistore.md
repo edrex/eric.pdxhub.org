@@ -113,4 +113,13 @@ Mostly what I use Harp for is to parse `_data.json` and pass that data to Jade.
  - move away from Harp entirely
  - pass camli metadata to Jade
 
+## Things I'd like to continuously archive into my store
 
+ - Browsing activity
+ - currently open tabs? can clone the chrome sync format?
+ - Tweets, status updates, etc
+   - twitter
+   - g+
+   - fb
+   - goodreads
+   - github

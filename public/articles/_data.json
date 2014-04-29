@@ -1,4 +1,21 @@
 {
+  "fuse-vs-temp-files": {
+    "title": "FUSE vs the Temp Files",
+    "description": "My experiences storing my Documents folder in Camli",
+    "tags": [
+      "camlistore"
+    ],
+    "date": "2014-04-27"
+  },
+  "beaglebone-storage-server": {
+    "title": "Beaglebone Storage Server",
+    "description": "Build log for my home Camlistore",
+    "tags": [
+      "camlistore",
+      "devices"
+    ],
+    "date": "2014-04-20"
+  },
   "index": {
     "title": "Articles",
     "icon": "bookmark"
@@ -8,7 +25,8 @@
     "description": "A content-addressable storage system for your stuff",
     "tags": [
       "privacy",
-      "storage"
+      "storage",
+      "camlistore"
     ],
     "date": "2013-11-19"
   },
