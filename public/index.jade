@@ -1,5 +1,13 @@
 extends _layout
 include _shared/posts
+block nav
+  ul
+    include _shared/sections
+    li#searchBox
+      form(action='http://google.com/cse')
+        input(type='hidden', name='cx', value='012963123305395825585:pm5e7m4z5ey')
+        input(type='hidden', name='ie', value='UTF-8')
+        input(type='text', name='q', size='20')
 
 block main
   .home
@@ -14,16 +22,6 @@ block main
           and an immense curiousity and propensity for diving in with new and challenging topics. 
 
           In my free time I ride my bike, eat things I find outdoors, take online courses, and experiment with distributed information systems.
-    .media.activityStream
-      .figure
-        a.source(title="RSS Feed" href="https://zapier.com/engine/rss/196193/activity/")
-          mixin icon("rss", ["fa-4x"], true)
-      .body
-        h2 My Stream
-        ul.fa-ul
-        .toolbar
-          a.more(href title="Load more activities")
-            mixin icon("ellipsis-h", ["fa-2x"], true)
     .media.articles
       .figure
         mixin icon("pencil", ["fa-4x"], true)

@@ -4,24 +4,10 @@ $lg: 800px;
 $gutters: .6em;
 
 body {
-  margin: 0 auto;
+  margin: .5em auto;
   max-width: 960px;
 }
 .container {
   padding: 1px 2*$gutters;
   @include clearfix;
-}
-
-.header > h1 {
-  display: inline-block;
-}
-
-ul.site-nav {
-  float: right;
-  margin-bottom: 0;
-}
-
-.gutter {
-  clear: both;
-  text-align: center;
 }

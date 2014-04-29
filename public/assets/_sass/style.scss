@@ -11,7 +11,11 @@
 
 @import "grid";
 
+.title {
+  text-align: center;
+}
 .subheading {
+  text-align: center;
   margin-top: -.6em;
 }
 
@@ -30,19 +34,30 @@
 
 }
 
-ul.site-nav, ul.page-info {
-  text-align: right;
-  list-style-type: none;
-  padding-left: 0;
-  li {
-    margin-right: 1em;
-    display: inline-block;
+.nav {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  margin-top: 0;
+  > * {
+    flex: 0 1 auto;
   }
-  clear: both;
-}
+  > ul
+  {
+    display: inline-block;
+    list-style-type: none;
+    padding-left: 0;
+    > li {
+      margin-right: 1em;
+      display: inline-block;
+    }
+  }
+  :last-child{
+    align-self: flex-end;
+  }
 
-ul.page-info {
-  text-align: center;
 }
 
 #searchBox * {
@@ -55,11 +70,11 @@ ul.page-info {
   .figure {
     text-align: center;
     margin-right: 1em;
-    flex: 0 0 33.3333%;
+    flex: 0 0 auto;
     max-width: 96px;
   }
   .body {
-    flex: 1 0 66.6666%;
+    flex: 0 1 auto;
     .toolbar {
       text-align: center;
     }
