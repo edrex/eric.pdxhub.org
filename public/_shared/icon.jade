@@ -1,6 +1,6 @@
-mixin icon(icon, classes, skip_trailing_space)
+mixin icon(icon, classes, omit_space)
   i(class="fa fa-#{ icon } #{ classes || '' }")
-  unless skip_trailing_space
+  unless omit_space
     | 
 
 mixin emoji(text, classes)

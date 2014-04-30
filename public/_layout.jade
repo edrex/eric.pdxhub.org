@@ -25,14 +25,12 @@ html(lang='en')
             mixin post_title(locals, current.path[current.path.length-1])
             | 
         h3.subheading!= description
-        .nav
-          block nav
-            ul
-              unless (current.path.length == 1 && current.path[0]=='index')
-                li 
-                  a.label(href='/' title='home')
-                    mixin icon('home') Home
-              include _shared/post_tags
+        block nav
+          .nav
+            unless (current.path.length == 1 && current.path[0]=='index')
+              a.label(href='/' title='home')
+                mixin icon('home') Home
+            include _shared/post_tags
       .main
         block main
           != yield
