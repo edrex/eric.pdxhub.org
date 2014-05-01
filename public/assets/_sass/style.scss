@@ -9,7 +9,17 @@
   @include box-sizing(border-box);
 }
 
-@import "grid";
+$gutters: .6em;
+
+body {
+  margin: .5em auto;
+  // max-width: 960px;
+}
+.container {
+  position: relative;
+  margin: 1px 2*$gutters;
+  @include clearfix;
+}
 
 .header {
   text-align:center;
