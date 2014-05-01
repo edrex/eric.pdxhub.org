@@ -1,53 +1,107 @@
-.row
-  .medium-5.columns.sidebar
-    .panel
+extends _layout
+block main
+  .media.activityStream
+    .figure
+      a.source(title="RSS Feed" href="https://zapier.com/engine/rss/196193/activity/")
+        mixin icon("rss", ["fa-4x"], true)
+    .body
+      ul.fa-ul
+      .toolbar
+        a.more(href title="Load more activities")
+          mixin icon("ellipsis-h", ["fa-2x"], true)
+  .row
+    .medium-5.columns.sidebar
+      .panel
+        :markdown
+          #### Social profiles
+            
+            * [Google+](https://plus.google.com/112296035418181656313)
+            * [Twitter](http://twitter.com/edrex/) 
+            * [Foursquare](https://foursquare.com/edrex) 
+            * [FB](http://facebook.com/ericdrex/) 
+
+          #### Professional
+        
+            * [Github](http://github.com/edrex/) 
+            * [Stack Overflow](http://stackoverflow.com/users/114581)
+            * [LinkedIn](http://www.linkedin.com/pub/eric-drechsel/14/2b6/b67) 
+
+          #### Resume
+            
+            * [HTML](http://erics-blog.pdxhub.org/pages/eric_drechsel_resume.html)
+            * [PDF](http://erics-blog.pdxhub.org/pages/eric_drechsel_resume.pdf)
+
+          #### Niche Stuff
+            
+            * [TiddlySpace](http://eric.tiddlyspace.com)
+            * [Launchpad](https://bugs.launchpad.net/~ericdrex)
+            * [IRC](irc://irc.freenode.net/#pdxtech "me llamo edrex")
+            * [Drupal](http://drupal.org/user/14325 "I don't do Drupal stuff anymore :D")
+    .medium-7.columns
+      img.right(src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png")
       :markdown
-        #### Social profiles
-          
-          * [Google+](https://plus.google.com/112296035418181656313)
-          * [Twitter](http://twitter.com/edrex/) 
-          * [Foursquare](https://foursquare.com/edrex) 
-          * [FB](http://facebook.com/ericdrex/) 
+        ## Keywords
 
-        #### Professional
-      
-          * [Github](http://github.com/edrex/) 
-          * [Stack Overflow](http://stackoverflow.com/users/114581)
-          * [LinkedIn](http://www.linkedin.com/pub/eric-drechsel/14/2b6/b67) 
+         - curious
+         - capable
+         - compassionate
 
-        #### Resume
-          
-          * [HTML](http://erics-blog.pdxhub.org/pages/eric_drechsel_resume.html)
-          * [PDF](http://erics-blog.pdxhub.org/pages/eric_drechsel_resume.pdf)
+        ## Subsections
 
-        #### Niche Stuff
-          
-          * [TiddlySpace](http://eric.tiddlyspace.com)
-          * [Launchpad](https://bugs.launchpad.net/~ericdrex)
-          * [IRC](irc://irc.freenode.net/#pdxtech "me llamo edrex")
-          * [Drupal](http://drupal.org/user/14325 "I don't do Drupal stuff anymore :D")
-  .medium-7.columns
-    img.right(src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png")
-    :markdown
-      ## Keywords
+         * Classes
+         * Lab
 
-       - curious
-       - capable
-       - compassionate
+        I have done exploratory work on neighborhood server appliances including real world prototypes deployed in several CoOp houses.
 
-      ## Subsections
+        Wishlist: Timeline graphic
 
-       * Classes
-       * Lab
+        community support apps at [PDXHub](http://pdxhub.org/). Get in touch if you are interested in
 
-      I have done exploratory work on neighborhood server appliances including real world prototypes deployed in several CoOp houses.
+        [services](http://wiki.pdxhub.org/ops) in support of other local organizers, and am a founding member of [Activate](http://activatehub.org/). I'm also active in many open source software, civic, and bicycling communities.
 
-      Wishlist: Timeline graphic
+        I hold a BS in [Mathematics](http://math.pdx.edu/) and [Physics](http://physics.pdx.edu/) minor from [Portland State University](http://pdx.edu/). In my free time I am continuing my studies in physics, data sciences, and natural history.
 
-      community support apps at [PDXHub](http://pdxhub.org/). Get in touch if you are interested in
+        One day I will analyze all the things. Until then, [check out my Vizify](https://www.vizify.com/eric-drechsel/).
+block scripts
+  script(type='text/javascript').
+    function renderActivityStream(root, extender, limit) {
+      var ignore = [
+        /^edrex pushed to master at edrex\/edrex.github.io/,
+        /^RT @/
+      ]
+      var tpl = '<% _.forEach(items, function(i) { %><li><a href="<%- i.link %>" title="<%- i.source %> - <%- new Date(i.date).toDateString() %>"><i class="fa fa-li fa-<%- i.source %>"></i><%= i.title %></a></li><% }); %>';
+      var n = 0;
+      var items = [];
 
-      [services](http://wiki.pdxhub.org/ops) in support of other local organizers, and am a founding member of [Activate](http://activatehub.org/). I'm also active in many open source software, civic, and bicycling communities.
-
-      I hold a BS in [Mathematics](http://math.pdx.edu/) and [Physics](http://physics.pdx.edu/) minor from [Portland State University](http://pdx.edu/). In my free time I am continuing my studies in physics, data sciences, and natural history.
-
-      One day I will analyze all the things. Until then, [check out my Vizify](https://www.vizify.com/eric-drechsel/).
+      function extend(){
+        n = n + limit;
+        root.html(_.template(tpl, { items: items.slice(0,n) }))
+      }
+      $.get("https://zapier.com/engine/rss/196193/activity/", function (data) {
+        items = $(data).find("item").map(function () { 
+          var el = $(this);
+          return {
+            title: el.find("title").text(),
+            link: el.find("link").text(),
+            description: el.find("description").text(),
+            author: el.find("creator").text(),
+            date: el.find("pubDate").text(),
+            source: el.find('link').text().replace(/^https?:\/\/([a-z.]+\.)?([a-z]+)\.[a-z]+\/.*/,"$2")
+          }
+        }).get().filter(function(elt){
+          return !(ignore.some(function(p){return p.test(elt.title)}));
+        });
+        extend();
+        extender.click(function(event){
+          event.preventDefault();
+          extend();
+          if (n >= items.length) {
+            $(this).hide();
+          }
+        });
+      });
+    }
+    (function() {
+      var root = $('.activityStream')
+      renderActivityStream(root.find('ul'), root.find('.more'), 5)
+    }())

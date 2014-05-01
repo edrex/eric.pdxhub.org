@@ -10,7 +10,8 @@
     "title": "Bio",
     "description": "Eric's Vital Statistics",
     "icon": "user",
-    "main": false
+    "main": true,
+    "layout": false
   },
   "things": {
     "title": "Thing a Day",
