@@ -1,15 +1,16 @@
 extends _layout
 include _shared/posts
-block nav
-  ul
-    li#searchBox
-      form(action='http://google.com/cse')
-        input(type='hidden', name='cx', value='012963123305395825585:pm5e7m4z5ey')
-        input(type='hidden', name='ie', value='UTF-8')
-        input(type='text', name='q', size='20')
-    .gather
-      include _shared/sections
 
+block nav
+  .gather
+    include _shared/sections
+  .search
+    .input(contenteditable="true")
+    i.fa.fa-search
+    form(action='http://google.com/cse' )
+      input(type='hidden', name='cx', value='012963123305395825585:pm5e7m4z5ey')
+      input(type='hidden', name='ie', value='UTF-8')
+      input(type='hidden', name='q')
 block main
   .home
     .media.bio
@@ -33,7 +34,7 @@ block main
 block footer
 
 block scripts
-
+  script(src="assets/scripts/searchbox.js")
   script(type='text/javascript').
+      mountSearch($('.search').first())
 
-      }
