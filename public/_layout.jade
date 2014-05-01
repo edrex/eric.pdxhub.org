@@ -18,6 +18,9 @@ html(lang='en')
     include _shared/analytics
   body
     .container
+      unless (current.path.length == 1 && current.path[0]=='index')
+        a.homeLink(href='/' title='home')
+          mixin icon('home')
       .header
         h1.title
           span.brand
@@ -27,9 +30,6 @@ html(lang='en')
         h3.subheading!= description
         block nav
           .nav
-            unless (current.path.length == 1 && current.path[0]=='index')
-              a.label(href='/' title='home')
-                mixin icon('home') Home
             include _shared/post_tags
       .main
         block main
