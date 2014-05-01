@@ -2,12 +2,13 @@ extends _layout
 include _shared/posts
 block nav
   ul
-    include _shared/sections
     li#searchBox
       form(action='http://google.com/cse')
         input(type='hidden', name='cx', value='012963123305395825585:pm5e7m4z5ey')
         input(type='hidden', name='ie', value='UTF-8')
         input(type='text', name='q', size='20')
+    .gather
+      include _shared/sections
 
 block main
   .home

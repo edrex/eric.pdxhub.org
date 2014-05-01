@@ -28,8 +28,9 @@ html(lang='en')
             mixin post_title(locals, current.path[current.path.length-1])
             | 
         h3.subheading!= description
+      .nav
         block nav
-          .nav
+          .gather
             include _shared/post_tags
       .main
         block main

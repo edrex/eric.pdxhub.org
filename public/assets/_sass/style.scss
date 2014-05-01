@@ -22,11 +22,17 @@ body {
 }
 
 .header {
-  text-align:center;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  .title {
+    padding-right: .67em;
+  }
 }
 
 .subheading {
-  margin-top: -.6em;
+  margin-top: -1.6em;
+}
 
 .homeLink {
   right: 0;
@@ -54,48 +60,48 @@ body {
   margin-top: -.8em;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-content: center;
   > * {
     margin: .3em;
-    flex-shrink: 0;
   }
-  > searchBox {
-    flex-basis: 8em;
-    flex-shrink: 1;
+  > .spacer {
+    flex-shrink: 100;
+  }
+  > .search {
+    flex-grow: 1;
   }
 }
 
+.gather {
+  > * {
+    margin: .3em;
+  }
+}
 
 .media {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-bottom: 2em;
   .figure {
-    text-align: center;
-    margin: 1em;
+    flex-grow: 0;
   }
   .body {
+    flex: 1 1 18em;
   }
-  margin-bottom: 2em;
+}
+
+.figure {
+  margin: 1em;
 }
 
 .avatar {
-  @include border-radius(4px);
-  width: 64px;
+  width: 128px;
 }
 
-@media (min-width: 500px) {
-  .media {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    .figure {
-      flex: 0 0 auto;
-    }
-    .body {
-      flex: 1 1 auto;
-    }
-  }
-  .avatar {
-    @include border-radius(8px);
-    width: 128px;
-  }
+// small generic components
+.label, .label:visited, .date {
+  padding-right: .2em;
+  white-space: nowrap;
 }
