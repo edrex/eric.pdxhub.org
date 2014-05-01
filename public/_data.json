@@ -6,7 +6,7 @@
     "navbar": false,
     "layout": false
   },
-  "bio": {
+  "profile": {
     "title": "Bio",
     "description": "Eric's Vital Statistics",
     "icon": "user",
