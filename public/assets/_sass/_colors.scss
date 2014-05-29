@@ -15,6 +15,69 @@ $blue:      #268bd2;
 $cyan:      #2aa198;
 $green:     #859900;
 
+.swatches {
+  display: flex;
+  flex-flow: row wrap;
+  > div {
+    // display: inline-block;
+    width: 8em;
+  }
+}
+.swatch {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+}
+
+.baseOC {
+  background: $base03;
+}
+.baseOB {
+  background: $base02;
+}
+.baseOA {
+  background: $base01;
+}
+.baseOO {
+  background: $base00;
+}
+.baseO {
+  background: $base0;
+}
+.baseA {
+  background: $base1;
+}
+.baseB {
+  background: $base2;
+}
+.baseC {
+  background: $base3;
+}
+.yellow {
+  background: $yellow;
+}
+.orange {
+  background: $orange;
+}
+.red {
+  background: $red;
+}
+.magenta {
+  background: $magenta;
+}
+.violet {
+  background: $violet;
+}
+.blue {
+  background: $blue;
+}
+.cyan {
+  background: $cyan;
+}
+.green {
+  background: $green;
+}
+
 body {
   color: $base02;
   background: $base3;
@@ -40,7 +103,7 @@ h1.title {
 a, a:visited {
   color: $base02;
 }
-a:hover {
+a:hover, a:hover .fa {
   color: $orange;
 }
 
@@ -50,4 +113,8 @@ a:active {
 
 .date {
   color: $base01;
+}
+
+.fa {
+  color: $base0;
 }
