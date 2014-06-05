@@ -1,5 +1,15 @@
+Rick at Side Door:
+  knytt stories
+  broforce
+
+Rob Story: rich hickey closure concurrency talks
+
+
+
 ## Comics/Art
 
+ - http://www.dumbingofage.com/
+ - [Scenes from a Multiverse](http://amultiverse.com/)
  - http://www.jedmcgowan.com/ voyager, bristlecone pine
  - http://www.letswatchstartrek.com/
  - http://studygroupcomics.com/main/gray-city-part-1-by-ryan-dirks/ (Alicia's friend)

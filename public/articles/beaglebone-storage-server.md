@@ -59,7 +59,7 @@ My home router is DD-WRT. I highly recommend using it over stock vendor firmware
 
 ## camlistored startup
 
- - copy init script from https://gist.github.com/naholyr/4275302
+ - If you can, use systemd. Otherwise, [here is the sysvinit script I used](https://gist.github.com/edrex/eab2fe86fba89346d4e1)
 
 ## syncc
 
