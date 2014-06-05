@@ -1,0 +1,5 @@
+a(href="javascript:analyticsOptout()") Click here to opt-out of Analytics
+script(type='text/javascript').
+  function analyticsOptout() {
+    document.cookie = "analytics-opt-out" + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+  }

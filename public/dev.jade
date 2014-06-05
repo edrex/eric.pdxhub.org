@@ -1,58 +1,14 @@
 extends _layout
 block main
-  <a href="javascript:analyticsOptout()">Click here to opt-out of Analytics</a>
-  h2 Color swatches
-  .swatches
-    div
-      .swatch.baseOC
-      |  $base03
-    div
-      .swatch.baseOB
-      |  $base02
-    div
-      .swatch.baseOA
-      |  $base01
-    div
-      .swatch.baseOO
-      |  $base00
-    div
-      .swatch.baseO
-      |  $base0
-    div
-      .swatch.baseA
-      |  $base1
-    div
-      .swatch.baseB
-      |  $base2
-    div
-      .swatch.baseC
-      |  $base3
-    div
-      .swatch.yellow
-      |  $yellow
-    div
-      .swatch.orange
-      |  $orange
-    div
-      .swatch.red
-      |  $red
-    div
-      .swatch.magenta
-      |  $magenta
-    div
-      .swatch.violet
-      |  $violet
-    div
-      .swatch.blue
-      |  $blue
-    div
-      .swatch.cyan
-      |  $cyan
-    div
-      .swatch.green
-      |  $green
-block scripts
-  script(type='text/javascript').
-    function analyticsOptout() {
-      document.cookie = "analytics-opt-out" + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-    }
+  include _shared/analytics_opt_out
+  include _shared/swatches
+  style(type='text/css')
+block nav
+  .gather
+    include _shared/sections
+  .search
+    .input(contenteditable="true" spellcheck="false")
+    form(action='http://google.com/cse' )
+      input(type='hidden', name='cx', value='012963123305395825585:pm5e7m4z5ey')
+      input(type='hidden', name='ie', value='UTF-8')
+      input(type='hidden', name='q')
