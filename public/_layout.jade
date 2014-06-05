@@ -27,14 +27,18 @@ html(lang='en')
             mixin post_icon(locals)
             mixin post_title(locals, current.path[current.path.length-1])
             | 
-        h3.subheading!= description
-      .nav
+        if (description != null)
+          h3.subheading!= description
         block nav
           .gather
             include _shared/post_tags
-      .main
-        block main
-          != yield
+      .cols
+        .maincol
+          .main
+            block main
+              != yield
+        .sidebar
+          block sidebar
       .footer
         block footer
     script(src='/assets/scripts/jquery.min.js')

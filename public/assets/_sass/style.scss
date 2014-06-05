@@ -9,22 +9,38 @@
   @include box-sizing(border-box);
 }
 
-$gutters: .6em;
+$m: 12px;
 
 body {
-  margin: .5em auto;
-  // max-width: 960px;
+  padding: $m 0;
 }
+
+@media(min-width: 600px) {
+  body {
+    padding-left: $m;
+    padding-right: $m;
+  }
+}
+
 .container {
   position: relative;
-  margin: 1px 2*$gutters;
+  padding: $m;
   @include clearfix;
+}
+
+.cols {
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    flex: 1 1 30em;
+  }
 }
 
 .header {
   display: flex;
   flex-flow: row wrap;
   align-items: baseline;
+  justify-content: space-around;
   .title {
     padding-right: .67em;
   }
@@ -35,7 +51,8 @@ body {
 }
 
 .homeLink {
-  right: 0;
+  left: 0;
+  top: -$m;
   font-size: 3em;
   position: absolute;
 }
@@ -85,21 +102,23 @@ body {
 }
 
 .nav {
-  font-size: 1.6em;
-  input[type="text"] {
-    width: 15vw;
-  }
-  padding: 0;
   margin-top: -.8em;
+  font-size: 1.6em;
+
+  // padding: 0;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row-reverse wrap;
+  align-items: center;
   justify-content: space-between;
-  align-content: center;
   > * {
     margin: .3em;
+    flex-shrink: 0;
   }
   > .spacer {
     flex-shrink: 100;
+  }
+  > .gather {
+    flex-grow: 1;
   }
   > .search {
     flex-grow: 1;
@@ -112,29 +131,71 @@ body {
   }
 }
 
+.sections {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  > * {
+    flex: 1 1 30em;
+  }
+}
+
+$figsize: 128px;
+
 .media {
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 2em;
-  .figure {
-    flex-grow: 0;
+  padding: $m;
+  position: relative;
+  z-index: 1;
+  > * {
+    margin: .5em;
+  }
+  .watermark {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 0;
+    opacity: .5;
+    i {
+      color: $base2;
+    }
+    font-size: $figsize;
+    margin: $m 0;
+    // text-align: center;
   }
   .body {
-    flex: 1 1 18em;
+    z-index: 1;
+    flex: 1 1 12em;
   }
 }
 
 .figure {
-  margin: 1em;
-}
-
-.avatar {
-  width: 128px;
+  display: flex;
+  height: $figsize;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  i {
+    font-size: $figsize/2;
+  }
+  .avatar {
+    width: $figsize;
+  }
 }
 
 // small generic components
+
+.button {
+  margin: $m;
+}
+
 .label, .label:visited, .date {
   padding-right: .2em;
   white-space: nowrap;
+}
+
+p {
+  margin-top: 0;
 }

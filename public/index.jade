@@ -11,27 +11,25 @@ block nav
       input(type='hidden', name='ie', value='UTF-8')
       input(type='hidden', name='q')
 block main
-  .home
-    .media.bio
-      .figure
-        img.avatar(src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=96")
-      .body
-        :markdown
-          I'm **Eric Drechsel** &mdash;
-          a multiclass creative professional with deep roots in the web and open source, 
-          a focus on user experience, education in math modeling and statistical methods,
-          and an immense curiousity and propensity for diving in with new and challenging topics. 
+  .media.bio
+    .figure
+      img.avatar(src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=512")
+    .body
+      :markdown
+        I'm **Eric Drechsel** &mdash;
+        a multiclass creative professional with deep roots in the web and open source, 
+        a focus on user experience, education in math modeling and statistical methods,
+        and an immense curiousity and propensity for diving in with new and challenging topics. 
 
-          In my free time I ride my bike, eat things I find outdoors, take online courses, and experiment with distributed information systems.
-    .media.articles
-      .figure
-        mixin icon("pencil", ["fa-4x"], true)
-      .body
-        each post in posts_array(public.articles._data)
-          mixin post_summary(post, post.slug, '/articles')
+        In my free time I ride my bike, eat things I find outdoors, take online courses, and experiment with distributed information systems.
 
-block footer
-
+block sidebar
+  .media.articles
+    .watermark
+      mixin icon("pencil", "", true)
+    .body
+      each post in posts_array(public.articles._data)
+        mixin post_summary(post, post.slug, '/articles')
 block scripts
   script(src="assets/scripts/searchbox.js")
   script(type='text/javascript').
