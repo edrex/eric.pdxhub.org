@@ -51,28 +51,33 @@ body {
 }
 
 .search {
+  // ensure empty element has a baseline
   position: relative;
-  display: inline-flex;
-  box-shadow: 1px 1px 1px 0 lightgray inset;
-  background: white;
   z-index: 0;
-  > * {
-    padding: 3px;
+  &:before {
+    content: "\2060";
   }
-  // margin: .1em;
-  .input {
-    text-align: left;
-    background: transparent;
-    width: 100%;
-    padding-right: 1.3em;
-  }
-  > i {
-    z-index: -1;
-    padding: 5px;
-    color: $base2;
+  &:after {
+    @extend .icon;
+    content: "\f002";
     position: absolute;
     right: 0;
-    top: 0;
+    padding-right: .2em;
+  }
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  box-shadow: 1px 1px 1px 0 lightgray inset;
+  background: white;
+  // this is outside so the baseline doesn't get messed up
+  padding: .2em;
+  .input {
+    margin: -.2em;
+    padding: .2em;
+    min-width: 5em;
+    padding-right: 1.4em;
+    z-index: 1;
+    background: transparent;
   }
   > form {
     display: none;
