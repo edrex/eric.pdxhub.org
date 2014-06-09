@@ -4,7 +4,11 @@ Rick at Side Door:
 
 Rob Story: rich hickey closure concurrency talks
 
+## Video
 
+http://vimeo.com/97747919
+We Are Glacier People
+from PBS Digital Studios 
 
 ## Comics/Art
 
