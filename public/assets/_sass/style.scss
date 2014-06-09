@@ -43,11 +43,12 @@ body {
   justify-content: space-around;
   .title {
     padding-right: .67em;
+    margin-bottom: 0;
   }
 }
 
 .subheading {
-  margin-top: -1.6em;
+  // margin-top: -1.6em;
 }
 
 .homeLink {
@@ -86,9 +87,10 @@ body {
   justify-content: space-between;
   box-shadow: 1px 1px 1px 0 lightgray inset;
   background: white;
-  // this is outside so the baseline doesn't get messed up
+  // padding on outside element so header baseline doesn't get messed up
   padding: .2em;
   .input {
+    // so the halo is as large as the outer box
     margin: -.2em;
     padding: .2em;
     min-width: 5em;
