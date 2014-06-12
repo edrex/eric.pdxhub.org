@@ -29,10 +29,10 @@
     "description": "Work I want to check out, often recommended in conversation.",
     "icon": "headphones"
   },
-  "tags": {
+  "tags/": {
     "title": "Tags",
     "icon": "tags",
-    "main": false
+    "main": true
   },
   "year": {
     "title": "Year",
