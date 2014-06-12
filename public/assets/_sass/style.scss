@@ -31,9 +31,9 @@ body {
 .cols {
   display: flex;
   flex-wrap: wrap;
-  > * {
-    flex: 1 1 30em;
-  }
+  // > * {
+  //   flex: 1 1 30em;
+  // }
 }
 
 .header {
@@ -133,12 +133,14 @@ body {
   }
 }
 
+$col: 30em;
+
 .sections {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   > * {
-    flex: 1 1 30em;
+    flex: 1 1 $col;
   }
 }
 
@@ -163,29 +165,31 @@ $figsize: 128px;
     i {
       color: $base2;
     }
-    font-size: $figsize;
+    font-size: 128px;
     margin: $m 0;
     // text-align: center;
   }
+  .figure {
+    // height: 100%;
+    display: flex;
+    height: $figsize;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    flex: 0 0 $col/2;
+    i {
+      font-size: $figsize/2;
+    }
+    .avatar {
+      width: $figsize;
+    }
+  }
   .body {
     z-index: 1;
-    flex: 1 1 12em;
+    flex: 1 0 $col/2;
   }
 }
 
-.figure {
-  display: flex;
-  height: $figsize;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-  i {
-    font-size: $figsize/2;
-  }
-  .avatar {
-    width: $figsize;
-  }
-}
 
 // small generic components
 
