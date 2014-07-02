@@ -25,34 +25,41 @@ section
 section
   h2 Takes stuff* and makes browser bundles out of it
   aside.notes *Mainly JS modules, but there are loaders for many kinds of static assets
-section 
-  h2 My experience
-  aside.notes 
+section.stack
+  section
+    h2 My experience
+    aside.notes 
+      :markdown
+        - docs online
+        - browserify
+        - wanted to split deps bundle from app
+        - learned about webpack from React team
+  section
+    h2 Yes it has feature x
+    ul
+      li(class="fragment") Module loaders 
+        span(class="fragment") 
+          b CommonJS (including NPM)
+        span(class="fragment"),
+          b  AMD
+        span(class="fragment"),
+          b  Shims for broken modules
+      li(class="fragment") Loads HTML templates (Jade etc)
+      li(class="fragment") Can also bundle CSS
+    aside.notes 
+      :markdown
+        - CSS: image inlining, support for all preprocessors
+  section
+    h2 All competency, no hype
+    aside.notes 
+      :markdown
+  section
     :markdown
-      - docs online
-      - browserify
-      - wanted to split deps bundle from app
-      - learned about webpack from React team
-section
-  h2 Yes it has feature x
-  ul
-    li(class="fragment") Module loaders <b class="fragment">CommonJS (including NPM)</b>, <b class="fragment">AMD</b>, <b class="fragment">Shims for broken modules</b>
-    li(class="fragment") Loads HTML templates (Jade etc)
-    li(class="fragment") Can also bundle CSS
-  aside.notes 
-    :markdown
-      - CSS: image inlining, support for all preprocessors
-section
-  h2 All competency, no hype
-  aside.notes 
-    :markdown
-section
-  :markdown
-    ## Using it
+      ## Using it
 
-    - in npm
-    - `webpack generate`
-    - but really it's all about..
+      - in npm
+      - `webpack generate`
+      - but really it's all about..
 
 section
   :markdown

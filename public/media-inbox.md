@@ -1,3 +1,11 @@
+http://www.ted.com/talks/the_interspecies_internet_an_idea_in_progress
+https://sites.google.com/site/themetalibrary/home
+http://valleywag.gawker.com/san-francisco-anarchists-slash-tires-of-google-shopping-1591169285
+http://honoringmycompass.blogspot.com/2014/06/day-39-bestest-day-ride-ever.html
+http://awinterman.github.io/2013/11/09/we-are-not-at-war.html
+http://onoffrhodes.wordpress.com/
+
+Nima, Hadron Collider 101, New Physics Theory https://video.ias.edu/node/3814
 Rick at Side Door:
   knytt stories
   broforce
