@@ -54,6 +54,11 @@
     "main": true,
     "icon": "pencil"
   },
+  "resume/": {
+    "title": "Resume",
+    "main": true,
+    "icon": "graduation-cap"
+  },
   "README": {
     "title": "README",
     "description": "About this site",

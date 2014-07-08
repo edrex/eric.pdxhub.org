@@ -8,27 +8,6 @@ html(lang='en')
     meta(name='viewport', content='width=device-width')
     link(rel='shortcut icon', href='/assets/favicon.ico')
     link(rel='stylesheet', href='/assets/styles/markdown.css')
-    style
-        @media only print {
-            body a:visited {
-                color: #0099ff;
-            }
-            body, p, ol, ul, blockquote, hr {
-                max-width: inherit;
-            }
-            hr {
-                width: auto;
-            }
-        }
-        li.expert {
-            color: #268bd2;
-        }
-        li.proficient {
-            color: #6c71c4;
-        }
-        li.literate {
-            color: #d33682;
-        }
     link(rel='stylesheet', href='/assets/font-awesome/css/font-awesome.min.css')
     include ../_shared/analytics
   body
