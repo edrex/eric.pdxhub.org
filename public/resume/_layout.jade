@@ -1,4 +1,4 @@
-!!! 5
+doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
@@ -7,7 +7,31 @@ html(lang='en')
     title= title
     meta(name='viewport', content='width=device-width')
     link(rel='shortcut icon', href='/assets/favicon.ico')
-    link(rel='stylesheet', href='./markdown.css')
+    link(rel='stylesheet', href='/assets/styles/markdown.css')
+    link(rel='stylesheet', href='/assets/styles/font-awesome.min.css')
+    style
+        @media only print {
+            body a:visited {
+                color: #0099ff;
+            }
+            body, p, ol, ul, blockquote, hr {
+                max-width: inherit;
+            }
+            hr {
+                width: auto;
+            }
+        }
+        li.expert {
+            color: #268bd2;
+        }
+        li.proficient {
+            color: #6c71c4;
+        }
+        li.literate {
+            color: #d33682;
+        }
     include ../_shared/analytics
   body
+    p
+        img.avatar(style="float:right; width: 72px; border-radius: 10px; " src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=144")
     != yield

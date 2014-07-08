@@ -1,0 +1,20 @@
+@media only print {
+    body a:visited {
+        color: #0099ff;
+    }
+    body, p, ol, ul, blockquote, hr {
+        max-width: inherit;
+    }
+    hr {
+        width: auto;
+    }
+}
+li.expert {
+    color: #268bd2;
+}
+li.proficient {
+    color: #6c71c4;
+}
+li.literate {
+    color: #d33682;
+}

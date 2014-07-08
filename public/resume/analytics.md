@@ -31,8 +31,8 @@ Create tools to make sense of large amounts of data.
 
 ## History
 
-* Contributor to numerous open source projects, such as [Camlistore](http://camlistore.org) (Go).
-* 2012-2013 Engineer, [Janrain](http://janrain.com/). Team designed and built customer authorization store. (Scala)
+* Contributor to numerous open source projects, such as [Camlistore](http://camlistore.org) (React.js, Go).
+* 2012-2013 Engineer, [Janrain](http://janrain.com/). Team designed and built "organizations" feature. (AngularJS, Scala)
 * 2005-2012 Consultant, [PDXHub](http://wiki.pdxhub.org/ops). Various projects.
 * 2010 Developer, [Revelation](http://revelationglobal.com/). Helped build complex scheduling UI
 * 2005-2010 BS Mathematics, Physics minor, [Portland State University](http://www.mth.pdx.edu)
