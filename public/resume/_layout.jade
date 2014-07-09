@@ -8,9 +8,12 @@ html(lang='en')
     meta(name='viewport', content='width=device-width')
     link(rel='shortcut icon', href='/assets/favicon.ico')
     link(rel='stylesheet', href='/assets/styles/markdown.css')
+    link(rel='stylesheet', href='/assets/styles/style.css')
     link(rel='stylesheet', href='/assets/font-awesome/css/font-awesome.min.css')
     include ../_shared/analytics
   body
-    p
-        img.avatar(style="float:right; width: 72px; border-radius: 10px; " src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=144")
-    != yield
+    .container
+            p
+                a(href="http://eric.pdxhub.org/" title="Eric's homepage")
+                    img.avatar(style="float:right; width: 72px; border-radius: 10px; " src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=144")
+            != yield

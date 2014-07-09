@@ -1,0 +1,1 @@
+This document has moved to [/resume](/resume/).
