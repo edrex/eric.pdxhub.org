@@ -19,10 +19,12 @@ html(lang='en')
     include _shared/analytics
   body
     .container
-      unless (current.path.length == 1 && current.path[0]=='index')
-        a.homeLink(href='/' title='home')
-          mixin icon('home')
       .header
+        if (current.path.length == 1 && current.path[0]=='index')
+          img.avatar(src="/assets/avatar.jpeg")
+        else
+          a(href="/" title="Back to Eric's homepage")
+            img.avatar(src="/assets/avatar.jpeg")
         h1.title
           span.brand
             mixin post_icon(locals)

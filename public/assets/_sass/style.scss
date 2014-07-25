@@ -12,13 +12,13 @@
 $m: 12px;
 
 body {
-  padding: $m 0;
+  padding: $m;
 }
 
 @media(min-width: 600px) {
   body {
-    padding-left: $m;
-    padding-right: $m;
+    padding-left: 4*$m;
+    padding-right: 4*$m;
   }
 }
 
@@ -26,6 +26,14 @@ body {
   position: relative;
   padding: $m;
   @include clearfix;
+}
+
+// prevent empty last page
+@media print {
+  body, .container {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }
 
 .cols {
@@ -39,13 +47,27 @@ body {
 .header {
   display: flex;
   flex-flow: row wrap;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-around;
-  .title {
-    padding-right: .67em;
-    margin-bottom: 0;
+  > * {
+    margin: .3em;
+  }
+  nav {
+    > * {
+      font-size:2em;
+      margin: .3em;
+    }
   }
 }
+
+.avatar {
+  width: 72px;
+  border-radius: 10px;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-weight: inherit;
+} 
 
 .subheading {
   // margin-top: -1.6em;
@@ -61,6 +83,7 @@ body {
 .post-summary {
   .post-link {
     font-size: 1.6em;
+    font-weight: inherit;
   }
   .description {
     color: $base03;
@@ -69,68 +92,58 @@ body {
 }
 
 .search {
+  font-size: 2em;
   // ensure empty element has a baseline
   position: relative;
   z-index: 0;
+  // cursor: pointer;
+  // &:hover:after, &:focus:after {
+  //   color: $orange;
+  // }
   &:before {
     content: "\2060";
   }
   &:after {
+    z-index: 2;
+    color: $base1;
+    pointer-events: none;
     @extend .icon;
     content: "\f002";
     position: absolute;
     right: 0;
-    padding-right: .2em;
+    // padding-right: .2em;
   }
-  display: flex;
+  display: inline-flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  box-shadow: 1px 1px 1px 0 lightgray inset;
-  background: white;
+  // box-shadow: 1px 1px 1px 0 lightgray inset;
+  // background: white;
   // padding on outside element so header baseline doesn't get messed up
-  padding: .2em;
   .input {
+    &:focus {
+      color: green;
+      min-width: 100%;
+    }
+    box-shadow: 1px 1px 1px 0 lightgray inset;
+    background: white;      
     // so the halo is as large as the outer box
     margin: -.2em;
     padding: .2em;
-    min-width: 5em;
-    padding-right: 1.4em;
+    // min-width: 5em;
+    padding-right: 1.3em;
     z-index: 1;
-    background: transparent;
+    // background: transparent;
   }
   > form {
     display: none;
   }
 }
 
-.nav {
-  margin-top: -.8em;
-  font-size: 1.6em;
-
-  // padding: 0;
+.row {
   display: flex;
-  flex-flow: row-reverse wrap;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  > * {
-    margin: .3em;
-    flex-shrink: 0;
-  }
-  > .spacer {
-    flex-shrink: 100;
-  }
-  > .gather {
-    flex-grow: 1;
-  }
-  > .search {
-    flex-grow: 1;
-  }
-}
-
-.gather {
-  > * {
-    margin: .3em;
-  }
+  justify-content: space-around;
 }
 
 $col: 30em;
@@ -179,9 +192,6 @@ $figsize: 128px;
     flex: 0 0 $col/2;
     i {
       font-size: $figsize/2;
-    }
-    .avatar {
-      width: $figsize;
     }
   }
   .body {

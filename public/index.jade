@@ -2,28 +2,28 @@ extends _layout
 include _shared/posts
 
 block nav
-  .gather
+  nav
     include _shared/sections
-  .search
-    .input(contenteditable="true" spellcheck="false")
-    form(action='http://google.com/cse' )
-      input(type='hidden', name='cx', value='012963123305395825585:pm5e7m4z5ey')
-      input(type='hidden', name='ie', value='UTF-8')
-      input(type='hidden', name='q')
+    .search
+      .input(contenteditable="true" spellcheck="false")
+      form(action='http://google.com/cse' )
+        input(type='hidden', name='cx', value='012963123305395825585:pm5e7m4z5ey')
+        input(type='hidden', name='ie', value='UTF-8')
+        input(type='hidden', name='q')
 block main
-  .media.bio
-    .figure
-      img.avatar(src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=512")
-    .body
-      :markdown
-        I'm **Eric Drechsel** &mdash;
-        a multiclass creative professional with deep roots in the web and open source, 
-        a focus on user experience, education in math modeling and statistical methods,
-        and an immense curiousity and propensity for diving in with new and challenging topics. 
+  .bio
+    :markdown
+      I'm **Eric Drechsel** &mdash;
+      a multiclass creative professional with deep roots in the web and open source, 
+      a focus on user experience, education in math modeling and statistical methods,
+      and an immense curiousity and propensity for diving in with new and challenging topics. 
 
-        In my free time I ride my bike, eat things I find outdoors, take online courses, and experiment with distributed information systems.
-
-        <i class="fa fa-twitter"></i>[@edrex](https://twitter.com/edrex) <i class="fa fa-github"></i><a href="https://github.com/edrex?tab=activity">edrex</a>
+      In my free time I ride my bike, eat things I find outdoors, take online courses, and experiment with distributed information systems.
+  .row.fa-4x
+      a(href="https://twitter.com/edrex" title="edrex on twitter")
+        i(class="fa fa-twitter")
+      a(href="https://github.com/edrex?tab=activity")
+        i(class="fa fa-github")
 block sidebar
   .media.articles
     .watermark
