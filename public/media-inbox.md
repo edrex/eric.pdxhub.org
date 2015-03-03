@@ -1,11 +1,16 @@
-http://www.ted.com/talks/the_interspecies_internet_an_idea_in_progress
-https://sites.google.com/site/themetalibrary/home
-http://valleywag.gawker.com/san-francisco-anarchists-slash-tires-of-google-shopping-1591169285
-http://honoringmycompass.blogspot.com/2014/06/day-39-bestest-day-ride-ever.html
-http://awinterman.github.io/2013/11/09/we-are-not-at-war.html
-http://onoffrhodes.wordpress.com/
+- jchris documentcoin https://docs.google.com/document/d/1-0D75T4_xjMNDdMdgaeRPtNvU-ggBJ_Z-FNg0DZIA_c/edit
+- http://freemusicarchive.org/music/podington_bear/
+- https://medium.com/message/what-is-public-f33b16d780f9
+- http://graydon2.dreamwidth.org/189377.html
+- http://www.ted.com/talks/the_interspecies_internet_an_idea_in_progress
+- https://sites.google.com/site/themetalibrary/home
+- http://valleywag.gawker.com/san-francisco-anarchists-slash-tires-of-google-- shopping-1591169285
+- http://honoringmycompass.blogspot.com/2014/06/day-39-bestest-day-ride-ever.html
+- http://awinterman.github.io/2013/11/09/we-are-not-at-war.html
+- http://onoffrhodes.wordpress.com/
 
 Nima, Hadron Collider 101, New Physics Theory https://video.ias.edu/node/3814
+
 Rick at Side Door:
   knytt stories
   broforce
@@ -27,6 +32,12 @@ from PBS Digital Studios
  - http://studygroupcomics.com/main/gray-city-part-1-by-ryan-dirks/ (Alicia's friend)
  - http://www.asofterworld.com/
  - http://www.buttercupfestival.com/2-5.htm
+
+## Web Design
+
+ - http://thepatternlibrary.com/
+ - http://24ways.org/
+ - http://patterns.alistapart.com/
  
 ## Math and science
 

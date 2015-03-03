@@ -32,7 +32,7 @@ Portland OR | +15036090837
   * Lead development of [SERPs](https://serps.com/), a PHP web traffic data aggregation and analysis product.
   * Created a rich web UI in Backbone.js for [Checkmarkable](https://checkmarkable.com/).
   * Built a multi-segment activity-scheduling UI in Javascript/Closure Library and Rails for [Revelation](http://revelationglobal.com/).
-* **Information Architect, [PSU Communications](http://www.pdx.edu/university-communications/)** (Nov 2005&mdash;Feb 2008) Architected a bubble-up content aggregation workflow for news, events, and faculty profiles. Developed and supported PSU Drupal distribution bundling reusable content types, views, workflows, and a customizable theme based on the University style guide.
+* **Information Architect, [PSU Communications](http://www.pdx.edu/university-communications/)** (Nov 2005&mdash;Feb 2008) Architected a bubble-up content aggregation workflow for news, events, and faculty profiles. Developed custom Drupal distributions bundling reusable content types, views, workflows, and a customizable theme based on the University style guide.
 * **BS Mathematics, Physics minor, [PSU](http://www.mth.pdx.edu)** (2005&mdash;2010) Explored topics in algebra, analysis, and statistical mechanics through computer modeling.
 * **Developer, [Oregon Catholic Press](http://ocp.org/)** (Aug&mdash;Nov 2005) Developed a Drupal-based [music and video portal](http://spiritandsong.com/).
 * **Systems Administrator, [Portland Public Schools](http://www.pps.k12.or.us/)** (Apr-Aug 2005) Provisioned Linux servers and operated services including Moodle, Drupal, Docuwiki, and JIRA.
