@@ -1,7 +1,6 @@
 #!/bin/bash
 
 harp compile ./ ./out
-node_modules/.bin/autoprefixer out/assets/styles/style.css
 
 IFS=$(echo -en "\n\b")
 
