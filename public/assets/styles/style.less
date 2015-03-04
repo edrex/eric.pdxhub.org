@@ -1,31 +1,28 @@
-@import "colors";
-@import "emoji";
-// @import "layout";
-@import "bourbon";
-@import "compass/css3/border-radius";
+@import "_colors";
+@import "_emoji";
 
 
-*, *:before, *:after{
-  @include box-sizing(border-box);
-}
+// *, *:before, *:after{
+//   @include box-sizing(border-box);
+// }
 
-$m: 12px;
+@m: 12px;
 
 body {
-  padding: $m;
+  padding: @m;
 }
 
 @media(min-width: 600px) {
   body {
-    padding-left: 4*$m;
-    padding-right: 4*$m;
+    padding-left: 4*@m;
+    padding-right: 4*@m;
   }
 }
 
 .container {
   position: relative;
-  padding: $m;
-  @include clearfix;
+  padding: @m;
+  // @include clearfix;
 }
 
 // prevent empty last page
@@ -75,7 +72,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 .homeLink {
   left: 0;
-  top: -$m;
+  top: -@m;
   font-size: 3em;
   position: absolute;
 }
@@ -86,7 +83,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     font-weight: inherit;
   }
   .description {
-    color: $base03;
+    color: @base03;
   }
   margin-bottom: 1em;
 }
@@ -98,16 +95,16 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   z-index: 0;
   // cursor: pointer;
   // &:hover:after, &:focus:after {
-  //   color: $orange;
+  //   color: @orange;
   // }
-  &:before {
-    content: "\2060";
-  }
+  // &:before {
+  //   content: "\2060";
+  // }
   &:after {
     z-index: 2;
-    color: $base1;
+    color: @base1;
     pointer-events: none;
-    @extend .icon;
+    .icon;
     content: "\f002";
     position: absolute;
     right: 0;
@@ -146,24 +143,24 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   justify-content: space-around;
 }
 
-$col: 30em;
+@col: 30em;
 
 .sections {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   > * {
-    flex: 1 1 $col;
+    flex: 1 1 @col;
   }
 }
 
-$figsize: 128px;
+@figsize: 128px;
 
 .media {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: $m;
+  padding: @m;
   position: relative;
   z-index: 1;
   > * {
@@ -176,27 +173,27 @@ $figsize: 128px;
     z-index: 0;
     opacity: .5;
     i {
-      color: $base2;
+      color: @base2;
     }
     font-size: 128px;
-    margin: $m 0;
+    margin: @m 0;
     // text-align: center;
   }
   .figure {
     // height: 100%;
     display: flex;
-    height: $figsize;
+    height: @figsize;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-around;
-    flex: 0 0 $col/2;
+    flex: 0 0 @col/2;
     i {
-      font-size: $figsize/2;
+      font-size: @figsize/2;
     }
   }
   .body {
     z-index: 1;
-    flex: 1 0 $col/2;
+    flex: 1 0 @col/2;
   }
 }
 
@@ -204,7 +201,7 @@ $figsize: 128px;
 // small generic components
 
 .button {
-  margin: $m;
+  margin: @m;
 }
 
 .label, .label:visited, .date {

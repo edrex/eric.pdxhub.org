@@ -2,5 +2,3 @@ bower install
 rm -rf public/talks/reveal.js
 cp -R public/assets/_components/reveal.js public/talks/
 rm -rf public/talks/reveal.js/css/theme/{source,template}
-cd public/assets/_sass
-bundle
