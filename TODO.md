@@ -7,6 +7,7 @@
  * [x] Clean up working copy, P
  * [x] Upgrade Harp etc, P
  * [x] Switch styles SCSS -> LESS
+ * [ ] Replace scripts with a Makefile
  * Set up CI build server (awesome sauce)
   - first try travis
    - http://docs.travis-ci.com/user/deployment/s3/ (but need finer control)
