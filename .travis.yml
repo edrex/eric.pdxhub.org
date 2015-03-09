@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+  - "0.12"
+
+# hello world
+# get s3cmd
+# prevent running tests
+# get creds passed to s3cmd
+# http://docs.travis-ci.com/user/encryption-keys/
+# https://github.com/s3tools/s3cmd/blob/master/NEWS#L119
+
+# env:
+#     global:
+#         - your_secure_BLOG_KEY_variable
+#         - your_secure_BLOG_ACCESS_KEY_variable
+ 
+# install:
+#     - pip install -r requirements.txt
+ 
+before_script:
+    - source travis_before.sh
+ 
+script:
+    - echo "Hello"
+ 
+after_success:
+    - make deploy
+ 
+branches:
+  only:
+    - master
