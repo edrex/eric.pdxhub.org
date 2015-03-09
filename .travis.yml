@@ -16,10 +16,6 @@ node_js:
  
 # install:
 #     - pip install -r requirements.txt
-
- 
-before_script:
-    - source travis_before.sh
  
 script:
     - echo "Hello"
