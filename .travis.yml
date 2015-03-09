@@ -1,28 +1,17 @@
 language: node_js
 node_js:
-  - "0.12"
-
-# hello world
-# get s3cmd
-# prevent running tests
-# get creds passed to s3cmd
-# http://docs.travis-ci.com/user/encryption-keys/
-# https://github.com/s3tools/s3cmd/blob/master/NEWS#L119
-
-# env:
-#     global:
-#         - your_secure_BLOG_KEY_variable
-#         - your_secure_BLOG_ACCESS_KEY_variable
- 
-# install:
-#     - pip install -r requirements.txt
- 
+- '0.12'
+before_script:
+- add-apt-repository ppa:abrody/ppa
+- apt-get update
+- apt-get install s3cmd
+- cp .s3cfg ~/
 script:
-    - echo "Hello"
- 
-after_success:
-    - make deploy
- 
+- make deploy
 branches:
   only:
-    - master
+  - master
+env:
+  global:
+  - secure: blKXyhh23ozg44SfB9xCL51oGppHU9lpXSH4IKuD2XcWIAv0Gg0Ek3biinGqC5ZW85DUqUEVkkF5gBv7w2iChEpaXUksI+8zZKt1K8RNVIFd6hqJQHCRN9zMNaSAJePtr+9bp/YL6f60JBKT+q/iuqf1wlojLKvJ+rAAOL2LuzU=
+  - secure: IwohF8TXXKPi8NWvo1L6qEZB109UAiT8pDGsN2PnMq2UYW9jAI6gCRJLU2eUJhv8VMZ2FjQ22TdrrLu/UJxdcsyoFbOHOVNSq6MhiJjxAueJiYa3rSlo7ZXdJuYsipW26+Ih51sehcdUx86anbuY1goMwDenydcNO2GmlS9cfxo=
