@@ -33,5 +33,7 @@ strip_html_extension:
 	# back bend to deal with filenames containing spaces
 	find $(OUTDIR) -name '*.html' -exec bash -c 'mv "$$1" "$${1%%.html}"' bash {} \;
 
-deploy: deps compile strip_html_extension
+deploy: compile strip_html_extension
 	s3cmd/s3cmd sync --default-mime-type="text/html; charset=utf-8" --guess-mime-type --delete-removed out/ s3://$(S3_BUCKET)/
+
+all: deps deploy
