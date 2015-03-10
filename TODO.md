@@ -16,11 +16,8 @@ This list is for infrastructure, Trello board is for design, maybe a drafts sect
 * [x] Upgrade Harp etc, P
 * [x] Switch styles SCSS -> LESS
 * [x] Replace scripts with a Makefile
-* [ ] Blog should rebuild on push
-  - https://github.com/jmervine/node-git-fish on heroku
-  - gen config
-    - token
-  - with example script
+* [x] Blog should rebuild on push
+  - https://github.com/jmervine/gitfish on ankh
   - also looked at
     - first try travis
       - http://docs.travis-ci.com/user/deployment/s3/ (but need finer control)
@@ -30,8 +27,10 @@ This list is for infrastructure, Trello board is for design, maybe a drafts sect
       - tried. kind of silly overkill
     - https://github.com/prashtx/harpist 
       - too specific. just want to run a script.
-   
- * Draft handling: branch vs folder
+* [ ] Clean up autodeploy
+* [ ] Make deploy faster
+* [ ] Edit link
+* Draft handling: branch vs folder
  
 ## Ideas
 
