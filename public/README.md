@@ -4,7 +4,7 @@ Source code is available on Github at [edrex/edrex.github.io](https://github.com
 
 ## Credits
 
-**Posts** are written in [Markdown](http://daringfireball.net/projects/markdown/) (with no Jekyll-style YAML header), unless they contain lots of markup in which case they are written in [Jade](http://jade-lang.com/) (using the `:markdown` Jade filter for prose sections).
+**Posts** are written in [Markdown](http://daringfireball.net/projects/markdown/) (no Jekyll-style YAML header), unless they contain lots of markup in which case they are written in [Jade](http://jade-lang.com/) (using the `:markdown` Jade filter for prose sections).
 
 **Layouts** and other XML/HTML templates are written in Jade.
 
