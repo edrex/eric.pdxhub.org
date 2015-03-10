@@ -1,15 +1,9 @@
-_site
 out
-.idea
 *.sw?
 *.un~
 .DS_Store
 public/assets/_components
 node_modules
-.sass-cache
+s3cmd
 npm-debug.log
-public/assets/styles/style.css
-public/assets/styles/style.css.map
-.sass-cache
 public/talks/reveal.js
-
