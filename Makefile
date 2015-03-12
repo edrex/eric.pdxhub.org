@@ -19,6 +19,7 @@ npm:
 bower:
 	$(BINDIR)/bower install
 
+# could replace with CDN?
 reveal:
 	rm -rf public/talks/reveal.js
 	cp -R public/assets/_components/reveal.js public/talks/
@@ -32,6 +33,7 @@ clean:
 compile:
 	$(BINDIR)/harp compile ./ $(OUTDIR)
 
+# if i were hosting with apache this wouldn't be necessary (eg, webfaction)
 strip_html_extension:
 	# back bend to deal with filenames containing spaces
 	find $(OUTDIR) -name '*.html' -exec bash -c 'mv "$$1" "$${1%%.html}"' bash {} \;

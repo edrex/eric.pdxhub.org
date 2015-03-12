@@ -6,7 +6,7 @@
   },
   "webhooks-deployment": {
     "title": "Continuously Deploy Your Site with Webhooks",
-    "theme": "solarized"
+    "theme": "simple"
   },
   "workflow": {
     "title": "Workflow Talk",

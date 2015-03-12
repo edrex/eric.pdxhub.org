@@ -27,9 +27,9 @@ This list is for infrastructure, Trello board is for design, maybe a drafts sect
       - tried. kind of silly overkill
     - https://github.com/prashtx/harpist 
       - too specific. just want to run a script.
-* [ ] Clean up autodeploy
-* [ ] Make deploy faster
-* [ ] Edit link
+* [x] Clean up autodeploy
+* [x] Make deploy faster
+* [ ] Edit link - can Harp do this yet?
 * Draft handling: branch vs folder
  
 ## Ideas
