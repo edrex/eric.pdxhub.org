@@ -4,6 +4,10 @@
     "description": "Slides of my most recent talks",
     "layout": "../_layout"
   },
+  "webhooks-deployment": {
+    "title": "Continuously Deploy Your Site with Webhooks",
+    "theme": "solarized"
+  },
   "workflow": {
     "title": "Workflow Talk",
     "theme": "solarized"
