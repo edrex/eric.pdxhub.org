@@ -1,0 +1,14 @@
+include _shared/deep
+- var posts = all_posts(public, '/');
+- var remaining = Object.keys(posts).length;
+| callback([
+each val, key in posts
+  - remaining--;
+  | {
+  |   "text": "#{val.title || key}",
+  |   "href": "#{key}"
+  if remaining > 0
+    | },
+  else
+    | }
+|])

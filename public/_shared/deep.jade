@@ -1,4 +1,25 @@
 - function merge(a,b,pre){for (var f in b) { a[f] = b[f]}; return a}
-- function prefix(a,pre){var r={}; for (var f in a) { r[pre+f] = a[f]}; return r}
-- function subdirs(b){var r={}; for (var i in b) {if (i !== '_data' && i !== '_contents') r[i]=b[i]}; return r;}
-- function all_posts(b,pre){var r=prefix(b._data,pre); for(var s in subdirs(b)){merge(r, all_posts(b[s],pre+s+'/'))}; return r}
+- function prefix(a,pre){
+  - var r={};
+  - for (var f in a) {
+    - if (a[f]['index'] === false) continue;
+    - if (f == 'index') {
+      - r[pre] = a[f];
+    - } else r[pre+f] = a[f];
+  - }
+  - return r
+- }
+- function subdirs(b){
+  - var r={};
+  - for (var i in b) {
+    - if (i !== '_data' && i !== '_contents') r[i]=b[i];
+  - };
+  - return r;
+- }
+- function all_posts(b,pre){
+  - var r=prefix(b._data,pre);
+  - for(var s in subdirs(b)){
+    - merge(r, all_posts(b[s],pre+s+'/'));
+  - };
+  - return r;
+- }

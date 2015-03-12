@@ -46,6 +46,9 @@
   "sitemap": {
     "layout": false
   },
+  "links": {
+    "layout": false
+  },
   "articles": {
     "title": "Articles"
   },
