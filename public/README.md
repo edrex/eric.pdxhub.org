@@ -4,6 +4,7 @@ This blog is statically compiled. Source is available at [edrex/edrex.github.io]
 
 ## Credits
 
+
 **Prose posts** are written in [Markdown](http://daringfireball.net/projects/markdown/).
 
 **Page layouts** and **demo posts** are written in Jade.
