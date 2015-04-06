@@ -61,10 +61,21 @@ from PBS Digital Studios
  - https://hasgeek.tv/metarefresh/2013/493-why-the-next-big-thing-sucks
  - http://www.webstock.org.nz/
 
+## Books, Fiction
+
+- The windup girl / Paolo Bacigalupi
+- Pattern recognition / William Gibson
+- Pandora's star / Peter F. Hamilton
+
+## Movies
+
+- 1 hr photo (Robin Williams thriller)
+
 ## Music
 
-Andrew Bird Fake Palindromes
-Moby
+- Andrew Bird Fake Palindromes
+- Moby
+- Roger Clyne and the Peacemakers
 
 ## Anime
 
