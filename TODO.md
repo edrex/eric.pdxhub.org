@@ -8,9 +8,14 @@ Organization: identify levels
  - Site design changes
  - Infrastructure changes
  
-This list is for infrastructure, Trello board is for design, maybe a drafts section is for content.
+This list is for infrastructure, design, code tasks
+
+Drafts section is for content.
 
 ## Tasks
+
+* [ ] Compare my helpers to the ones on Lauren's site, and simplify
+* [ ] Create Featured Posts section on front page
 
 * [x] Clean up working copy, P
 * [x] Upgrade Harp etc, P

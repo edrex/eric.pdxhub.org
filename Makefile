@@ -19,7 +19,7 @@ npm:
 bower:
 	$(BINDIR)/bower install
 
-# could replace with CDN?
+# reveal plugins don't work cross-origin
 reveal:
 	rm -rf public/talks/reveal.js
 	cp -R public/assets/_components/reveal.js public/talks/
