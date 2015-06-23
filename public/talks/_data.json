@@ -4,6 +4,10 @@
     "description": "Slides of my most recent talks",
     "layout": "../_layout"
   },
+  "systemjs": {
+    "title": "SystemJS: Javascript Modules in the Browser",
+    "theme": "simple"
+  },
   "webhooks-deployment": {
     "title": "Continuously Deploy Your Site with Webhooks",
     "theme": "simple"
