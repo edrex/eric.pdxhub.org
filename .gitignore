@@ -2,8 +2,6 @@ out
 *.sw?
 *.un~
 .DS_Store
-public/assets/_components
 node_modules
 s3cmd
 npm-debug.log
-public/talks/reveal.js

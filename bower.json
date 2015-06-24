@@ -1,9 +1,0 @@
-{
-  "name": "i-am-not-a-component",
-  "dependencies": {
-    "normalize-css": "~2.1.3"
-  },
-  "devDependencies": {
-    "reveal.js": "~2.6.1"
-  }
-}

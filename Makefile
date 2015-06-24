@@ -6,6 +6,8 @@ S3CMD_VERSION := 1.5.2
 GITHUB_USER := edrex
 GITHUB_REPO := $(GITHUB_USER).github.io
 
+all: deps deploy
+
 s3cmd:
 	curl -L http://softlayer-ams.dl.sourceforge.net/project/s3tools/s3cmd/$(S3CMD_VERSION)/s3cmd-$(S3CMD_VERSION).tar.gz | tar zx
 	mv s3cmd-$(S3CMD_VERSION) s3cmd
@@ -16,16 +18,7 @@ start:
 npm:
 	npm install
 	
-bower:
-	$(BINDIR)/bower install
-
-# reveal plugins don't work cross-origin
-reveal:
-	rm -rf public/talks/reveal.js
-	cp -R public/assets/_components/reveal.js public/talks/
-	rm -rf public/talks/reveal.js/css/theme/{source,template}
-
-deps: s3cmd npm bower reveal
+deps: s3cmd npm
 
 clean:
 	rm -rf $(OUTDIR)
@@ -45,8 +38,3 @@ pull:
 	git pull
 
 update: pull deploy
-
-listen: # requires $FISH_SECRET
-	gitfish -p 8765 --master -c "make update"
-
-all: deps deploy
