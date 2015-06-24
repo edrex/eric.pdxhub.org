@@ -5,8 +5,8 @@
     "layout": "../_layout"
   },
   "systemjs": {
-    "title": "SystemJS: Javascript Modules in the Browser",
-    "theme": "simple"
+    "title": "Javascript Modules in the Browser",
+    "theme": "solarized"
   },
   "webhooks-deployment": {
     "title": "Continuously Deploy Your Site with Webhooks",
