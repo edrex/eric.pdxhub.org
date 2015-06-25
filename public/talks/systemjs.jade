@@ -1,39 +1,168 @@
+style
+  @-webkit-keyframes shake {
+    0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+    10% { -webkit-transform: translate(-3px, -6px) rotate(-3deg); }
+    20% { -webkit-transform: translate(-6px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(0px, 4px) rotate(0deg); }
+    40% { -webkit-transform: translate(3px, -4px) rotate(5deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-3deg); }
+    60% { -webkit-transform: translate(-5px, -2px) rotate(0deg); }
+    70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(7deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+  }
+  .shake {
+    display:block;
+    position:relative;
+    -webkit-animation-name: shake;
+    -webkit-animation-duration: 1s;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+  }
+  .shake2 {
+    -webkit-animation-duration: 1.01s;
+  }
+
 section
-  h1 SystemJS: Modules in the Browser
+  p Eric Drechsel / 
+    a(href='http://twitter.com/edrex') @edrex
+  h1 Modules in the Browser
   aside.notes 
     :markdown
-section
-  h2 Tasks
-  :markdown
-    - [ ] Push stub talk to website
-    - [ ] Make an outline
-    - Stub History
-    - 
-    - Research History
 section
   h2 Outline
   ul
     li History of modular JS
-    li Where are we now? Where are we headed?
-    li How SystemJS helps us get there.
+    li ES Modules
+    li SystemJS helps us get there
+    li Crystal ball: the future of module delivery
+  aside.notes 
+    h2 Disclaimer
+    p I'm not a primary source for any of these topics (the module systems, the ES Loader spec, SystemJS etc).
 section
   h2 History of modular JS
   ul
-    li Archean era (Sun, Netscape, etc)
-    li AMD / Require.JS (where/who/why)
+    li Archean era
+    li AMD / Require.JS
     li Common JS
       ul
         li To the browser: browserify and webpack
     li ES6 Modules
 section
-  h2 But I want it now
-    li ES6 Module Loader
-    li In that context: SystemJS is a set of ES6 module lifecycle hooks
-    li But more than that: it's a c
+  h2
+section(data-background="http://tuttidentro.files.wordpress.com/2012/12/active-volcano-venus.jpg")
+  h2 Archean era
+  p.fragment.shake: strong SCRIPT TAGS
+  p.fragment.shake.shake2: strong Globals
 section
-  img.avatar(src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=512")  
-  h2 Eric Drechsel
-  p Slides at 
-    a(href='//eric.pdxhub.org') eric.pdxhub.org/talks
-  p
-    a(href='http://twitter.com/edrex') @edrex
+  section
+    h2 AMD
+    aside.notes
+      ul
+        li Async
+  section
+    h3 Consuming modules
+    :markdown
+      ```
+      require(['foo'], 
+          function(foo){
+              foo.doStuff()
+          }
+      );
+      ```
+    a(href="http://addyosmani.com/writing-modular-js/") addyosmani.com/writing-modular-js
+  section
+    h3 Defining modules
+    :markdown
+      ```
+      define('foo', 
+          ['bar', 'baz'], 
+          // dependencies (foo and bar) are mapped to function parameters
+          function ( bar, baz ) {
+              var myModule = {
+                  doStuff:function(){
+                      console.log('Yay! Stuff');
+                  }
+              }
+       
+              return function(x) {
+                  return [bar(x), baz(x)]
+              };
+      });
+      ```
+    a(href="http://addyosmani.com/writing-modular-js/") addyosmani.com/writing-modular-js
+section
+  section
+    h2 CommonJS
+    p aka NPM modules
+    aside.notes
+      ul
+        li Sync
+        li which seems to imply bundling for local delivery
+  section
+    h3 Consuming modules
+    p On Node:
+      :markdown
+        ```
+        var bar = require("bar")
+        ```
+    p Bundling (Browserify, Webpack)
+section
+  section
+    h2 EcmaScript Modules
+    aside.notes
+      p Combines both worlds
+  section
+    h3 Exports
+    :markdown
+      ```
+      //------ module1.js ------
+      export default 123;
+      
+      //------ module2.js ------
+      const D = 123;
+      export { D as default };
+      ```
+    p: a(href="http://www.2ality.com/2014/09/es6-modules-final.html") 2ality.com/2014/09/es6-modules-final.html
+  section
+    h3 Declarative import syntax
+    :markdown
+      ```
+      import * as math from "lib/math";
+      import {sum, pi} from "lib/math";
+      ```
+  section
+    h3 Default vs named exports
+    :markdown
+      ```
+      //------ foo.js ------
+      export default 123;
+      
+      //------ module2.js ------
+      export const A = 321;
+      
+      //------ main.js ------
+      import foo, { A } from 'foo';
+      ```
+  section
+    h3 System.import
+    p Hint: it's just AMD's `require`
+section(data-background="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/11/15/anigif_enhanced-buzz-11490-1381518046-13.gif")
+  h3 but I want it
+  h1: strong NOW
+  aside.notes
+    ul
+      li ES6 Module Loader
+      li In that context: SystemJS is a set of ES6 module lifecycle hooks
+      li But more than that: it's a c
+section
+  p Eric Drechsel / 
+    a(href='https://twitter.com/edrex') @edrex
+  img.avatar(src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=256")  
+  p Slides: 
+    a(href='http://eric.pdxhub.org/talks') eric.pdxhub.org/talks
+  p Code: 
+    a(href="https://github.com/edrex/hello-systemjs") github.com/edrex/hello-systemjs
+

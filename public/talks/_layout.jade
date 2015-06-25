@@ -7,7 +7,11 @@ head
     meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
     link(rel='stylesheet', href='//cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.min.css')
-    link#theme(rel='stylesheet', href='//cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/' + (theme || 'solarized') + '.css')
+    if theme
+      link#theme(rel='stylesheet' href='//cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/' + theme + '.css')
+    else
+      link(rel='stylesheet', href='/assets/styles/reveal_theme.css')
+
     // For syntax highlighting 
     link(rel='stylesheet', href='//cdn.jsdelivr.net/reveal.js/3.0.0/lib/css/zenburn.css')
     link(rel='stylesheet', href='notecards.css')
@@ -31,14 +35,14 @@ head
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
       controls: false,
-      progress: true,
+      progress: false,
       history: true,
       center: true,
       theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
       transition: Reveal.getQueryHash().transition || "#{revealTransition || 'linear'}", // default/cube/page/concave/zoom/linear/fade/none
       // Parallax scrolling
-      // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-      // parallaxBackgroundSize: '2100px 900px',
+      //- parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+      //- parallaxBackgroundSize: '2100px 900px',
       // Optional libraries used to extend on reveal.js
       dependencies: [
       { src: '//cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
