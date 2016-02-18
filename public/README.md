@@ -13,7 +13,7 @@ This blog is statically compiled. Source is available at [edrex/edrex.github.io]
 
 **Icons** are sourced from [Emoji Symbols](http://emojisymbols.com/) and [Font Awesome](fontawesome.io).
 
-**Compilation** uses [Harp.js](http://harpjs.com) along with a [GNU Make](http://www.gnu.org/software/make/) [Makefile](https://github.com/edrex/edrex.github.io/blob/master/Makefile), and is triggered by [gitfish](https://github.com/jmervine/gitfish) listening to a [Github Webhook](https://developer.github.com/webhooks/). The site is **hosted** on Amazon S3. Changes are **synced** by [s3cmd](http://s3tools.org/s3cmd).
+**Compilation** uses [Harp.js](http://harpjs.com) along with a [GNU Make](http://www.gnu.org/software/make/) [Makefile](https://github.com/edrex/edrex.github.io/blob/master/Makefile). [adnanh/webhook](https://github.com/adnanh/webhook) listening to a [Github Webhook](https://developer.github.com/webhooks/). The site is **hosted** on Amazon S3. Changes are **synced** by [s3cmd](http://s3tools.org/s3cmd).
 
 **Talks** are presented using the excellent [reveal.js](http://lab.hakim.se/reveal-js/).
 
@@ -31,11 +31,8 @@ Deps are listed along with Ubuntu install command.
 
 - NodeJS + NPM `apt-get install nodejs npm`
 - Python 2 + magic and dateutil for s3cmd `apt-get install python-magic python-dateutil`
-- Golang, for gitfish `apt-get install golang` and add to `~/.profile`:
-      export GOROOT=/usr/lib/go
-      export GOPATH=$HOME/go
-      export PATH=$GOPATH/bin:$PATH
-- [gitfish](https://github.com/jmervine/gitfish) `go get -u github.com/jmervine/gitfish`
+- Golang, for the webhook command `apt-get install golang`
+- [adnanh/webhook](https://github.com/adnanh/webhook)
 
 ### Running
 
