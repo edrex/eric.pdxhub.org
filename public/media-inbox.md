@@ -1,3 +1,9 @@
+## Courses
+
+http://natureofcode.com/book/
+
+## Rand
+
 - jchris documentcoin https://docs.google.com/document/d/1-0D75T4_xjMNDdMdgaeRPtNvU-ggBJ_Z-FNg0DZIA_c/edit
 - http://freemusicarchive.org/music/podington_bear/
 - https://medium.com/message/what-is-public-f33b16d780f9
@@ -86,3 +92,23 @@ Jacob:
  - blue gender
  - arjuna
  - flcl
+
+### Similar to Ghibli
+
+src: https://www.reddit.com/r/ghibli/comments/1dw2nr/movies_similar_to_ghibli_films/?sort=top
+
+Mushi-shi
+
+- FUNimation https://www.youtube.com/watch?v=aT_1OdsSvKI
+- Season 2: http://www.crunchyroll.com/mushi-shi
+
+The Girl Who Leapt Through Time https://www.youtube.com/watch?v=ZVtftNwjVW4 http://www.rottentomatoes.com/m/the_girl_who_leapt_through_time/
+
+Children Who Chase Lost Voices https://www.youtube.com/watch?v=_enFiTiLo_Y http://www.rottentomatoes.com/m/hoshi_o_ou_kodomo_2011/
+
+http://www.rottentomatoes.com/m/summer-wars/
+
+Paprika
+
+A Letter to Momo	
+
