@@ -16,9 +16,9 @@ mixin post_icon(post, classes, omit_space)
     mixin icon(field(post,'icon'), classes, omit_space)
 
 mixin tag(tag)
-  - var post = public.tags._data[tag] || {'url':'/tags/#tag-'+ tag, 'icon': 'tag'}
+  - var post = public.tags._data[tag] || {'url':'/tags#'+ tag, 'icon': 'tag'}
   a(class="tag label label-default", href=post.url)
-    mixin icon(post.icon) #{tag}
+    mixin icon(post.icon)= tag
 
 mixin post_title(post, slug)
   if post.title

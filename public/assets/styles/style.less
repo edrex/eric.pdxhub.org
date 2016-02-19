@@ -36,9 +36,6 @@ body {
 .cols {
   display: flex;
   flex-wrap: wrap;
-  // > * {
-  //   flex: 1 1 30em;
-  // }
 }
 
 .header {
@@ -57,6 +54,12 @@ body {
   }
 }
 
+a.social {
+    color: @blue;
+}
+a.section {
+    color: @violet;
+}
 .avatar {
   width: 72px;
   border-radius: 10px;
@@ -160,23 +163,19 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: @m;
   position: relative;
   z-index: 1;
-  > * {
-    margin: .5em;
-  }
   .watermark {
     position: absolute;
     width: 100%;
     text-align: center;
-    z-index: 0;
+    z-index: -1;
     opacity: .5;
     i {
       color: @base2;
     }
     font-size: 128px;
-    margin: @m 0;
+    // margin: @m 0;
     // text-align: center;
   }
   .figure {
@@ -191,8 +190,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
       font-size: @figsize/2;
     }
   }
-  .body {
-    z-index: 1;
+  .list {
     flex: 1 0 @col/2;
   }
 }
@@ -211,4 +209,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 p {
   margin-top: 0;
+}
+
+a:hover {
+  color: @orange;
+}
+
+a:active {
+  text-decoration: underline;
 }

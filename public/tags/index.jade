@@ -4,7 +4,6 @@ include ../_shared/posts
 - var tags = indexPostsBy(posts, fieldGetter('tags'))
 each paths, tag in tags
   h2= tag
-    small= paths.length
   ul
     each path in paths
       li
