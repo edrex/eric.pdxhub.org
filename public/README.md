@@ -2,7 +2,7 @@
 
 This blog is statically compiled. Source is available at [github.com/edrex/eric.pdxhub.org](https://github.com/edrex/eric.pdxhub.org). Pull requests welcome :)
 
-## Stack
+## Credits
 
 **Prose posts** are written in [Markdown](http://daringfireball.net/projects/markdown/), **page layouts** and **demo posts** in Jade.
 
