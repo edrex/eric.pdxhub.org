@@ -13,7 +13,9 @@ This blog is statically compiled. Source is available at [edrex/edrex.github.io]
 
 **Icons** are sourced from [Emoji Symbols](http://emojisymbols.com/) and [Font Awesome](fontawesome.io).
 
-**Compilation** uses [Harp.js](http://harpjs.com) along with a [GNU Make](http://www.gnu.org/software/make/) [Makefile](https://github.com/edrex/edrex.github.io/blob/master/Makefile). [adnanh/webhook](https://github.com/adnanh/webhook) listening to a [Github Webhook](https://developer.github.com/webhooks/). The site is **hosted** on Amazon S3. Changes are **synced** by [s3cmd](http://s3tools.org/s3cmd).
+**Compilation** uses [Harp.js](http://harpjs.com) along with a [GNU Make](http://www.gnu.org/software/make/) [Makefile](https://github.com/edrex/eric.github.com/blob/master/Makefile). The build is triggered by a Github webhook, which hits a Caddy instance using the Caddy-git extension.
+
+Source code is [available](https://github.com/edrex/eric.github.com) on **Github**, and the site is also published using Github Pages.
 
 **Talks** are presented using the excellent [reveal.js](http://lab.hakim.se/reveal-js/).
 
