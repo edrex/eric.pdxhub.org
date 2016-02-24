@@ -1,6 +1,6 @@
 ## Source
 
-This blog is statically compiled. Source is available at [edrex/edrex.github.io](https://github.com/edrex/edrex.github.io). Pull requests welcome :)
+This blog is statically compiled. Source is available at [github.com/edrex/eric.pdxhub.org](https://github.com/edrex/eric.pdxhub.org). Pull requests welcome :)
 
 ## Stack
 
