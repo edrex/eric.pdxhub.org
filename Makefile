@@ -25,4 +25,4 @@ compile:
 	$(BINDIR)/harp compile ./ $(OUTDIR)
 
 publish: pull compile
-	cd $(OUTDIR) && git add . && git commit -m "Publish" && git push
+	cd $(OUTDIR) && git add -A . && git commit -m "Publish" && git push
