@@ -4,12 +4,12 @@ OUTDIR := ./out/
 GIT_REPO := git@github.com:edrex/eric.pdxhub.org.git
 GIT_PUBLISH_BRANCH := gh-pages
 
-all: deps publish
+all: npm publish
 
 start:
 	$(BINDIR)/harp server
 
-deps: npm
+npm:
 	npm install
 
 clean:
