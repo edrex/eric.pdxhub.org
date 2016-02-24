@@ -32,16 +32,12 @@ Deps are listed along with Ubuntu install command.
 
 ### Running
 
-`make deps`
+`make`
 
 #### Local dev
 
 `make start`
 
-#### Deploy
+#### Publish
 
 `make deploy`
-
-#### Listen
-
-FISH_SECRET="github webhook secret" make listen
