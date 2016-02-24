@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta http-equiv="CACHE-CONTROL" content="NO-CACHE"><title>Liquid Limit</title><meta name="viewport" content="width=device-width"><link rel="shortcut icon" href="/assets/favicon.ico"><link rel="stylesheet" href="/assets/styles/normalize.css"><link rel="stylesheet" href="/assets/styles/markdown.css"><link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="/assets/styles/style.css"><link rel="stylesheet" href="/assets/styles/highlight_solarized_dark.css"><meta name="google-site-verification" content="jdNxQ0D7Pu5Zp7em_fWgy3CMhDdvHL9R5aRt8HuL8KY"><script>var gaProperty = 'UA-342641-5';
+if (document.cookie.indexOf("analytics-opt-out" + '=true') == -1) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', gaProperty, 'pdxhub.org');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+}</script></head><body><div class="container"><div class="header"><a href="/" title="Back to Eric's homepage"><img src="/assets/avatar.jpeg" class="avatar"></a><h1 class="title"><span class="brand"><i class="fa fa-glass "></i> Liquid Limit </span></h1><h3 class="subheading">a tenacious unwanted comma</h3><div class="gather"><span data-raw="2013-10-24" class="date">Oct 23, 2013</span> </div></div><div class="cols"><div class="maincol"><div class="main"><p>This is the story of how I finally hit a <a href="#" rel="tooltip" title="Liquid is the template language used to generate output files on Jekyll sites.">Liquid</a> limitation that I couldn&#39;t work around with a series of ugly hacks.</p>
+<p>Last night at <a href="https://twitter.com/MaptimePDX">MaptimePDX</a> I decided to add a <a href="http://leafletjs.com/">Leaflet</a> map to my blog, just for fun. It would show markers for all posts with a location field. An example post:</p>
+<pre><code>---
+title: Locatable Post
+permalink: with-location/
+location:
+  lon: 0.5
+  lat: 102.0
+---
+
+This post has a location field!
+</code></pre><p>For the map, I needed to aggregate all the location data into a single GeoJSON index. My first attempt:</p>
+<h2>```{% raw %}</h2><hr>
+<p>{ &quot;type&quot;: &quot;FeatureCollection&quot;,
+  &quot;features&quot;: [{% for post in site.posts %}{% if post.location %}
+    { &quot;type&quot;: &quot;Feature&quot;,
+      &quot;geometry&quot;: {&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [{{ post.location.lon }}, {{ post.location.lat }}]},
+      &quot;properties&quot;: {
+        &quot;title&quot;: &quot;{{ post.title }}&quot;,
+        &quot;url&quot;: &quot;{{ post.url }}&quot;
+        }
+      }{% unless forloop.last %}, {% endunless %}{% endif %}{% endfor %}
+    ]
+  }
+{% endraw %}```</p>
+<p>Result:</p>
+<pre><code>{ &quot;type&quot;: &quot;FeatureCollection&quot;,
+  &quot;features&quot;: [
+    { &quot;type&quot;: &quot;Feature&quot;,
+      &quot;geometry&quot;: {&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [0.5, 102.0]},
+      &quot;properties&quot;: {
+        &quot;title&quot;: &quot;Locatable Post&quot;,
+        &quot;url&quot;: &quot;/with-location/&quot;
+        }
+      }, 
+    ]
+  }
+</code></pre><p>Unfortunately the output still has a trailing comma, which <a href="#" rel="tooltip" title="yes, this is an awkward flaw in JSON that XML doesn't suffer.">isn&#39;t valid JSON</a>. This is because the last location-having post <em>isn&#39;t</em> the last post in the collection. I&#39;m hacking around the lack of <a href="#" rel="tooltip" title="a &quot;select&quot; or &quot;filter&quot; tag.">collection filtering</a> in Liquid by nesting an <code>if</code> tag inside the <code>for</code> tag, which breaks <code>forloop.last</code>. </p>
+<p>The above experience is representative of using Liquid: inconsistent, ad hoc language semantics get in the way and generally increase the cognitive cost of using it.</p>
+<p>Granted, I could implement the semantics needed to drop my trailing comma as a Jekyll plugin, but this wouldn&#39;t change the root problem: <em>Liquid is a terrible templating language</em>.</p>
+<p>Right now I&#39;m investigating moving to DocPad, however given its chronic issues with memory usage, I may go with something more basic.</p></div></div><div class="sidebar"></div></div><div class="footer"></div></div><script src="/assets/scripts/jquery.min.js"></script><script src="/assets/scripts/lodash.min.js"></script><script src="/assets/scripts/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad()</script><script src="/assets/scripts/toggle-grid.js"></script></body></html>

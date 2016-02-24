@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta http-equiv="CACHE-CONTROL" content="NO-CACHE"><title>Git Add Patch Ftw</title><meta name="viewport" content="width=device-width"><link rel="shortcut icon" href="/assets/favicon.ico"><link rel="stylesheet" href="/assets/styles/normalize.css"><link rel="stylesheet" href="/assets/styles/markdown.css"><link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="/assets/styles/style.css"><link rel="stylesheet" href="/assets/styles/highlight_solarized_dark.css"><meta name="google-site-verification" content="jdNxQ0D7Pu5Zp7em_fWgy3CMhDdvHL9R5aRt8HuL8KY"><script>var gaProperty = 'UA-342641-5';
+if (document.cookie.indexOf("analytics-opt-out" + '=true') == -1) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', gaProperty, 'pdxhub.org');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+}</script></head><body><div class="container"><div class="header"><a href="/" title="Back to Eric's homepage"><img src="/assets/avatar.jpeg" class="avatar"></a><h1 class="title"><span class="brand"><i class="fa fa-coffee "></i> Git Add Patch Ftw </span></h1><div class="gather"></div></div><div class="cols"><div class="maincol"><div class="main"><pre>
+git help add /--patch
+
+       -p, --patch
+           Interactively choose hunks of patch between the index and the work tree and add them to the index. This gives the user a chance to review the
+           difference before adding modified contents to the index.
+
+           This effectively runs add --interactive, but bypasses the initial command menu and directly jumps to the patch subcommand. See "Interactive mode" for
+           details.
+
+Stage this hunk [y,n,q,a,d,/,s,e,?]? ?
+y - stage this hunk
+n - do not stage this hunk
+q - quit; do not stage this hunk nor any of the remaining ones
+a - stage this hunk and all later hunks in the file
+d - do not stage this hunk nor any of the later hunks in the file
+g - select a hunk to go to
+/ - search for a hunk matching the given regex
+j - leave this hunk undecided, see next undecided hunk
+J - leave this hunk undecided, see next hunk
+k - leave this hunk undecided, see previous undecided hunk
+K - leave this hunk undecided, see previous hunk
+s - split the current hunk into smaller hunks
+e - manually edit the current hunk
+? - print help
+</pre></div></div><div class="sidebar"></div></div><div class="footer"></div></div><script src="/assets/scripts/jquery.min.js"></script><script src="/assets/scripts/lodash.min.js"></script><script src="/assets/scripts/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad()</script><script src="/assets/scripts/toggle-grid.js"></script></body></html>

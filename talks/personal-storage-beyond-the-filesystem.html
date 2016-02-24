@@ -1,0 +1,86 @@
+<!DOCTYPE html><html lang="en"></html><head><meta charset="utf-8"><title></title><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.min.css"><link rel="stylesheet" href="/assets/styles/reveal_theme.css"><!-- For syntax highlighting --><link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/lib/css/zenburn.css"><link rel="stylesheet" href="notecards.css"><!-- If the query includes 'print-pdf', use the PDF print sheet --><script>document.write( '<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script><!--if lt IE 9script(src='//cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/html5shiv.js')--><meta name="google-site-verification" content="jdNxQ0D7Pu5Zp7em_fWgy3CMhDdvHL9R5aRt8HuL8KY"><script>var gaProperty = 'UA-342641-5';
+if (document.cookie.indexOf("analytics-opt-out" + '=true') == -1) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', gaProperty, 'pdxhub.org');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+}</script></head><body><div class="reveal"><!--Any section element inside of this container is displayed as a slide --><div class="slides"><section><h1>Personal Storage - Beyond the Filesystem</h1><p><small>Speaker:<a href="http://eric.pdxhub.org">Eric Drechsel</a> /<a href="http://twitter.com/edrex">@edrex</a></small></p><aside class="notes">Point-in-time snapshot of my learning process. Questions/comments anytime.</aside></section><section><h2>History of Personal Storage</h2><ul><li>Journals</li><li>My Documents</li><li>Local Silos</li><li>Siloed Online Apps</li></ul></section><section><ul><li>Archival</li><li>Annotation</li><li>Publishing</li></ul></section><section><h2>Collaboration</h2><ul><li>Authenticity</li><li>Reconciling multiple POV</li></ul></section><section><h2>Benefits of collaboration without siloing</h2><aside class="notes"><h2>Outline</h2><h2 id="subtitle">subtitle</h2>
+<ul>
+<li>oh hi</li>
+<li>Once you&#39;ve put all your information in one basket, you might want to publish a website out of it.</li>
+<li>Options:<ul>
+<li>Go templates<ul>
+<li>Have to rebuild the binary each time. That&#39;s no fun!</li>
+<li>Also violates encapsulation like whoa. I want my store to be a black box with a consistent API.</li>
+<li>Go templates seem great for teaching the server custom output formats (FOOSON?)</li>
+</ul>
+</li>
+<li>External build process<ul>
+<li>BYO tools/environment</li>
+</ul>
+</li>
+<li>Need to get at store data somehow</li>
+</ul>
+</li>
+<li>My site build: <draw a picture><ul>
+<li>Posts (Markdown and Jade) + templates (Jade) in Git</li>
+<li>Metadata in <code>_data.json</code></li>
+<li>Harp feeds metadata to Jade templates</li>
+</ul>
+</draw></li>
+<li>Want<ul>
+<li>Posts are Camli objects (Permanodes)</li>
+<li>Metadata via Camli claims</li>
+<li>Templates in Git</li>
+</ul>
+</li>
+<li><p>Questions</p>
+<ul>
+<li>How to update</li>
+</ul>
+</li>
+<li><p>The vision
+1 Capture</p>
+<ul>
+<li>One interpolated stream for all activity<ul>
+<li>Location history</li>
+<li>Smartphone photos</li>
+<li>Social network activity (twitter/fb/g+ etc)</li>
+<li>Open browser tabs</li>
+<li>Wireless network connections
+2 Annotate to add structure</li>
+</ul>
+</li>
+<li>Tags</li>
+<li>&quot;Folder&quot; structures</li>
+<li>Arbitrary fields
+3 Query<ul>
+<li>^ this is what&#39;s great about one basket</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</aside></section></div></div><script src="//cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script><script src="//cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script><script>// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: false,
+progress: false,
+history: true,
+center: true,
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || "linear", // default/cube/page/concave/zoom/linear/fade/none
+// Parallax scrolling
+//- parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+//- parallaxBackgroundSize: '2100px 900px',
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{ src: '//cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+{ src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+]
+});</script></body>
