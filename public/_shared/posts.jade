@@ -9,11 +9,11 @@
 
 include icon
 
-mixin post_icon(post, classes, omit_space)
+mixin post_icon(post, classes)
   if post.emoji
     mixin emoji(post.emoji, classes)
-  else
-    mixin icon(field(post,'icon'), classes, omit_space)
+  else if post.icon
+    mixin icon(post.icon, classes)
 
 mixin tag(tag)
   - var post = public.tags._data[tag] || {'url':'/tags#'+ tag, 'icon': 'tag'}

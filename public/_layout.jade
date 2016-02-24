@@ -21,14 +21,15 @@ html(lang='en')
   body
     .container
       .header
-        if (current.path.length == 1 && current.path[0]=='index')
-          img.avatar(src="/assets/avatar.jpeg")
-        else
-          a(href="/" title="Back to Eric's homepage")
-            img.avatar(src="/assets/avatar.jpeg")
+        if current.path.length != 1 || current.path[0] !='index'
+          a.index(href="/" title="Back to Eric's homepage")
+            | ◀︎
+            mixin icon("coffee")
+          | 
         h1.title
           span.brand
             mixin post_icon(locals)
+            | 
             mixin post_title(locals, current.path[current.path.length-1])
             | 
         if (description != null)
