@@ -1,3 +1,11 @@
+## Sprint: March 1-7 2016
+
+ - [ ] Migrate this file and trello to Github Issues.
+       Going forward, content tasks should be tracked internally, using dashboards, draft status, etc
+ - [ ] Port site to Metalsmith
+   - [ ] Write metalsmith-harp-metadata plugin
+   - [ ] Port template helpers as needed
+
 ## Standing orders
 
 - Practice conservative development.
