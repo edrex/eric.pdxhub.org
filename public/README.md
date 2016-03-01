@@ -18,8 +18,7 @@ Source code is [available](https://github.com/edrex/eric.github.com) on **Github
 
 ## Workflow
 
-- Infrastructure work is tracked in [TODO.md](https://github.com/edrex/edrex.github.io/blob/master/TODO.md)
-- Site design is tracked on [the Trello board](https://trello.com/b/Jkc4wyMZ/french-press).
+- Design and infrastructure work is organized [on Github](https://github.com/edrex/eric.pdxhub.org/issues)
 - Content tasks are tracked on the super secret [drafts/](http://eric.pdxhub.org/drafts/) page
 
 ## Installation
