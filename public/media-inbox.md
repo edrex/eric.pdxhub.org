@@ -1,11 +1,15 @@
-## Courses
+
+## Tech stuff
+
+- [Collection of tech books on IPFS](https://ipfs.io/ipfs/QmTmMhRv2nh889JfYBWXdxSvNS6zWnh4QFo4Q2knV7Ei2B/)
+
+### Courses
 
 http://natureofcode.com/book/
 
 ## Rand
 
 - jchris documentcoin https://docs.google.com/document/d/1-0D75T4_xjMNDdMdgaeRPtNvU-ggBJ_Z-FNg0DZIA_c/edit
-- http://freemusicarchive.org/music/podington_bear/
 - https://medium.com/message/what-is-public-f33b16d780f9
 - http://graydon2.dreamwidth.org/189377.html
 - http://www.ted.com/talks/the_interspecies_internet_an_idea_in_progress
@@ -82,6 +86,7 @@ from PBS Digital Studios
 - Andrew Bird Fake Palindromes
 - Moby
 - Roger Clyne and the Peacemakers
+- http://freemusicarchive.org/music/podington_bear/
 
 ## Anime
 

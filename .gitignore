@@ -5,3 +5,4 @@ out
 node_modules
 s3cmd
 npm-debug.log
+*.md
