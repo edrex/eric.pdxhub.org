@@ -12,15 +12,16 @@ Portland OR | +15036090837
 ## Proficiencies
 
 * Write clean, well-factored Go, Python, Ruby, and Javascript code with unit tests.
-* Perform code review, provide first response support, and farm issue queues. 
-* Build functional, appealing web user interfaces from visual comps or behavioral specifications.
+* Provide first response support, farm issue queues, and perform code review.
 * Work with stakeholders to validate goals, specify functionality, and prioritize delivery.
+* Build functional, appealing web user interfaces from visual comps or behavioral specifications.
 * Care for team health through mindful communication and support.
+* Automate manual tasks such as builds, deployment, and provisioning.
 
 ## Qualifications
 
 * 15 years experience operating services, developing applications, and supporting customers.
-* Autodidactic learner.
+* Autodidactic learner with a strong background in computer science and applied mathematics.
 <div style="page-break-after:always;"></div>
 
 ## History
