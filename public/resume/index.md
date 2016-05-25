@@ -19,16 +19,15 @@ Portland OR | +15036090837
 
 ## Qualifications
 
-* 15 years experience operating services, developing applications, and supporing customers.
-* Deeply steeped in open source software development practices.
-* Autodidactic learner. Careful research and open collaboration.
+* 15 years experience operating services, developing applications, and supporting customers.
+* Autodidactic learner.
 <div style="page-break-after:always;"></div>
 
 ## History
 
 * **Project Lead, [PDXHub](https://pdxhub.org/)** (2006&mdash;) Produce engaging and hard-working web applications. Project roles:
   * Lead development of [ActivateHub](http://portland.activatehub.org/), event promotion and aggregation platform.
-  * Built a Drupal/jQuery faceted browsing UI, text translation tool, and image/video asset manager for Nike's [2008 Summer Olympics campaign](http://eric.pdxhub.org/resume/nike-media.jpg) with [Sticky](http://www.sticky.tv/).
+  * Built a faceted browsing UI, text translation tool, and image/video asset manager for Nike's [2008 Summer Olympics campaign](http://eric.pdxhub.org/resume/nike-media.jpg) with [Sticky](http://www.sticky.tv/) (Drupal/jQuery).
   * Lead development of [SERPs](https://serps.com/), a web analytics product.
   * Created a browser-based UI (Backbone.js) for [Checkmarkable](https://checkmarkable.com/).
   * Built a market research study planner in Javascript and Rails for [Revelation](http://revelationglobal.com/).
