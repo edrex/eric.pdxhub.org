@@ -21,7 +21,7 @@ Portland OR | +15036090837
 ## Qualifications
 
 * 15 years experience operating services, developing applications, and supporting customers.
-* Autodidactic learner with a strong background in computer science and applied mathematics.
+* Autodidactic learner with Mathematics degree.
 <div style="page-break-after:always;"></div>
 
 ## History
