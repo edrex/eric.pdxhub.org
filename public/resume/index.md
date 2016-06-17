@@ -9,31 +9,36 @@ Portland OR | +15036090837
 
 ---
 
-## Proficiencies
+## Skills
 
-* Write clean, well-factored Go, Python, Ruby, and Javascript code with unit tests.
-* Provide first response support, farm issue queues, and perform code review.
-* Work with stakeholders to validate goals, specify functionality, and prioritize delivery.
+* Write clean Go, Python, Ruby, and Javascript with tests.
+* Review code and coordinate releases.
+* Automate software builds, deployment, server provisioning, and service monitoring.
+* Plan development efforts, specify functionality, and manage delivery timelines.
+* Provide front-line support, farm issue queues, and perform code review.
 * Build functional, appealing web user interfaces from visual comps or behavioral specifications.
-* Care for team health through mindful communication and support.
-* Automate manual tasks such as builds, deployment, and provisioning.
 
-## Qualifications
+## Background
 
-* 15 years experience operating services, developing applications, and supporting customers.
-* Autodidactic learner with Mathematics degree.
+* 15 years operating services, developing applications, and supporting customers.
+* Autodidactic learner with Mathematics/Physics degree.
 <div style="page-break-after:always;"></div>
 
-## History
+## Consultancy
 
-* **Project Lead, [PDXHub](https://pdxhub.org/)** (2006&mdash;) Produce engaging and hard-working web applications. Project roles:
+  * Operate [PDXHub](https://pdxhub.org/) infrastructure Produce engaging and hard-working web applications.
   * Lead development of [ActivateHub](http://portland.activatehub.org/), event promotion and aggregation platform.
   * Built a faceted browsing UI, text translation tool, and image/video asset manager for Nike's [2008 Summer Olympics campaign](http://eric.pdxhub.org/resume/nike-media.jpg) with [Sticky](http://www.sticky.tv/) (Drupal/jQuery).
   * Lead development of [SERPs](https://serps.com/), a web analytics product.
   * Created a browser-based UI (Backbone.js) for [Checkmarkable](https://checkmarkable.com/).
   * Built a market research study planner in Javascript and Rails for [Revelation](http://revelationglobal.com/).
+  * Created [Pillowfork](http://github.com/edrex/pillowfork/), a real-time, content-addressible storytelling tool
+  * Contribute Go and React.js patches to the filesystem and web interfaces of the [Camlistore](http://camlistore.org) personal storage system.
+
+
+## Previous roles
+
 * **Application Engineer**, **Point 97** / **Ecotrust** (Aug 2014&mdash;Jan 2015) Built tools for capturing and analyzing spatial datasets, and helped storytellers interweave spatial data visualizations with text and video. Automated provisioning and deployment of Django and PostgreSQL to cloud infrastructure using Ansible.
-* **Sabbatical** (Aug 2013&mdash;July 2014) Continued my studies in Physics, Mathematics, and Information Science through online courses and collaborations, creating [Pillowfork](http://github.com/edrex/pillowfork/), a real-time, content-addressible storytelling tool using Angular/IndexedDB, contributing Go and React.js patches to the filesystem and web interfaces of the [Camlistore](http://camlistore.org) personal storage system, and taking deep dives into HTML5+CSS3.
 * **Software Engineer, [Janrain](http://janrain.com/)** (May 2012&mdash;July 2013) Architected and built a Rails [customer dashboard](https://dashboard.janrain.com/) unifying various existing tools into a cohesive experience. Created provisioning APIs in core products and integrated with Zookeeper distributed configuration registry. Designed and built web UI and REST APIs for team management service using AngularJS, Scala, and Riak.
 * **Information Architect, [PSU Communications](http://www.pdx.edu/university-communications/)** (Nov 2005&mdash;Feb 2008) Architected a bubble-up content aggregation workflow for news, events, and faculty profiles. Developed custom Drupal distributions bundling reusable content types, views, workflows, and a customizable theme based on the University style guide.
 * **BS Mathematics/Physics [PSU](http://www.mth.pdx.edu)**, 2010 Computer algebra, numerical modeling, graphics.
