@@ -10,23 +10,21 @@ block nav
         input(type='hidden', name='ie', value='UTF-8')
         input(type='hidden', name='q')
 block main
-  :markdown
-    📢 [Talks](/talks) &nbsp;&nbsp;🤓 [Resume](/resume) &nbsp;&nbsp;🤖 Projects &nbsp; 🎞&nbsp;[Media Inbox](/media-inbox)
-  h3 Online identities
-  ul
-    li
-      i(class="fa fa-twitter")
-      | 
-      a.social(href="https://twitter.com/edrex" rel="me" title="edrex on twitter") twitter.com/edrex
-    li
-      i(class="fa fa-github")
-      |  
-      a.social(href="https://github.com/edrex" rel="me") github.com/edrex
-  h3 Posts
-  .media.articles
-    .list
-      each post in posts_array(public.articles._data)
-        mixin post_summary(post, post.slug, '/articles')
+  p.page-links
+    | 📢&nbsp;#[a(href='/talks') Talks] &nbsp;&nbsp;
+    | 🤓&nbsp;#[a(href='/resume') Resume] &nbsp;&nbsp;
+    | 🤖&nbsp;Projects &nbsp;&nbsp;
+    | 🎞&nbsp;#[a(href='/media-inbox') Media Inbox] &nbsp;&nbsp;
+    i(class="fa fa-twitter")
+    |&nbsp;
+    a.social(href="https://twitter.com/edrex" rel="me" title="edrex on twitter") twitter.com/edrex
+    | &nbsp;&nbsp;
+    i(class="fa fa-github")
+    | 
+    a.social(href="https://github.com/edrex" rel="me") github.com/edrex
+  .articles-list
+    each post in posts_array(public.articles._data)
+      mixin post_summary(post, post.slug, '/articles')
 block footer
     | 📃 
     a(href="/README") README

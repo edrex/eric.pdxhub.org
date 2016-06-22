@@ -33,11 +33,6 @@ body {
   }
 }
 
-.cols {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .header {
   display: flex;
   flex-flow: row wrap;
@@ -146,43 +141,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   justify-content: space-around;
 }
 
-@col: 30em;
-
-.sections {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  > * {
-    flex: 1 1 @col;
-  }
-}
-
-@figsize: 128px;
-
-.media {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  position: relative;
-  z-index: 1;
-  .figure {
-    // height: 100%;
-    display: flex;
-    height: @figsize;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: space-around;
-    flex: 0 0 @col/2;
-    i {
-      font-size: @figsize/2;
-    }
-  }
-  .list {
-    flex: 1 0 @col/2;
-  }
-}
-
-
 // small generic components
 
 .button {
@@ -192,10 +150,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 .label, .label:visited, .date {
   padding-right: .2em;
   white-space: nowrap;
-}
-
-p {
-  margin-top: 0;
 }
 
 a:hover {
