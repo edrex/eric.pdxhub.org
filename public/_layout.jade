@@ -21,12 +21,13 @@ html(lang='en')
   body
     .container
       .header
-        if current.path.length != 1 || current.path[0] !='index'
-          a.index(href="/" title="Back to Eric's homepage")
-            | ◀︎
-            mixin icon("coffee")
-          | 
         h1.title
+          if current.path.length != 1 || current.path[0] !='index'
+            a.index(href="/" title="Back to Eric's homepage")
+              img.avatar(src="/assets/avatar.jpeg")
+            | 
+          else
+            img.avatar(src="/assets/avatar.jpeg")
           span.brand
             mixin post_icon(locals)
             | 
@@ -37,13 +38,9 @@ html(lang='en')
         block nav
           .gather
             include _shared/post_tags
-      .cols
-        .maincol
-          .main
-            block main
-              != yield
-        .sidebar
-          block sidebar
+        .main
+          block main
+            != yield
       .footer
         block footer
     script(src='/assets/scripts/jquery.min.js')

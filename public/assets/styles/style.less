@@ -41,12 +41,12 @@ body {
 .header {
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-around;
-  > *, nav > * {
+  align-items: baseline;
+  justify-content: space-between;
+  nav > * {
     margin: .3em;
   }
-  a {
+  > nav > a {
     font-size:2em;
     line-height: 2em;
     text-decoration: none;
@@ -61,6 +61,7 @@ a.section {
 }
 .avatar {
   width: 72px;
+  margin: -18px 0;
   border-radius: 10px;
 }
 
@@ -164,19 +165,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   justify-content: space-around;
   position: relative;
   z-index: 1;
-  .watermark {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    z-index: -1;
-    opacity: .5;
-    i {
-      color: @base2;
-    }
-    font-size: 128px;
-    // margin: @m 0;
-    // text-align: center;
-  }
   .figure {
     // height: 100%;
     display: flex;

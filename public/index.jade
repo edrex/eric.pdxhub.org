@@ -3,39 +3,33 @@ include _shared/posts
 
 block nav
   nav
-    include _shared/sections
-    a.social(href="https://twitter.com/edrex" rel="me" title="edrex on twitter")
-      i(class="fa fa-twitter")
-    a.social(href="https://github.com/edrex" rel="me")
-      i(class="fa fa-github")
     .search
       .input(contenteditable="true" spellcheck="false")
-      form(action='http://google.com/cse' )
+      form(action='http://google.com/cse')
         input(type='hidden', name='cx', value='012963123305395825585:pm5e7m4z5ey')
         input(type='hidden', name='ie', value='UTF-8')
         input(type='hidden', name='q')
 block main
-  .bio
-    :markdown
-      I'm **Eric Drechsel**, a creative professional with deep roots in the web and open source. 
-      
-      I build things with hypertext.
-      
-      My interests include:
-      
-       - human computer interaction
-       - 
-      and an immense curiousity and propensity for diving in with new and challenging topics. 
-
-      In my free time I ride my bike, eat things I find outdoors, take online courses, and experiment with distributed information systems.
-  .row.fa-4x
-block sidebar
+  :markdown
+    📢 [Talks](/talks) &nbsp;&nbsp;🤓 [Resume](/resume) &nbsp;&nbsp;🤖 Projects &nbsp; 🎞&nbsp;[Media Inbox](/media-inbox)
+  h3 Online identities
+  ul
+    li
+      i(class="fa fa-twitter")
+      | 
+      a.social(href="https://twitter.com/edrex" rel="me" title="edrex on twitter") twitter.com/edrex
+    li
+      i(class="fa fa-github")
+      |  
+      a.social(href="https://github.com/edrex" rel="me") github.com/edrex
+  h3 Posts
   .media.articles
-    .watermark
-      mixin icon("pencil", "", true)
     .list
       each post in posts_array(public.articles._data)
         mixin post_summary(post, post.slug, '/articles')
+block footer
+    | 📃 
+    a(href="/README") README
 block scripts
   script(src="assets/scripts/searchbox.js")
   script(type='text/javascript').

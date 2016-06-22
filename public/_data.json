@@ -1,7 +1,6 @@
 {
   "index": {
-    "title": "French Press",
-    "icon": "coffee",
+    "title": "Eric Drechsel",
     "navbar": false,
     "layout": false
   },
@@ -9,30 +8,39 @@
     "title": "Bio",
     "description": "Eric's Vital Statistics",
     "icon": "user",
-    "main": true,
     "layout": false
   },
   "things": {
     "title": "Thing a Day",
-    "main": true,
     "icon": "gift"
   },
   "talks/": {
     "title": "Talks",
     "description": "Slides of my most recent talks",
-    "main": true,
     "icon": "comment"
+  },
+  "journal/": {
+    "title": "Journal",
+    "icon": "pencil"
+  },
+  "resume/": {
+    "title": "Resume",
+    "icon": "graduation-cap"
+  },
+  "README": {
+    "title": "README",
+    "description": "About this site",
+    "main": true,
+    "icon": "file-text"
   },
   "media-inbox": {
     "title": "Media Inbox",
     "main": true,
     "description": "Work I want to check out, often recommended in conversation.",
-    "icon": "headphones"
+    "icon": "film"
   },
   "tags/": {
-    "title": "Tags",
-    "icon": "tags",
-    "main": true
+    "title": "Tags"
   },
   "year": {
     "title": "Year",
@@ -51,22 +59,6 @@
   },
   "articles": {
     "title": "Articles"
-  },
-  "journal/": {
-    "title": "Journal",
-    "main": true,
-    "icon": "pencil"
-  },
-  "resume/": {
-    "title": "Resume",
-    "main": true,
-    "icon": "graduation-cap"
-  },
-  "README": {
-    "title": "README",
-    "description": "About this site",
-    "main": true,
-    "icon": "file-text"
   },
   "dev": {
     "layout": false
