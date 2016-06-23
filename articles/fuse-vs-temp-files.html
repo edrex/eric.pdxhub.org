@@ -7,7 +7,7 @@ if (document.cookie.indexOf("analytics-opt-out" + '=true') == -1) {
     ga('create', gaProperty, 'pdxhub.org');
     ga('require', 'displayfeatures');
     ga('send', 'pageview');
-}</script></head><body><div class="container"><div class="header"><h1 class="title"><a href="/" title="Back to Eric's homepage" class="index"><img src="/assets/avatar.jpeg" class="avatar"></a> <span class="brand"> FUSE vs the Temp Files </span></h1><h3 class="subheading">My experiences storing my Documents folder in Camli</h3><div class="gather"><span data-raw="2014-04-27" class="date">Apr 26, 2014</span> <a href="/tags#camlistore" class="tag label label-default"><i class="fa fa-tag "></i>camlistore</a></div><div class="main"><p>I moved my Documents folder into camli (on my home ARM server) and have been accessing it via FUSE for 10 days or so.</p>
+}</script></head><body><div class="container"><div class="header"><a href="/" title="Back to Eric's homepage"><img src="/assets/avatar.jpeg" class="avatar"></a><h1 class="title"><span class="brand"><i class="fa fa-coffee "></i> FUSE vs the Temp Files </span></h1><h3 class="subheading">My experiences storing my Documents folder in Camli</h3><div class="gather"><span data-raw="2014-04-27" class="date">Apr 26, 2014</span> <a href="/tags#camlistore" class="tag label label-default"><i class="fa fa-tag "></i> camlistore</a></div></div><div class="cols"><div class="maincol"><div class="main"><p>I moved my Documents folder into camli (on my home ARM server) and have been accessing it via FUSE for 10 days or so.</p>
 <p>Overall, the FUSE filesystem has been unstable.</p>
 <h3>1. FUSE exits occasionally without explaination</h3><p>This is probably an easy fix, I haven&#39;t looked at the code yet.</p>
 <h3>2. writes block until everything has been uploaded successfully</h3><p>This is painful over slow links. Not only does the writing app (VIM/sublime) block, but also things tmux (not sure why, maybe only one thread in FUSE somewhere?) </p>
@@ -29,4 +29,4 @@ import everything
 similarity to git
 recent importer rewrite (web config ui, store api creds and user auth tokens as data objects)
 importer rewrite
-foursquare</p></div></div><div class="footer"></div></div><script src="/assets/scripts/jquery.min.js"></script><script src="/assets/scripts/lodash.min.js"></script><script src="/assets/scripts/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad()</script><script src="/assets/scripts/toggle-grid.js"></script><script async defer src="https://hypothes.is/embed.js"></script></body></html>
+foursquare</p></div></div><div class="sidebar"></div></div><div class="footer"></div></div><script src="/assets/scripts/jquery.min.js"></script><script src="/assets/scripts/lodash.min.js"></script><script src="/assets/scripts/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad()</script><script src="/assets/scripts/toggle-grid.js"></script></body></html>

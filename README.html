@@ -7,21 +7,26 @@ if (document.cookie.indexOf("analytics-opt-out" + '=true') == -1) {
     ga('create', gaProperty, 'pdxhub.org');
     ga('require', 'displayfeatures');
     ga('send', 'pageview');
-}</script></head><body><div class="container"><div class="header"><h1 class="title"><a href="/" title="Back to Eric's homepage" class="index"><img src="/assets/avatar.jpeg" class="avatar"></a> <span class="brand"><i class="fa fa-file-text "></i> README </span></h1><h3 class="subheading">About this site</h3><div class="gather"></div><div class="main"><h2>Source</h2><p>This blog is statically compiled. Source is available at <a href="https://github.com/edrex/eric.pdxhub.org">github.com/edrex/eric.pdxhub.org</a>. Pull requests welcome :)</p>
-<h2>Credits</h2><p><strong>Prose posts</strong> are written in <a href="http://daringfireball.net/projects/markdown/">Markdown</a>, <strong>page layouts</strong> and <strong>demo posts</strong> in Jade.</p>
-<p><strong>Styles</strong> are preprocessed using <a href="http://lesscss.org/">{less}</a> and postprocessed using <a href="https://github.com/postcss/autoprefixer">autoprefixer</a>.</p>
+}</script></head><body><div class="container"><div class="header"><a href="/" title="Back to Eric's homepage"><img src="/assets/avatar.jpeg" class="avatar"></a><h1 class="title"><span class="brand"><i class="fa fa-file-text "></i> README </span></h1><h3 class="subheading">About this site</h3><div class="gather"></div></div><div class="cols"><div class="maincol"><div class="main"><h2>Source</h2><p>This blog is statically compiled. Source is available at <a href="https://github.com/edrex/edrex.github.io">edrex/edrex.github.io</a>. Pull requests welcome :)</p>
+<h2>Credits</h2><p><strong>Prose posts</strong> are written in <a href="http://daringfireball.net/projects/markdown/">Markdown</a>.</p>
+<p><strong>Page layouts</strong> and <strong>demo posts</strong> are written in Jade.</p>
+<p><strong>Styles</strong> are run through <a href="http://lesscss.org/">{less}</a> and <a href="https://github.com/postcss/autoprefixer">autoprefixer</a>.</p>
 <p><strong>Icons</strong> are sourced from <a href="http://emojisymbols.com/">Emoji Symbols</a> and <a href="fontawesome.io">Font Awesome</a>.</p>
-<p><strong>Compilation</strong> uses <a href="http://harpjs.com">Harp.js</a> along with a <a href="http://www.gnu.org/software/make/">GNU Make</a> <a href="https://github.com/edrex/eric.github.com/blob/master/Makefile">Makefile</a>. The build is triggered by a Github webhook, which hits a Caddy instance using the Caddy-git extension.</p>
-<p>Source code is <a href="https://github.com/edrex/eric.github.com">available</a> on <strong>Github</strong>, and the site is also published using Github Pages.</p>
+<p><strong>Compilation</strong> uses <a href="http://harpjs.com">Harp.js</a> along with a <a href="http://www.gnu.org/software/make/">GNU Make</a> <a href="https://github.com/edrex/edrex.github.io/blob/master/Makefile">Makefile</a>. <a href="https://github.com/adnanh/webhook">adnanh/webhook</a> listening to a <a href="https://developer.github.com/webhooks/">Github Webhook</a>. The site is <strong>hosted</strong> on Amazon S3. Changes are <strong>synced</strong> by <a href="http://s3tools.org/s3cmd">s3cmd</a>.</p>
 <p><strong>Talks</strong> are presented using the excellent <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
 <h2>Workflow</h2><ul>
-<li>Design and infrastructure work is organized <a href="https://github.com/edrex/eric.pdxhub.org/issues">on Github</a></li>
+<li>Infrastructure work is tracked in <a href="https://github.com/edrex/edrex.github.io/blob/master/TODO.md">TODO.md</a></li>
+<li>Site design is tracked on <a href="https://trello.com/b/Jkc4wyMZ/french-press">the Trello board</a>.</li>
 <li>Content tasks are tracked on the super secret <a href="http://eric.pdxhub.org/drafts/">drafts/</a> page</li>
 </ul>
 <h2>Installation</h2><h3>Requirements</h3><p>Deps are listed along with Ubuntu install command.</p>
 <ul>
 <li>NodeJS + NPM <code>apt-get install nodejs npm</code></li>
+<li>Python 2 + magic and dateutil for s3cmd <code>apt-get install python-magic python-dateutil</code></li>
+<li>Golang, for the webhook command <code>apt-get install golang</code></li>
+<li><a href="https://github.com/adnanh/webhook">adnanh/webhook</a></li>
 </ul>
-<h3>Running</h3><p><code>make</code></p>
+<h3>Running</h3><p><code>make deps</code></p>
 <h4>Local dev</h4><p><code>make start</code></p>
-<h4>Publish</h4><p><code>make deploy</code></p></div></div><div class="footer"></div></div><script src="/assets/scripts/jquery.min.js"></script><script src="/assets/scripts/lodash.min.js"></script><script src="/assets/scripts/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad()</script><script src="/assets/scripts/toggle-grid.js"></script><script async defer src="https://hypothes.is/embed.js"></script></body></html>
+<h4>Deploy</h4><p><code>make deploy</code></p>
+<h4>Listen</h4><p>FISH_SECRET=&quot;github webhook secret&quot; make listen</p></div></div><div class="sidebar"></div></div><div class="footer"></div></div><script src="/assets/scripts/jquery.min.js"></script><script src="/assets/scripts/lodash.min.js"></script><script src="/assets/scripts/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad()</script><script src="/assets/scripts/toggle-grid.js"></script></body></html>

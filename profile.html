@@ -7,7 +7,7 @@ if (document.cookie.indexOf("analytics-opt-out" + '=true') == -1) {
     ga('create', gaProperty, 'pdxhub.org');
     ga('require', 'displayfeatures');
     ga('send', 'pageview');
-}</script></head><body><div class="container"><div class="header"><h1 class="title"><a href="/" title="Back to Eric's homepage" class="index"><img src="/assets/avatar.jpeg" class="avatar"></a> <span class="brand"><i class="fa fa-user "></i> Bio </span></h1><h3 class="subheading">Eric's Vital Statistics</h3><div class="gather"></div><div class="main"><div class="media activityStream"><div class="figure"><a title="RSS Feed" href="https://zapier.com/engine/rss/196193/activity/" class="source"><i class="fa fa-rss fa-4x"></i></a></div><div class="body"><ul class="fa-ul"></ul><div class="toolbar"><a href title="Load more activities" class="more"><i class="fa fa-ellipsis-h fa-2x"></i></a></div></div></div><div class="row"><div class="medium-5 columns sidebar"><div class="panel"><h4 id="social-profiles">Social profiles</h4>
+}</script></head><body><div class="container"><div class="header"><a href="/" title="Back to Eric's homepage"><img src="/assets/avatar.jpeg" class="avatar"></a><h1 class="title"><span class="brand"><i class="fa fa-user "></i> Bio </span></h1><h3 class="subheading">Eric's Vital Statistics</h3><div class="gather"></div></div><div class="cols"><div class="maincol"><div class="main"><div class="media activityStream"><div class="figure"><a title="RSS Feed" href="https://zapier.com/engine/rss/196193/activity/" class="source"><i class="fa fa-rss fa-4x"></i></a></div><div class="body"><ul class="fa-ul"></ul><div class="toolbar"><a href title="Load more activities" class="more"><i class="fa fa-ellipsis-h fa-2x"></i></a></div></div></div><div class="row"><div class="medium-5 columns sidebar"><div class="panel"><h4 id="social-profiles">Social profiles</h4>
 <ul>
 <li><a href="https://plus.google.com/112296035418181656313">Google+</a></li>
 <li><a href="http://twitter.com/edrex/">Twitter</a> </li>
@@ -49,7 +49,7 @@ if (document.cookie.indexOf("analytics-opt-out" + '=true') == -1) {
 <p><a href="http://wiki.pdxhub.org/ops">services</a> in support of other local organizers, and am a founding member of <a href="http://activatehub.org/">Activate</a>. I&#39;m also active in many open source software, civic, and bicycling communities.</p>
 <p>I hold a BS in <a href="http://math.pdx.edu/">Mathematics</a> and <a href="http://physics.pdx.edu/">Physics</a> minor from <a href="http://pdx.edu/">Portland State University</a>. In my free time I am continuing my studies in physics, data sciences, and natural history.</p>
 <p>One day I will analyze all the things. Until then, <a href="https://www.vizify.com/eric-drechsel/">check out my Vizify</a>.</p>
-</div></div></div></div><div class="footer"></div></div><script src="/assets/scripts/jquery.min.js"></script><script src="/assets/scripts/lodash.min.js"></script><script src="/assets/scripts/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad()</script><script src="/assets/scripts/toggle-grid.js"></script><script async defer src="https://hypothes.is/embed.js"></script><script type="text/javascript">function renderActivityStream(root, extender, limit) {
+</div></div></div></div><div class="sidebar"></div></div><div class="footer"></div></div><script src="/assets/scripts/jquery.min.js"></script><script src="/assets/scripts/lodash.min.js"></script><script src="/assets/scripts/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad()</script><script src="/assets/scripts/toggle-grid.js"></script><script type="text/javascript">function renderActivityStream(root, extender, limit) {
   var ignore = [
     /^edrex pushed to master at edrex\/edrex.github.io/,
     /^RT @/
@@ -57,7 +57,7 @@ if (document.cookie.indexOf("analytics-opt-out" + '=true') == -1) {
   var tpl = '<% _.forEach(items, function(i) { %><li><a href="<%- i.link %>" title="<%- i.source %> - <%- new Date(i.date).toDateString() %>"><i class="fa fa-li fa-<%- i.source %>"></i><%= i.title %></a></li><% }); %>';
   var n = 0;
   var items = [];
-  
+
   function extend(){
     n = n + limit;
     root.html(_.template(tpl, { items: items.slice(0,n) }))
