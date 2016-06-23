@@ -1,6 +1,0 @@
-CHANGES
-center nav elements (li -> span)
-Embiggen nav icons
-don't take up two lines on mobile: fold up somehow
-  - don't wrap
-  - use a media query to hide elts and show an extender (for search)
