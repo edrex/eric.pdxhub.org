@@ -7,64 +7,72 @@ if (document.cookie.indexOf("analytics-opt-out" + '=true') == -1) {
     ga('create', gaProperty, 'pdxhub.org');
     ga('require', 'displayfeatures');
     ga('send', 'pageview');
-}</script></head><body><div class="reveal"><!--Any section element inside of this container is displayed as a slide --><div class="slides"><section><h1>Personal Storage - Beyond the Filesystem</h1><p><small>Speaker:<a href="http://eric.pdxhub.org">Eric Drechsel</a> /<a href="http://twitter.com/edrex">@edrex</a></small></p><aside class="notes">Point-in-time snapshot of my learning process. Questions/comments anytime.</aside></section><section><h2>History of Personal Storage</h2><ul><li>Journals</li><li>My Documents</li><li>Local Silos</li><li>Siloed Online Apps</li></ul></section><section><ul><li>Archival</li><li>Annotation</li><li>Publishing</li></ul></section><section><h2>Collaboration</h2><ul><li>Authenticity</li><li>Reconciling multiple POV</li></ul></section><section><h2>Benefits of collaboration without siloing</h2><aside class="notes"><h2>Outline</h2><h2 id="subtitle">subtitle</h2>
+}</script></head><body><div class="reveal"><!--Any section element inside of this container is displayed as a slide --><div class="slides"><section><h1>A Brief Tour of Camlistore</h1><p><small>Speaker:<a href="http://eric.pdxhub.org">Eric Drechsel</a> /<a href="http://twitter.com/edrex">@edrex</a></small></p><aside class="notes">Point-in-time snapshot of my learning process. Questions/comments anytime.</aside></section><section><h2 id="quick-demo">Quick demo</h2>
+</section><section><h2 id="what-is-it-">What is it?</h2>
 <ul>
-<li>oh hi</li>
-<li>Once you&#39;ve put all your information in one basket, you might want to publish a website out of it.</li>
-<li>Options:<ul>
-<li>Go templates<ul>
-<li>Have to rebuild the binary each time. That&#39;s no fun!</li>
-<li>Also violates encapsulation like whoa. I want my store to be a black box with a consistent API.</li>
-<li>Go templates seem great for teaching the server custom output formats (FOOSON?)</li>
+<li>A storage system</li>
+<li>Single-tenant</li>
+<li>Long term</li>
+<li>General purpose</li>
 </ul>
-</li>
-<li>External build process<ul>
-<li>BYO tools/environment</li>
-</ul>
-</li>
-<li>Need to get at store data somehow</li>
-</ul>
-</li>
-<li>My site build: <draw a picture><ul>
-<li>Posts (Markdown and Jade) + templates (Jade) in Git</li>
-<li>Metadata in <code>_data.json</code></li>
-<li>Harp feeds metadata to Jade templates</li>
-</ul>
-</draw></li>
-<li>Want<ul>
-<li>Posts are Camli objects (Permanodes)</li>
-<li>Metadata via Camli claims</li>
-<li>Templates in Git</li>
-</ul>
-</li>
-<li><p>Questions</p>
+</section><section><h2 id="demo">Demo</h2>
+</section><section><h2 id="a-large-go-project">A Large Go Project</h2>
 <ul>
-<li>How to update</li>
+<li>Grew with Golang</li>
+<li>Of the Google<ul>
+<li>serious about code review</li>
+<li>hermetic builds</li>
+<li>monolithic</li>
 </ul>
 </li>
-<li><p>The vision
-1 Capture</p>
+</ul>
+</section><section><h2 id="what-is-it-">What is it?</h2>
+</section><section><h2 id="me">Me</h2>
 <ul>
-<li>One interpolated stream for all activity<ul>
-<li>Location history</li>
-<li>Smartphone photos</li>
-<li>Social network activity (twitter/fb/g+ etc)</li>
-<li>Open browser tabs</li>
-<li>Wireless network connections
-2 Annotate to add structure</li>
+<li><strong>Application</strong> developer</li>
+<li>Opinionated about infrastructure (don&#39;t know my place)</li>
+<li>Sufficiently so to occasionally make forays into infrastructure service code</li>
+<li>But I really just want to make applications</li>
+</ul>
+</section><section><h2 id="layer-cake">Layer Cake</h2>
+<ul>
+<li>BlobStorage</li>
+<li>Schema (JSON blobs)</li>
+<li>Index</li>
+<li>Search</li>
+<li>Clients</li>
+</ul>
+</section><section><h3 id="blobstorage">BlobStorage</h3>
+<ul>
+<li>put, get, enumerate</li>
+<li>Lots of implementations</li>
+</ul>
+</section><section><h3 id="schema-objects">Schema objects</h3>
+<ul>
+<li>Simple JSON blobs with a common structure</li>
+<li>All schema blobs have a <code>camliType</code> field</li>
+<li>There are several schemas for different purposes, forming a little cake inside the big cake<ul>
+<li>Immutable <code>bytes</code> and <code>file</code> schemas</li>
+<li>Signed <code>permanode</code> and <code>claim</code> blobs are the primatives from which mutability is built up</li>
 </ul>
 </li>
-<li>Tags</li>
-<li>&quot;Folder&quot; structures</li>
-<li>Arbitrary fields
-3 Query<ul>
-<li>^ this is what&#39;s great about one basket</li>
 </ul>
-</li>
+</section><section><h3 id="index">Index</h3>
+<ul>
+<li>Built on another low level storage interface, <code>Sorted</code></li>
+<li>Extracts special purpose values from blobs for quick, indexed access.</li>
+<li>Totally bespoke</li>
 </ul>
-</li>
+</section><section><h3 id="clients">Clients</h3>
+<ul>
+<li>Simple command line tools: <code>camput</code>, <code>camget</code>, and a catch-all <code>camtool</code></li>
+<li>WebUI</li>
+<li>FUSE Filesystem</li>
+<li>Android and iOS apps</li>
 </ul>
-</aside></section></div></div><script src="//cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script><script src="//cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script><script>// Full list of configuration options available here:
+</section><section><h3 id="look-at-code">Look at code</h3>
+</section><section><p>### </p>
+</section></div></div><script src="//cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script><script src="//cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script><script>// Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
 controls: false,
