@@ -11,10 +11,16 @@ block nav
         input(type='hidden', name='q')
 block main
   p.page-links
-    | 📢&nbsp;#[a(href='/talks') Talks] &nbsp;&nbsp;
-    | 🤓&nbsp;#[a(href='/resume') Resume] &nbsp;&nbsp;
-    | 🤖&nbsp;Projects &nbsp;&nbsp;
-    | 🎞&nbsp;#[a(href='/media-inbox') Media Inbox] &nbsp;&nbsp;
+    | 📢&nbsp;
+    a(href='/talks') Talks
+    | &nbsp;&nbsp;
+    | 🤓&nbsp;
+    a(href='/resume') Resume
+    | &nbsp;&nbsp;
+    🤖&nbsp;Projects &nbsp;&nbsp;
+    | 🎞&nbsp;
+    a(href='/media-inbox') Media Inbox
+    | &nbsp;&nbsp;
     i(class="fa fa-twitter")
     |&nbsp;
     a.social(href="https://twitter.com/edrex" rel="me" title="edrex on twitter") twitter.com/edrex
