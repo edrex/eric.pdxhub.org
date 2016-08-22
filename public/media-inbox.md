@@ -52,6 +52,12 @@ from PBS Digital Studios
 ## Math and science
 
  - http://www.dcc.ufmg.br/miningalgorithms/files/pdf/dmafca.pdf
+ 
+
+### Physics
+
+ - http://space.mit.edu/home/tegmark/crazy.html
+ 
 
 ## Neat techies
 
