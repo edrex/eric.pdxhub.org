@@ -57,7 +57,7 @@ if (document.cookie.indexOf("analytics-opt-out" + '=true') == -1) {
   var tpl = '<% _.forEach(items, function(i) { %><li><a href="<%- i.link %>" title="<%- i.source %> - <%- new Date(i.date).toDateString() %>"><i class="fa fa-li fa-<%- i.source %>"></i><%= i.title %></a></li><% }); %>';
   var n = 0;
   var items = [];
-  
+
   function extend(){
     n = n + limit;
     root.html(_.template(tpl, { items: items.slice(0,n) }))
