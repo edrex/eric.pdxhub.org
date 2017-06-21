@@ -6,6 +6,6 @@
     "url": "http://github.com/edrex/edrex.github.io.git"
   },
   "devDependencies": {
-    "harp": "^0.20.1"
+    "harp": "^0.24.0"
   }
 }
