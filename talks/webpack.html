@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"></html><head><meta charset="utf-8"><title>Webpack Lightening Talk</title><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.min.css"><link rel="stylesheet" href="/assets/styles/reveal_theme.css"><!-- For syntax highlighting --><link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/lib/css/zenburn.css"><link rel="stylesheet" href="notecards.css"><!-- If the query includes 'print-pdf', use the PDF print sheet --><script>document.write( '<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script><!--if lt IE 9script(src='//cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/html5shiv.js')--><meta name="google-site-verification" content="jdNxQ0D7Pu5Zp7em_fWgy3CMhDdvHL9R5aRt8HuL8KY"><script>var gaProperty = 'UA-342641-5';
+<!DOCTYPE html><html lang="en"></html><head><meta charset="utf-8"><title>Webpack Lightening Talk</title><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.min.css"><link rel="stylesheet" href="/assets/styles/reveal_theme.css"><!-- For syntax highlighting --><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/css/zenburn.css"><link rel="stylesheet" href="notecards.css"><!-- If the query includes 'print-pdf', use the PDF print sheet --><script>document.write( '<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script><!--if lt IE 9script(src='//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/html5shiv.js')--><meta name="google-site-verification" content="jdNxQ0D7Pu5Zp7em_fWgy3CMhDdvHL9R5aRt8HuL8KY"><script>var gaProperty = 'UA-342641-5';
 if (document.cookie.indexOf("analytics-opt-out" + '=true') == -1) {
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -7,57 +7,14 @@ if (document.cookie.indexOf("analytics-opt-out" + '=true') == -1) {
     ga('create', gaProperty, 'pdxhub.org');
     ga('require', 'displayfeatures');
     ga('send', 'pageview');
-}</script></head><body><div class="reveal"><!--Any section element inside of this container is displayed as a slide --><div class="slides"><section><h1>Webpack</h1><aside class="notes"> <ul>
-<li>oh hi</li>
-<li>Webpack</li>
-<li>Takes stuff and makes browser bundles out of it.</li>
-<li>Yes it has feature x.<ul>
-<li>All competency, no hype (in contrast to most of the serverside JS ecosystem)</li>
-</ul>
-</li>
-<li>Module loaders:<ul>
-<li>CommonJs (including NPM)</li>
-<li>AMD</li>
-<li>Shims for various ways broken modules</li>
-</ul>
-</li>
-<li>More loaders<ul>
-<li>HTML templates (Jade, etc)</li>
-<li>Images</li>
-<li>CSS</li>
-</ul>
-</li>
-<li>It will fit into your workflow, because is supports everything.</li>
-<li>Efficient<ul>
-<li>each input file is hashed allowing the output bundle to be efficiently rebuilt</li>
-<li>by including the hash in the filename, you can ensure clients efficiently cache</li>
-<li>split your JS into multiple bundles, with dependencies</li>
-</ul>
-</li>
-<li>Getting started<ul>
-<li>Dev server</li>
-</ul>
-</li>
-</ul>
-</aside></section><section><h2>Takes stuff* and makes browser bundles out of it</h2><aside class="notes">*Mainly JS modules, but there are loaders for many kinds of static assets</aside></section><section class="stack"><section><h2>My experience</h2><aside class="notes"> <ul>
-<li>docs online</li>
-<li>browserify</li>
-<li>wanted to split deps bundle from app</li>
-<li>learned about webpack from React team</li>
-</ul>
-</aside></section><section><h2>Yes it has feature x</h2><ul><li class="fragment">Module loaders <span class="fragment"> <b>CommonJS (including NPM)</b></span><span class="fragment">,<b> AMD</b></span><span class="fragment">,<b> Shims for broken modules</b></span></li><li class="fragment">Loads HTML templates (Jade etc)</li><li class="fragment">Can also bundle CSS</li></ul><aside class="notes"> <ul>
-<li>CSS: image inlining, support for all preprocessors</li>
-</ul>
-</aside></section><section><h2>All competency, no hype</h2><aside class="notes"> </aside></section><section><h2 id="using-it">Using it</h2>
-<ul>
-<li>in npm</li>
-<li><code>webpack generate</code></li>
-<li>but really it&#39;s all about..</li>
-</ul>
-</section></section><section><p><code>webpack.config.JS</code></p>
-<pre><code class="language-javascript">var path = require(&quot;path&quot;);
+}</script></head><body><div class="reveal"><!--Any section element inside of this container is displayed as a slide --><div class="slides"><section><h1>Webpack</h1><aside class="notes"> <ul><li>oh hi</li><li>Webpack</li><li>Takes stuff and makes browser bundles out of it.</li><li>Yes it has feature x.<ul><li>All competency, no hype (in contrast to most of the serverside JS ecosystem)</li></ul></li><li>Module loaders:<ul><li>CommonJs (including NPM)</li><li>AMD</li><li>Shims for various ways broken modules</li></ul></li><li>More loaders<ul><li>HTML templates (Jade, etc)</li><li>Images</li><li>CSS</li></ul></li><li>It will fit into your workflow, because is supports everything.</li><li>Efficient<ul><li>each input file is hashed allowing the output bundle to be efficiently rebuilt</li><li>by including the hash in the filename, you can ensure clients efficiently cache</li><li>split your JS into multiple bundles, with dependencies</li></ul></li><li>Getting started<ul><li>Dev server</li></ul></li></ul></aside></section><section><h2>Takes stuff* and makes browser bundles out of it</h2><aside class="notes">*Mainly JS modules, but there are loaders for many kinds of static assets</aside></section><section class="stack"><section><h2>My experience</h2><aside class="notes"> <ul><li>docs online</li><li>browserify</li><li>wanted to split deps bundle from app</li><li>learned about webpack from React team</li></ul></aside></section><section><h2>Yes it has feature x</h2><ul><li class="fragment">Module loaders <span class="fragment"> <b>CommonJS (including NPM)</b></span><span class="fragment">,<b> AMD</b></span><span class="fragment">,<b> Shims for broken modules</b></span></li><li class="fragment">Loads HTML templates (Jade etc)</li><li class="fragment">Can also bundle CSS</li></ul><aside class="notes"> <ul><li>CSS: image inlining, support for all preprocessors</li></ul></aside></section><section><h2>All competency, no hype</h2><aside class="notes"> </aside></section><section><h2>Using it</h2>
 
-module.exports = {
+<ul><li>in npm</li><li><code>webpack generate</code></li><li>but really it&#39;s all about..</li></ul></section></section><section><p><code>webpack.config.JS</code></p>
+
+<p><code></code>`javascript
+var path = require(&quot;path&quot;);</p>
+
+<p>module.exports = {
     entry: {
       app: &quot;./src/app.js&quot;,
     },
@@ -68,34 +25,36 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.json$/, loader: &quot;json&quot; }
+            { test: /.json$/, loader: &quot;json&quot; }
         ]
     },
     resolve: {
         alias: { stream: &quot;stream-browserify&quot; }
     }
 }
-</code></pre>
-</section><section><p><code>app.js</code>:</p>
-<pre><code class="language-javascript">require(&#39;./graph.js&#39;);
+<code></code>`</p></section><section><p><code>app.js</code>:</p>
 
-require.ensure([], function(require) {
+<p><code></code>`javascript
+require(&#39;./graph.js&#39;);</p>
+
+<p>require.ensure([], function(require) {
   // Require external dependencies here
   require(&#39;./lib/angular/angular.js&#39;);
-  require(&#39;./lib/angular-route/angular-route.js&#39;);
+  require(&#39;./lib/angular-route/angular-route.js&#39;);</p>
 
-  // Main app code here
-  console.log(&quot;I can haz app&quot;)
+<p>  // Main app code here
+  console.log(&quot;I can haz app&quot;)</p>
 
-}, &#39;libs&#39;);
-</code></pre>
-<section></section><h2>Read The Docs</h2><p> <a href="http://webpack.github.io/docs/">http://webpack.github.io/docs/</a></p></section><section><p>I'm</p><img src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=192" class="avatar"><h2>Eric Drechsel</h2><p>Slides at <a href="//eric.pdxhub.org">&#47;&#47;eric.pdxhub.org/talks</a></p><p><a href="http://twitter.com/edrex">@edrex</a></p></section></div></div><script src="//cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script><script src="//cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script><script>// Full list of configuration options available here:
+<p>}, &#39;libs&#39;);
+<code></code>`</p><section></section><h2>Read The Docs</h2><p> <a href="http://webpack.github.io/docs/">http://webpack.github.io/docs/</a></p></section><section><p>I'm</p><img src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=192" class="avatar"><h2>Eric Drechsel</h2><p>Slides at <a href="//eric.pdxhub.org">&#47;&#47;eric.pdxhub.org/talks</a></p><p><a href="http://twitter.com/edrex">@edrex</a></p></section></div></div><script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.min.js"></script><script>var notesFilePath = '/assets/reveal/notes.html'
+// Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
 controls: false,
 progress: false,
 history: true,
 center: true,
+notesFilePath: '/assets/reveal/notes.html',
 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 transition: Reveal.getQueryHash().transition || "linear", // default/cube/page/concave/zoom/linear/fade/none
 // Parallax scrolling
@@ -103,9 +62,9 @@ transition: Reveal.getQueryHash().transition || "linear", // default/cube/page/c
 //- parallaxBackgroundSize: '2100px 900px',
 // Optional libraries used to extend on reveal.js
 dependencies: [
-{ src: '//cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-{ src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-{ src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-{ src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+{ src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+{ src: '/assets/reveal/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 ]
 });</script></body>

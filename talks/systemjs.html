@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"></html><head><meta charset="utf-8"><title>Javascript Modules in the Browser</title><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.min.css"><link rel="stylesheet" href="/assets/styles/reveal_theme.css"><!-- For syntax highlighting --><link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/lib/css/zenburn.css"><link rel="stylesheet" href="notecards.css"><!-- If the query includes 'print-pdf', use the PDF print sheet --><script>document.write( '<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script><!--if lt IE 9script(src='//cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/html5shiv.js')--><meta name="google-site-verification" content="jdNxQ0D7Pu5Zp7em_fWgy3CMhDdvHL9R5aRt8HuL8KY"><script>var gaProperty = 'UA-342641-5';
+<!DOCTYPE html><html lang="en"></html><head><meta charset="utf-8"><title>Javascript Modules in the Browser</title><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.min.css"><link rel="stylesheet" href="/assets/styles/reveal_theme.css"><!-- For syntax highlighting --><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/css/zenburn.css"><link rel="stylesheet" href="notecards.css"><!-- If the query includes 'print-pdf', use the PDF print sheet --><script>document.write( '<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script><!--if lt IE 9script(src='//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/html5shiv.js')--><meta name="google-site-verification" content="jdNxQ0D7Pu5Zp7em_fWgy3CMhDdvHL9R5aRt8HuL8KY"><script>var gaProperty = 'UA-342641-5';
 if (document.cookie.indexOf("analytics-opt-out" + '=true') == -1) {
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -32,12 +32,14 @@ if (document.cookie.indexOf("analytics-opt-out" + '=true') == -1) {
 .shake2 {
   -webkit-animation-duration: 1.01s;
 }
-</style><section><p>Eric Drechsel / <a href="http://twitter.com/edrex">@edrex</a></p><h1>Modules in the Browser</h1><aside class="notes"> </aside></section><section><h2>Outline</h2><ul><li>History of modular JS</li><li>ES Modules</li><li>SystemJS helps us get there</li><li>Crystal ball: the future of module delivery</li></ul><aside class="notes"> <h2>Disclaimer</h2><p>I'm not a primary source for any of these topics (the module systems, the ES Loader spec, SystemJS etc).</p></aside></section><section><h2>History of modular JS</h2><ul><li>Archean era</li><li>AMD / Require.JS</li><li>Common JS<ul><li>To the browser: browserify and webpack</li></ul></li><li>ES6 Modules</li></ul></section><section><h2></h2></section><section data-background="http://tuttidentro.files.wordpress.com/2012/12/active-volcano-venus.jpg"><h2>Archean era</h2><p class="fragment shake"><strong>SCRIPT TAGS</strong></p><p class="fragment shake shake2"><strong>Globals</strong></p></section><section><section><h2>AMD</h2><aside class="notes"><ul><li>Async</li></ul></aside></section><section><h3>Consuming modules</h3><pre><code>require([&#39;foo&#39;], 
+</style><section><p>Eric Drechsel / <a href="http://twitter.com/edrex">@edrex</a></p><h1>Modules in the Browser</h1><aside class="notes"> </aside></section><section><h2>Outline</h2><ul><li>History of modular JS</li><li>ES Modules</li><li>SystemJS helps us get there</li><li>Crystal ball: the future of module delivery</li></ul><aside class="notes"> <h2>Disclaimer</h2><p>I'm not a primary source for any of these topics (the module systems, the ES Loader spec, SystemJS etc).</p></aside></section><section><h2>History of modular JS</h2><ul><li>Archean era</li><li>AMD / Require.JS</li><li>Common JS<ul><li>To the browser: browserify and webpack</li></ul></li><li>ES6 Modules</li></ul></section><section><h2></h2></section><section data-background="http://tuttidentro.files.wordpress.com/2012/12/active-volcano-venus.jpg"><h2>Archean era</h2><p class="fragment shake"><strong>SCRIPT TAGS</strong></p><p class="fragment shake shake2"><strong>Globals</strong></p></section><section><section><h2>AMD</h2><aside class="notes"><ul><li>Async</li></ul></aside></section><section><h3>Consuming modules</h3><p><code>
+require([&#39;foo&#39;], 
     function(foo){
         foo.doStuff()
     }
 );
-</code></pre><a href="http://addyosmani.com/writing-modular-js/">addyosmani.com/writing-modular-js</a></section><section><h3>Defining modules</h3><pre><code>define(&#39;foo&#39;, 
+</code></p><a href="http://addyosmani.com/writing-modular-js/">addyosmani.com/writing-modular-js</a></section><section><h3>Defining modules</h3><p><code></code>`
+define(&#39;foo&#39;, 
     [&#39;bar&#39;, &#39;baz&#39;], 
     // dependencies (foo and bar) are mapped to function parameters
     function ( bar, baz ) {
@@ -45,36 +47,43 @@ if (document.cookie.indexOf("analytics-opt-out" + '=true') == -1) {
             doStuff:function(){
                 console.log(&#39;Yay! Stuff&#39;);
             }
-        }
+        }</p>
 
-        return function(x) {
-            return [bar(x), baz(x)]
-        };
-});
-</code></pre><a href="http://addyosmani.com/writing-modular-js/">addyosmani.com/writing-modular-js</a></section></section><section><section><h2>CommonJS</h2><p>aka NPM modules</p><aside class="notes"><ul><li>Sync</li><li>which seems to imply bundling for local delivery</li></ul></aside></section><section><h3>Consuming modules</h3><p>On Node:<pre><code>var bar = require(&quot;bar&quot;)
-</code></pre></p><p>Bundling (Browserify, Webpack)</p></section></section><section><section><h2>EcmaScript Modules</h2><aside class="notes"><p>Combines both worlds</p></aside></section><section><h3>Exports</h3><pre><code>//------ module1.js ------
-export default 123;
+<pre><code>    return function(x) {
+        return [bar(x), baz(x)]
+    };</code></pre>
 
-//------ module2.js ------
+<p>});
+<code></code>`</p><a href="http://addyosmani.com/writing-modular-js/">addyosmani.com/writing-modular-js</a></section></section><section><section><h2>CommonJS</h2><p>aka NPM modules</p><aside class="notes"><ul><li>Sync</li><li>which seems to imply bundling for local delivery</li></ul></aside></section><section><h3>Consuming modules</h3><p>On Node:</p><p><code>
+var bar = require(&quot;bar&quot;)
+</code></p><p>Bundling (Browserify, Webpack)</p></section></section><section><section><h2>EcmaScript Modules</h2><aside class="notes"><p>Combines both worlds</p></aside></section><section><h3>Exports</h3><p><code></code>`
+//------ module1.js ------
+export default 123;</p>
+
+<p>//------ module2.js ------
 const D = 123;
 export { D as default };
-</code></pre><p><a href="http://www.2ality.com/2014/09/es6-modules-final.html">2ality.com/2014/09/es6-modules-final.html</a></p></section><section><h3>Declarative import syntax</h3><pre><code>import * as math from &quot;lib/math&quot;;
+<code></code>`</p><p><a href="http://www.2ality.com/2014/09/es6-modules-final.html">2ality.com/2014/09/es6-modules-final.html</a></p></section><section><h3>Declarative import syntax</h3><p><code>
+import * as math from &quot;lib/math&quot;;
 import {sum, pi} from &quot;lib/math&quot;;
-</code></pre></section><section><h3>Default vs named exports</h3><pre><code>//------ foo.js ------
-export default 123;
+</code></p></section><section><h3>Default vs named exports</h3><p><code></code>`
+//------ foo.js ------
+export default 123;</p>
 
-//------ module2.js ------
-export const A = 321;
+<p>//------ module2.js ------
+export const A = 321;</p>
 
-//------ main.js ------
+<p>//------ main.js ------
 import foo, { A } from &#39;foo&#39;;
-</code></pre></section><section><h3>System.import</h3><p>Hint: it's just AMD's `require`</p></section></section><section data-background="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/11/15/anigif_enhanced-buzz-11490-1381518046-13.gif"><h3>but I want it</h3><h1><strong>NOW</strong></h1><aside class="notes"><ul><li>ES6 Module Loader</li><li>In that context: SystemJS is a set of ES6 module lifecycle hooks</li><li>But more than that: it's a c</li></ul></aside></section><section><p>Eric Drechsel / <a href="https://twitter.com/edrex">@edrex</a></p><img src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=256" class="avatar"><p>Slides: <a href="http://eric.pdxhub.org/talks">eric.pdxhub.org/talks</a></p><p>Code: <a href="https://github.com/edrex/hello-systemjs">github.com/edrex/hello-systemjs</a></p></section></div></div><script src="//cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script><script src="//cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script><script>// Full list of configuration options available here:
+<code></code>`</p></section><section><h3>System.import</h3><p>Hint: it's just AMD's `require`</p></section></section><section data-background="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/11/15/anigif_enhanced-buzz-11490-1381518046-13.gif"><h3>but I want it</h3><h1><strong>NOW</strong></h1><aside class="notes"><ul><li>ES6 Module Loader</li><li>In that context: SystemJS is a set of ES6 module lifecycle hooks</li><li>But more than that: it's a c</li></ul></aside></section><section><p>Eric Drechsel / <a href="https://twitter.com/edrex">@edrex</a></p><img src="http://www.gravatar.com/avatar/9fe1649090216341429d39f2425a7d5c.png?s=256" class="avatar"><p>Slides: <a href="http://eric.pdxhub.org/talks">eric.pdxhub.org/talks</a></p><p>Code: <a href="https://github.com/edrex/hello-systemjs">github.com/edrex/hello-systemjs</a></p></section></div></div><script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.min.js"></script><script>var notesFilePath = '/assets/reveal/notes.html'
+// Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
 controls: false,
 progress: false,
 history: true,
 center: true,
+notesFilePath: '/assets/reveal/notes.html',
 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 transition: Reveal.getQueryHash().transition || "linear", // default/cube/page/concave/zoom/linear/fade/none
 // Parallax scrolling
@@ -82,9 +91,9 @@ transition: Reveal.getQueryHash().transition || "linear", // default/cube/page/c
 //- parallaxBackgroundSize: '2100px 900px',
 // Optional libraries used to extend on reveal.js
 dependencies: [
-{ src: '//cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-{ src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-{ src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-{ src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+{ src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: '//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+{ src: '/assets/reveal/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 ]
 });</script></body>
