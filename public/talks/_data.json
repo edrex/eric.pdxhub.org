@@ -4,6 +4,9 @@
     "description": "Slides of my most recent talks",
     "layout": "../_layout"
   },
+  "serving-social-spaces": {
+    "title": "Serving Social Spaces"
+  },
   "systemjs": {
     "title": "Javascript Modules in the Browser"
   },
