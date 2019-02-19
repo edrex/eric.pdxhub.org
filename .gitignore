@@ -2,6 +2,4 @@ out
 *.sw?
 *.un~
 .DS_Store
-node_modules
-s3cmd
-npm-debug.log
+/resources
