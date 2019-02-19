@@ -1,0 +1,39 @@
+include _shared/posts
+
+block nav
+  nav
+    .search
+      .input(contenteditable="true" spellcheck="false")
+      form(action='http://google.com/cse')
+        input(type='hidden', name='cx', value='012963123305395825585:pm5e7m4z5ey')
+        input(type='hidden', name='ie', value='UTF-8')
+        input(type='hidden', name='q')
+block main
+  p.page-links
+    | 📢&nbsp;
+    a(href='/talks') Talks
+    | &nbsp;&nbsp;
+    | 🤓&nbsp;
+    a(href='/resume') Resume
+    | &nbsp;&nbsp;
+    🤖&nbsp;Projects &nbsp;&nbsp;
+    | 🎞&nbsp;
+    a(href='/media-inbox') Media Inbox
+    | &nbsp;&nbsp;
+    i(class="fa fa-twitter")
+    |&nbsp;
+    a.social(href="https://twitter.com/edrex" rel="me" title="edrex on twitter") twitter.com/edrex
+    | &nbsp;&nbsp;
+    i(class="fa fa-github")
+    | 
+    a.social(href="https://github.com/edrex" rel="me") github.com/edrex
+  .articles-list
+    each post in posts_array(public.articles._data)
+      mixin post_summary(post, post.slug, '/articles')
+block footer
+    | 📃 
+    a(href="/README") README
+block scripts
+  script(src="assets/scripts/searchbox.js")
+  script(type='text/javascript').
+      mountSearch($('.search').first())
