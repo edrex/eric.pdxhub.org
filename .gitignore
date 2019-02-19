@@ -1,5 +1,5 @@
-out
+/public
+/resources
 *.sw?
 *.un~
 .DS_Store
-/resources
