@@ -1,4 +1,5 @@
-baseURL = "https://eric.pdxhub.org/"
+# baseURL = "https://eric.pdxhub.org/"
+baseURL = "/"
 languageCode = "en-us"
 title = "Eric's Site"
 
