@@ -3,11 +3,8 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Eric's Site"
 
-
-
-
 # theme = "hermit"
-theme = "minos"
+theme = ["minos-local","minos"]
 enableGitInfo = true
 pygmentsCodefences  = true
 pygmentsUseClasses  = true
