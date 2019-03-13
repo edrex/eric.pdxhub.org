@@ -30,5 +30,7 @@ Site is hosted at no cost by Netlify. Thanks!
 #### Tasks
 
  - Finish porting content
-  - [] journal
-  - [] presentations (big)
+  - [x] journal
+  - [ ] resume
+  - [ ] presentations (big)
+  - [ ] 

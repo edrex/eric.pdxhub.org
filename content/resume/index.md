@@ -1,10 +1,11 @@
-# Eric Drechsel
++++
+title = "Eric Drechsel"
++++
 
 ### Software Engineer
 
 <p class="linkbar">
-<i class="fa fa-twitter"></i><a href="https://twitter.com/edrex">edrex</a> &nbsp; <i class="fa fa-github"></i>&nbsp;<a href="https://github.com/edrex?tab=activity">edrex</a> &nbsp; <i class="fa fa-linkedin"></i>&nbsp;<a href="http://www.linkedin.com/in/edrex/">edrex</a><br/>
-[eric@pdxhub.org](mailto:eric@pdxhub.org) &nbsp; Portland OR &nbsp; +15036090837
+<a href="mailto:eric@pdxhub.org">eric@pdxhub.org</a> &nbsp; Portland OR &nbsp; +15036090837
 </p>
 
 ---
