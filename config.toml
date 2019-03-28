@@ -68,7 +68,12 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 [menu]
 
   [[menu.main]]
-    name = "📢 Posts"
+    name = "📅 Journal"
+    url = "/journal/"
+    weight = 10
+
+  [[menu.main]]
+    name = "📢 Articles"
     url = "/articles/"
     weight = 10
 
