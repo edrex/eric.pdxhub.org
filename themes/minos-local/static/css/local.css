@@ -1,0 +1,11 @@
+details summary {
+    cursor: pointer;
+}
+
+details[open] {
+    border: 1px dotted;
+}
+
+details {
+    padding: 1em;
+}
