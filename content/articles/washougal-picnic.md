@@ -1,8 +1,8 @@
-\+++
++++
 title="Washougal Picnic Invitation"
 description = "river frolick invitation"
 date = "2013-07-15"
-\+++
++++
 
 ![](/_unported/media/1.jpg "_unported/media/1.jpg")
 
