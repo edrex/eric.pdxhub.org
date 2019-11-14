@@ -1,5 +1,5 @@
 [build.environment]
-  HUGO_VERSION = "0.54.0"
+  HUGO_VERSION = "0.59.1"
 
 [context.develop.environment]
   HUGO_VERSION = "0.59.1"
