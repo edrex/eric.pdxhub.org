@@ -1,8 +1,0 @@
-[submodule "themes/hermit"]
-	path = themes/hermit
-	url = https://github.com/Track3/hermit
-    branch = master
-[submodule "themes/minos"]
-	path = themes/minos
-    branch = master
-	url = https://github.com/carsonip/hugo-theme-minos
