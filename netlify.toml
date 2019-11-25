@@ -1,5 +1,6 @@
 [build]
-    command = "hugo -b $URL && npm run build:functions"
+    # command = "hugo -b $URL && npm run build:functions"
+    command = "hugo -b $URL"
     publish = "public"
     functions = "functions"
 
