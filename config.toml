@@ -1,54 +1,23 @@
-# baseURL = "https://eric.pdxhub.org/"
 baseURL = "/"
 languageCode = "en-us"
-title = "Eric's Site"
+title = "{TITLE}"
 
-# theme = "hermit"
-theme = ["minos-local","minos"]
+# theme = ["minos-local","minos"]
+
 enableGitInfo = true
 pygmentsCodefences  = true
 pygmentsUseClasses  = true
-# hasCJKLanguage = true  # If Chinese/Japanese/Korean is your main content language, enable this to make wordCount works right.
-rssLimit = 10  # Maximum number of items in the RSS feed.
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
-# googleAnalytics = "UA-123-45"
-# disqusShortname = "yourdiscussshortname"
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
 
-[author]
-  name = "Eric Drechsel"
-
-[blackfriday]
-  # hrefTargetBlank = true
-  # noreferrerLinks = true
-  # nofollowLinks = true
-
-[taxonomies]
-  tag = "tags"
-#  category = ""  # Categories are disabled by default.
+enablerobotstxt = true
+disablealiases = true
 
 [params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 -0700"
+disallow_search_engines = false # set robots.txt to disallow everything
+edit_url_prefix = "https://github.com/edrex/eric.pdxhub.org/edit/master/"
 
-  # Metadata mostly used in document's head
-  # description = ""
-  # images = [""]
-  themeColor = "#494f5c"
-
-  homeSubtitle = "Outlets for my curiosity"
-  footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-  # bgImg = ""  # Homepage background-image URL
-
-  # Prefix of link to the git commit detail page. GitInfo must be enabled.
-  # gitUrl = "https://github.com/username/repository/commit/"
-
-  # Toggling this option needs to rebuild SCSS, requires Hugo extended version
-  justifyContent = false  # Set "text-align: justify" to `.content`.
-
-  edit_url_prefix = "https://github.com/edrex/eric.pdxhub.org/edit/master/"
+# TODO: put this anywhere else
   # Add custom css
   # customCSS = ["css/foo.css", "css/bar.css"]
 
@@ -97,3 +66,26 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
     name = "📝 README"
     url = "/readme/"
     weight = 90
+# add redirects/headers
+[outputs]
+home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
+
+# remove .{ext} from text/netlify
+[mediaTypes."text/netlify"]
+suffixes = [""]
+delimiter = ""
+
+# add output format for netlify _redirects
+[outputFormats.REDIRECTS]
+mediatype = "text/netlify"
+baseName = "_redirects"
+isPlainText = true
+notAlternative = true
+
+# add output format for netlify _headers
+[outputFormats.HEADERS]
+mediatype = "text/netlify"
+baseName = "_headers"
+isPlainText = true
+notAlternative = true
+
