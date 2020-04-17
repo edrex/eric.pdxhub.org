@@ -21,7 +21,7 @@ title = "Eric Drechsel"
 ## Skills
 
 * Write maintainable Go, Python, Javascript, Ruby, and C and perform code reviews.
-* Support team members and users by managing issue queues, and creating documentation resources, and automating builds, deployment, provisioning, and monitoring.
+* Support team members and users by managing issue queues, writing documentation, and automating builds, deployment, provisioning, and monitoring.
 * Plan development efforts, specify functionality, and manage delivery timelines.
 * Build highly usable human interfaces partnering with designer or from functional specifications.
 
