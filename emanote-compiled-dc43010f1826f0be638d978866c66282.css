@@ -146,17 +146,17 @@ ul {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
 }
-.bg-pink-100 {
+.bg-red-100 {
   --tw-bg-opacity: 1;
-  background-color: rgba(252, 231, 243, var(--tw-bg-opacity));
+  background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
 }
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
 }
-.hover\:bg-pink-50:hover {
+.hover\:bg-red-50:hover {
   --tw-bg-opacity: 1;
-  background-color: rgba(253, 242, 248, var(--tw-bg-opacity));
+  background-color: rgba(254, 242, 242, var(--tw-bg-opacity));
 }
 .hover\:bg-gray-50:hover {
   --tw-bg-opacity: 1;
@@ -170,13 +170,13 @@ ul {
   --tw-bg-opacity: 1;
   background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
 }
-.border-pink-200 {
+.border-red-200 {
   --tw-border-opacity: 1;
-  border-color: rgba(251, 207, 232, var(--tw-border-opacity));
+  border-color: rgba(254, 202, 202, var(--tw-border-opacity));
 }
-.hover\:border-pink-500:hover {
+.hover\:border-red-500:hover {
   --tw-border-opacity: 1;
-  border-color: rgba(236, 72, 153, var(--tw-border-opacity));
+  border-color: rgba(239, 68, 68, var(--tw-border-opacity));
 }
 .rounded {
   border-radius: 0.25rem;
@@ -412,9 +412,9 @@ ul {
   --tw-text-opacity: 1;
   color: rgba(55, 65, 81, var(--tw-text-opacity));
 }
-.text-pink-600 {
+.text-red-600 {
   --tw-text-opacity: 1;
-  color: rgba(219, 39, 119, var(--tw-text-opacity));
+  color: rgba(220, 38, 38, var(--tw-text-opacity));
 }
 .text-gray-500 {
   --tw-text-opacity: 1;
