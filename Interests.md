@@ -1,2 +1,1 @@
-# Hobbies
 - [[Natural Science]]#

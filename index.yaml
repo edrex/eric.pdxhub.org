@@ -2,7 +2,7 @@ page:
   siteTitle: Eric Drechsel's Profile
 template:
   name: /templates/layouts/note
-  theme: pink
+  theme: red
   sidebar:
     collapsed: true
   urlStrategy: pretty

@@ -21,4 +21,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output/
-          cname: profile-test.pdxhub.org
+          cname: eric.pdxhub.org
