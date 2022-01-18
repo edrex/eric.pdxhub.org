@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build emanote site 🔧
         run: |
-          rm README.md
+          # rm README.md
           mkdir -p output.docker 
           docker run -v $PWD:/data sridca/emanote emanote --layers /data gen /data/output.docker
           cp -r output.docker output  # Ditch docker created root-owned files
