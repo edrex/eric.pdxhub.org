@@ -1,8 +1,5 @@
 ## Eric Drechsel
-##### Software Engineer
-
-<p class="linkbar">
-<a href="mailto:eric@pdxhub.org">eric@pdxhub.org</a> &nbsp; Portland OR &nbsp; +15036090837
+**Software Engineer** &nbsp; <a href="mailto:eric@pdxhub.org">eric@pdxhub.org</a> &nbsp; Portland OR &nbsp; +15036090837
 </p>
 
 ---
