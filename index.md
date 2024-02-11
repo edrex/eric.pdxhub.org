@@ -1,20 +1,30 @@
-# Eric Drechsel
+# Start
 
-- [[Resume]]#
+Hi, I'm Eric Drechsel - a naturally-curious, resourceful, tool-making hominid.
+
+[edit](vscode://file/home/eric/wiki/index.md)
+
+<details>
+	<summary>Systems thinker</summary>
+I studied math and physics at uni ages ago. I am a systems thinker: systematic approaches to structure underly my worldview.
+</details>
+
+I am a pragmatic and effective **information technology** practitioner.
+
+I'm looking for satisfying work.
+- Have a look at my [[Resume]]#
+
+ - I would rather integrate existing code than write new code, because I care more 
+I've sponged up a lot of domain knowledge, making me a walking repository of observational, theoretical, and applied knowledge about the natural and constructed world.
+
+[[NewFile]]
 - [[Interests]]#
-- a natural science nerd and enthusiastic adventurer
+- [[identity]]
 
-a skilled, pragmatic, and effective [[Technology Practitioner]]
+## Origin
+I began creating and adapting information tech professionally as a teenager around 2000, when I started a business building and repairing computers for small businesses in Southern Oregon, eventually expanding into networking, server administration, and web development. I ran Linux servers and maintained networks for a local wireless ISP, Pioneer-Net, where I operated a community bulletin board.
 
-
-I specialize in creating prototypes, and my skillset reflects that.
-
-## Origin story
-I've been creating and adapting information tech professionally since 2000, when as a teenager I started a business building and repairing computers for small businesses in Southern Oregon, eventually expanding into ecommerce hosting. This lead to a job running servers and networks for a local wireless ISP, Pioneer-Net, where I built my first Drupal website.
-
-For a long time, building complex portal and ecommerce sites was my main gig, 
-
-I'm an information technology practitioner
+For a few years after that, as I, building complex portal and ecommerce sites was my main gig, 
 
 
 Hi, I'm Eric
